@@ -1,0 +1,17 @@
+# List of repositories to analyze
+# Format: one repository URL per line
+# Comments start with '#'
+
+# Example repositories with good documentation
+https://github.com/eli64s/readme-ai
+https://github.com/tiangolo/fastapi
+https://github.com/psf/requests
+https://github.com/pallets/flask
+https://github.com/pandas-dev/pandas
+https://github.com/pytorch/pytorch
+https://github.com/microsoft/fluentui
+https://github.com/django/django
+https://github.com/numpy/numpy
+https://github.com/scikit-learn/scikit-learn
+
+# Add more repositories as needed
