@@ -170,4 +170,6 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-analysis_results/
+analysis_results/cloned_repo/
+
+analysis_results/analysis_results/*/*.json
