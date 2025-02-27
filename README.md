@@ -38,8 +38,8 @@ We evaluate our system using the following metrics:
 Current progress:
 - [x] Project setup and requirements definition
 - [x] Research on existing solutions and baselines
-- [ ] Data collection and preprocessing
-- [ ] AST-based code structure extraction
+- [x] Data collection and preprocessing
+- [x] AST-based code structure extraction
 - [ ] Vector database integration
 - [ ] README generation module
 - [ ] Evaluation pipeline
@@ -62,15 +62,6 @@ We build upon but differentiate from existing tools:
 6. "Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing"
 7. "Lift Yourself Up: Retrieval-augmented Text Generation with Self Memory"
 8. "Bridging Relevance and Reasoning: Rationale Distillation in Retrieval-Augmented Generation"
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Contributors
-
-- [Your Name]
-- [Team Member Names]
 
 ## 📅 Project Timeline
 
