@@ -1,0 +1,6 @@
+You are an expert software developer. Given the following AI-generated READMEs and the original READMEs, evaluate the AI-generated on a scale of 0 to 1 (higher is better, retain two decimal places) for:
+
+1. **Completeness**: Does it include all necessary sections (e.g., installation, usage, dependencies)?
+2. **Clarity**: Is it easy to understand?
+3. **Accuracy**: Does it correctly describe the project?
+4. **Similarity**: Is it similar to the original readme?
