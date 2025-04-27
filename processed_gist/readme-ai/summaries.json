@@ -1,0 +1,890 @@
+[
+  {
+    "id": "noxfile.py",
+    "summary": "Nox file for running tests against multiple Python versions. | functions: install, tests | imports: nox | [noxfile.py]",
+    "role": "src",
+    "loc": 52
+  },
+  {
+    "id": "readmeai\\__init__.py",
+    "summary": "Package initializer | [readmeai __init__.py]",
+    "role": "src",
+    "loc": 1
+  },
+  {
+    "id": "readmeai\\cli\\main.py",
+    "summary": "Entrypoint for the command-line interface for readme-ai. | functions: main | imports: click, readmeai | [readmeai cli main.py]",
+    "role": "src",
+    "loc": 91
+  },
+  {
+    "id": "readmeai\\cli\\options.py",
+    "summary": "Command-line interface options for the readme-ai package. | functions: prompt_for_logo, version_callback | imports: click, readmeai | [readmeai cli options.py]",
+    "role": "src",
+    "loc": 187
+  },
+  {
+    "id": "readmeai\\cli\\__init__.py",
+    "summary": "Package initializer | [readmeai cli __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\config\\settings.py",
+    "summary": "Pydantic model settings for the readme-ai package. | classes: FileSettings, GitSettings, MarkdownSettings, ModelSettings, Settings, ConfigLoader | imports: random, pydantic, pydantic_extra_types, readmeai | [readmeai config settings.py]",
+    "role": "src",
+    "loc": 288
+  },
+  {
+    "id": "readmeai\\config\\__init__.py",
+    "summary": "Package initializer | [readmeai config __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\core\\errors.py",
+    "summary": "Base class for exceptions in this module. | classes: ReadmeAIError, ReadmeGeneratorError, CLIError, FileSystemError, FileReadError, FileWriteError | [readmeai core errors.py]",
+    "role": "src",
+    "loc": 78
+  },
+  {
+    "id": "readmeai\\core\\logger.py",
+    "summary": "Custom logger implementation with color and emoji support. | classes: LoggingConfig, CustomFormatter, Logger | functions: parse_env_bool, get_logger | imports: structlog, pydantic, pydantic_settings | [readmeai core logger.py]",
+    "role": "src",
+    "loc": 131
+  },
+  {
+    "id": "readmeai\\core\\pipeline.py",
+    "summary": "Orchestrates the pipeline for the README.md file generation. | functions: error_handler, readme_agent, should_generate_image, log_repository_context, log_process_completion | imports: asyncio, tempfile, readmeai | [readmeai core pipeline.py]",
+    "role": "src",
+    "loc": 99
+  },
+  {
+    "id": "readmeai\\core\\__init__.py",
+    "summary": "Package initializer | [readmeai core __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\extractors\\analyzer.py",
+    "summary": "Processes a repository to extract dependencies and metadata. | classes: RepositoryAnalyzer | imports: readmeai | [readmeai extractors analyzer.py]",
+    "role": "src",
+    "loc": 52
+  },
+  {
+    "id": "readmeai\\extractors\\dependencies.py",
+    "summary": "File processor class to process files in a repository. | classes: FileProcessor | imports: readmeai | [readmeai extractors dependencies.py]",
+    "role": "src",
+    "loc": 59
+  },
+  {
+    "id": "readmeai\\extractors\\metadata.py",
+    "summary": "Enhanced metadata extractor class that uses the existing parser system. | classes: MetadataExtractor | imports: fnmatch, readmeai | [readmeai extractors metadata.py]",
+    "role": "src",
+    "loc": 86
+  },
+  {
+    "id": "readmeai\\extractors\\models.py",
+    "summary": "Instructions for installation, usage, and testing a repository. | classes: QuickStart, FileContext, RepositoryContext | imports: pydantic | [readmeai extractors models.py]",
+    "role": "src",
+    "loc": 33
+  },
+  {
+    "id": "readmeai\\extractors\\tools.py",
+    "summary": "Model for storing badge information from repository files. | classes: BadgeInfo, RepositoryBadges, RepositoryContext, BadgeExtractor, RepositoryAnalyzer | imports: pydantic | [readmeai extractors tools.py]",
+    "role": "src",
+    "loc": 134
+  },
+  {
+    "id": "readmeai\\extractors\\__init__.py",
+    "summary": "Package initializer | [readmeai extractors __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\generators\\badges.py",
+    "summary": "Methods to build SVG badges for the README using shields.io icons. | functions: build_code_metrics, build_tech_stack, format_badges, sort_badges, shieldsio, skillicons | imports: readmeai | [readmeai generators badges.py]",
+    "role": "src",
+    "loc": 119
+  },
+  {
+    "id": "readmeai\\generators\\builder.py",
+    "summary": "Generates the content of each section for the README.md document. | classes: MarkdownBuilder | imports: readmeai | [readmeai generators builder.py]",
+    "role": "src",
+    "loc": 198
+  },
+  {
+    "id": "readmeai\\generators\\emojis.py",
+    "summary": "Theme manager for handling emoji header themes in README documentation. | classes: Section, Theme, ThemeRegistry, ThemeManager | functions: normalize_section_name | imports: yaml, pydantic, readmeai | [readmeai generators emojis.py]",
+    "role": "src",
+    "loc": 214
+  },
+  {
+    "id": "readmeai\\generators\\enums.py",
+    "summary": "Enums that define settings for customizing the README file. | classes: BadgeStyles, CustomLogos, DefaultLogos, EmojiThemes, HeaderStyles, NavigationStyles | [readmeai generators enums.py]",
+    "role": "src",
+    "loc": 82
+  },
+  {
+    "id": "readmeai\\generators\\headers.py",
+    "summary": "Standard section types for documentation. | classes: SectionType, HeaderData, HeaderTemplate, HeaderConfig, HeaderRegistry | functions: normalize_section_name | imports: pydantic, readmeai | [readmeai generators headers.py]",
+    "role": "src",
+    "loc": 176
+  },
+  {
+    "id": "readmeai\\generators\\navigation.py",
+    "summary": "Table of contents and navigation menu generation for the documentation. | classes: NavigationTemplate | imports: readmeai | [readmeai generators navigation.py]",
+    "role": "src",
+    "loc": 109
+  },
+  {
+    "id": "readmeai\\generators\\quickstart.py",
+    "summary": "Dynamically construct the install, ssage, and testing Qucickstart guides. | classes: QuickStartBuilder, QuickStartGenerator | imports: dataclasses, string, readmeai, tomllib | [readmeai generators quickstart.py]",
+    "role": "src",
+    "loc": 295
+  },
+  {
+    "id": "readmeai\\generators\\tables.py",
+    "summary": "Generates nested content for modules and submodules using HTML tables. | functions: _generate_nested_module_content, generate_nested_module_tables, build_submodule_disclosure_widget, add_path_header, create_table_header, process_module | imports: readmeai | [readmeai generators tables.py]",
+    "role": "src",
+    "loc": 237
+  },
+  {
+    "id": "readmeai\\generators\\tree.py",
+    "summary": "Generates a directory tree structure from a given root directory. | classes: TreeGenerator | [readmeai generators tree.py]",
+    "role": "src",
+    "loc": 45
+  },
+  {
+    "id": "readmeai\\generators\\__init__.py",
+    "summary": "Package initializer | [readmeai generators __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\generators\\banners\\ascii.py",
+    "summary": "Generate an ASCII banner for the project name. | functions: generate_banner, generate_box_banner, generate_console_banner, _create_letter, _wrap_with_pre_tag, _wrap_with_console_tag | [readmeai generators banners ascii.py]",
+    "role": "src",
+    "loc": 76
+  },
+  {
+    "id": "readmeai\\generators\\banners\\svg.py",
+    "summary": "Pydantic model for SVG configuration settings. | classes: SVGBannerSettings, SVGBannerConfig, SVGBannerGenerator | imports: pydantic, readmeai | [readmeai generators banners svg.py]",
+    "role": "src",
+    "loc": 111
+  },
+  {
+    "id": "readmeai\\generators\\banners\\__init__.py",
+    "summary": "Package initializer | [readmeai generators banners __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\generators\\colors\\converters.py",
+    "summary": "Converts a hex color to HLS. | functions: hex_to_hls | imports: colorsys | [readmeai generators colors converters.py]",
+    "role": "src",
+    "loc": 6
+  },
+  {
+    "id": "readmeai\\generators\\colors\\gradients.py",
+    "summary": "Utilities for managing color schemes used to style the README. | functions: generate_base_color, generate_gradient_colors, generate_random_color, generate_related_color | imports: colorsys, random, readmeai | [readmeai generators colors gradients.py]",
+    "role": "src",
+    "loc": 31
+  },
+  {
+    "id": "readmeai\\generators\\colors\\__init__.py",
+    "summary": "Package initializer | [readmeai generators colors __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\models\\anthropic.py",
+    "summary": "Anthropic LLM API service implementation. | classes: AnthropicHandler | imports: aiohttp, readmeai, tenacity, anthropic | [readmeai models anthropic.py]",
+    "role": "src",
+    "loc": 92
+  },
+  {
+    "id": "readmeai\\models\\base.py",
+    "summary": "Base class for handling LLM API requests. | classes: BaseModelHandler | imports: asyncio, abc, aiohttp, readmeai | [readmeai models base.py]",
+    "role": "src",
+    "loc": 180
+  },
+  {
+    "id": "readmeai\\models\\dalle.py",
+    "summary": "Text-to-Image generation using OpenAI's DALL-E model. | classes: DalleHandler | imports: aiohttp, openai, readmeai | [readmeai models dalle.py]",
+    "role": "src",
+    "loc": 81
+  },
+  {
+    "id": "readmeai\\models\\enums.py",
+    "summary": "LLM API service environment variable keys. | classes: LLMAuthKeys, LLMProviders, AnthropicModels, GeminiModels, OllamaModels, OpenAIModels | [readmeai models enums.py]",
+    "role": "src",
+    "loc": 58
+  },
+  {
+    "id": "readmeai\\models\\factory.py",
+    "summary": "Factory class for creating LLM API handler instances. | classes: ModelFactory | imports: readmeai | [readmeai models factory.py]",
+    "role": "src",
+    "loc": 32
+  },
+  {
+    "id": "readmeai\\models\\gemini.py",
+    "summary": "Google Gemini LLM API service implementation. | classes: GeminiHandler | imports: aiohttp, readmeai, tenacity, google | [readmeai models gemini.py]",
+    "role": "src",
+    "loc": 87
+  },
+  {
+    "id": "readmeai\\models\\offline.py",
+    "summary": "'Offline Mode' backend handler. Runs the CLI without a LLM API. | classes: OfflineHandler | imports: readmeai | [readmeai models offline.py]",
+    "role": "src",
+    "loc": 28
+  },
+  {
+    "id": "readmeai\\models\\openai.py",
+    "summary": "OpenAI API model handler implementation, with Ollama support. | classes: OpenAIHandler | imports: aiohttp, openai, readmeai, tenacity | [readmeai models openai.py]",
+    "role": "src",
+    "loc": 116
+  },
+  {
+    "id": "readmeai\\models\\prompts.py",
+    "summary": "Utility methods to build prompts for LLM text generation. | functions: get_prompt_context, get_prompt_template, inject_prompt_context, set_additional_contexts, set_summary_context | imports: readmeai | [readmeai models prompts.py]",
+    "role": "src",
+    "loc": 89
+  },
+  {
+    "id": "readmeai\\models\\tokens.py",
+    "summary": "Utilities for handling tokens in the LLM model. | functions: _set_encoding_cache, count_tokens, truncate_tokens, update_max_tokens | imports: structlog, readmeai, tiktoken | [readmeai models tokens.py]",
+    "role": "src",
+    "loc": 68
+  },
+  {
+    "id": "readmeai\\models\\__init__.py",
+    "summary": "Package initializer | [readmeai models __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\parsers\\base.py",
+    "summary": "Abstract base class for dependency file parsers. | classes: BaseFileParser, DefaultParser | imports: abc, readmeai | [readmeai parsers base.py]",
+    "role": "src",
+    "loc": 29
+  },
+  {
+    "id": "readmeai\\parsers\\cpp.py",
+    "summary": "Dependency file parsers for C/C++ projects. | classes: CMakeParser, ConfigureAcParser, MakefileAmParser | imports: readmeai | [readmeai parsers cpp.py]",
+    "role": "src",
+    "loc": 77
+  },
+  {
+    "id": "readmeai\\parsers\\docker.py",
+    "summary": "Parser for Docker (Dockerfile, docker-compose.yaml) configuration files. | classes: DockerfileParser, DockerComposeParser | imports: yaml, readmeai | [readmeai parsers docker.py]",
+    "role": "src",
+    "loc": 86
+  },
+  {
+    "id": "readmeai\\parsers\\factory.py",
+    "summary": "Factory for creating dependency file parser callable objects. | classes: ParserFactory | imports: base, cpp, docker, go | [readmeai parsers factory.py]",
+    "role": "src",
+    "loc": 56
+  },
+  {
+    "id": "readmeai\\parsers\\go.py",
+    "summary": "Parser for go.mod dependency files. | classes: GoModParser | imports: readmeai | [readmeai parsers go.py]",
+    "role": "src",
+    "loc": 26
+  },
+  {
+    "id": "readmeai\\parsers\\gradle.py",
+    "summary": "Parser for gradle dependency files. | classes: BuildGradleParser, BuildGradleKtsParser | imports: readmeai | [readmeai parsers gradle.py]",
+    "role": "src",
+    "loc": 48
+  },
+  {
+    "id": "readmeai\\parsers\\maven.py",
+    "summary": "Parser utilities for Java-based dependency files. | classes: MavenParser | imports: readmeai | [readmeai parsers maven.py]",
+    "role": "src",
+    "loc": 27
+  },
+  {
+    "id": "readmeai\\parsers\\npm.py",
+    "summary": "Parsers for npm related dependency files i.e. package.json | classes: PackageJsonParser | imports: json, readmeai | [readmeai parsers npm.py]",
+    "role": "src",
+    "loc": 25
+  },
+  {
+    "id": "readmeai\\parsers\\properties.py",
+    "summary": "Parser for *.properties configuration files. | classes: PropertiesParser | imports: base | [readmeai parsers properties.py]",
+    "role": "src",
+    "loc": 242
+  },
+  {
+    "id": "readmeai\\parsers\\python.py",
+    "summary": "Python dependency file parsers methods. | classes: RequirementsParser, TomlParser, YamlParser | imports: yaml, readmeai, tomli, tomllib | [readmeai parsers python.py]",
+    "role": "src",
+    "loc": 130
+  },
+  {
+    "id": "readmeai\\parsers\\rust.py",
+    "summary": "Parser for Rust cargo.toml dependency files. | classes: CargoTomlParser | imports: readmeai, tomli, tomllib | [readmeai parsers rust.py]",
+    "role": "src",
+    "loc": 34
+  },
+  {
+    "id": "readmeai\\parsers\\swift.py",
+    "summary": "Dependency file parsers for Swift projects. | classes: SwiftPackageParser | imports: readmeai | [readmeai parsers swift.py]",
+    "role": "src",
+    "loc": 42
+  },
+  {
+    "id": "readmeai\\parsers\\__init__.py",
+    "summary": "Package initializer | [readmeai parsers __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\postprocessor\\markdown_to_html.py",
+    "summary": "Converts markdown syntax to HTML elements in a given piece of text. | functions: convert, process_inline, nested_format | [readmeai postprocessor markdown_to_html.py]",
+    "role": "src",
+    "loc": 77
+  },
+  {
+    "id": "readmeai\\postprocessor\\response_cleaner.py",
+    "summary": "Utility functions cleaning and formatting LLM API responses. | functions: fix_markdown_table_rows, format_markdown_table, process_markdown, process_text, extract_text_between_tags, remove_quotes | [readmeai postprocessor response_cleaner.py]",
+    "role": "src",
+    "loc": 77
+  },
+  {
+    "id": "readmeai\\postprocessor\\__init__.py",
+    "summary": "Package initializer | [readmeai postprocessor __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\preprocessor\\directory_cleaner.py",
+    "summary": "No description | imports: asyncio, platform, shutil | [readmeai preprocessor directory_cleaner.py]",
+    "role": "src",
+    "loc": 21
+  },
+  {
+    "id": "readmeai\\preprocessor\\document_cleaner.py",
+    "summary": "Document cleaner to preprocess repository content. | classes: DocumentCleaner | imports: textwrap | [readmeai preprocessor document_cleaner.py]",
+    "role": "src",
+    "loc": 78
+  },
+  {
+    "id": "readmeai\\preprocessor\\file_filter.py",
+    "summary": "Filter files based on a default ignore list. | functions: is_excluded | [readmeai preprocessor file_filter.py]",
+    "role": "src",
+    "loc": 11
+  },
+  {
+    "id": "readmeai\\preprocessor\\__init__.py",
+    "summary": "Package initializer | [readmeai preprocessor __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\retrievers\\__init__.py",
+    "summary": "Package initializer | [readmeai retrievers __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\retrievers\\git\\metadata.py",
+    "summary": "Retrieve metadata of a git repository via the host provider's API. | classes: RepositoryMetadata | functions: _parse_repository_metadata | imports: dataclasses, aiohttp, readmeai | [readmeai retrievers git metadata.py]",
+    "role": "src",
+    "loc": 108
+  },
+  {
+    "id": "readmeai\\retrievers\\git\\providers.py",
+    "summary": "Git repository hosting providers. | classes: GitHost, GitURL | functions: parse_git_url | imports: functools, pydantic, readmeai | [readmeai retrievers git providers.py]",
+    "role": "src",
+    "loc": 123
+  },
+  {
+    "id": "readmeai\\retrievers\\git\\repository.py",
+    "summary": "No description | imports: asyncio, platform, shutil, git | [readmeai retrievers git repository.py]",
+    "role": "src",
+    "loc": 67
+  },
+  {
+    "id": "readmeai\\retrievers\\git\\__init__.py",
+    "summary": "Package initializer | [readmeai retrievers git __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "readmeai\\utilities\\fetch_badges.py",
+    "summary": "Extract the logo name from the badge URL. | functions: extract_logo_name, normalize_name, normalize_unicode, transform_badge_data, merge_badge_data | imports: asyncio, json, unicodedata, datetime | [readmeai utilities fetch_badges.py]",
+    "role": "src",
+    "loc": 164
+  },
+  {
+    "id": "readmeai\\utilities\\file_handler.py",
+    "summary": "File I/O support for md, json, toml, txt, and yaml formats. | classes: FileHandler | imports: functools, json, yaml, readmeai | [readmeai utilities file_handler.py]",
+    "role": "src",
+    "loc": 131
+  },
+  {
+    "id": "readmeai\\utilities\\importer.py",
+    "summary": "Check if a module is available for import. | functions: is_available | imports: importlib | [readmeai utilities importer.py]",
+    "role": "src",
+    "loc": 8
+  },
+  {
+    "id": "readmeai\\utilities\\resource_manager.py",
+    "summary": "Utility that builds the full path for package resource files. | functions: build_resource_path | imports: importlib, readmeai, pkg_resources | [readmeai utilities resource_manager.py]",
+    "role": "src",
+    "loc": 31
+  },
+  {
+    "id": "readmeai\\utilities\\__init__.py",
+    "summary": "Package initializer | [readmeai utilities __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "tests\\conftest.py",
+    "summary": "Pytest fixtures for reuse across the test suite. | functions: capture_stderr, fixture_log_output, fixture_configure_structlog, output_file_path, temp_dir, mock_config | imports: json, io, pytest, structlog | [tests conftest.py]",
+    "role": "tests",
+    "loc": 186
+  },
+  {
+    "id": "tests\\__init__.py",
+    "summary": "Package initializer | [tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\cli\\test_main.py",
+    "summary": "No description | functions: cli_runner, mock_config, mock_readme_agent, test_main_command_basic, test_main_command_all_options, test_main_command_missing_repository | imports: unittest, pytest, _pytest, click | [tests cli test_main.py]",
+    "role": "tests",
+    "loc": 155
+  },
+  {
+    "id": "tests\\cli\\test_options.py",
+    "summary": "Test the CLI options for badge icons. | functions: test_badge_options, test_image_options | imports: readmeai | [tests cli test_options.py]",
+    "role": "tests",
+    "loc": 18
+  },
+  {
+    "id": "tests\\cli\\__init__.py",
+    "summary": "Package initializer | [tests cli __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\config\\test_settings.py",
+    "summary": "No description | [tests config test_settings.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\config\\__init__.py",
+    "summary": "Package initializer | [tests config __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\core\\test_errors.py",
+    "summary": "Test the ReadmeAIError class. | functions: test_readme_ai_exception, test_read_file_exception, test_write_file_exception, test_readme_generation_exception, test_unsupported_file_type_exception | imports: readmeai | [tests core test_errors.py]",
+    "role": "tests",
+    "loc": 28
+  },
+  {
+    "id": "tests\\core\\test_logger.py",
+    "summary": "Test that different log methods work correctly. | classes: CustomJSONHandler | functions: test_logger_log_methods, test_custom_formatter, test_logging_config_defaults, test_logging_config_env_override, test_get_logger_multiple_calls, test_logger_json_output | imports: json, io, unittest, pytest | [t",
+    "role": "tests",
+    "loc": 121
+  },
+  {
+    "id": "tests\\core\\test_pipeline.py",
+    "summary": "No description | [tests core test_pipeline.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\core\\__init__.py",
+    "summary": "Package initializer | [tests core __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\extractors\\test_analyzer.py",
+    "summary": "No description | [tests extractors test_analyzer.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\extractors\\test_dependencies.py",
+    "summary": "No description | [tests extractors test_dependencies.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\extractors\\test_metadata_extractor.py",
+    "summary": "No description | [tests extractors test_metadata_extractor.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\extractors\\test_models.py",
+    "summary": "No description | functions: test_repository_context | imports: readmeai | [tests extractors test_models.py]",
+    "role": "tests",
+    "loc": 6
+  },
+  {
+    "id": "tests\\extractors\\__init__.py",
+    "summary": "Package initializer | [tests extractors __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\generators\\conftest.py",
+    "summary": "Pytest fixtures to reuse across readmeai.generators submodule. | functions: quickstart_fixture, quickstart_generator | imports: pytest, readmeai | [tests generators conftest.py]",
+    "role": "tests",
+    "loc": 19
+  },
+  {
+    "id": "tests\\generators\\test_badges.py",
+    "summary": "Tests the format_html method. | functions: testformat_badges, test_build_tech_stack, test_build_code_metrics_success, test_shieldsio_success, test_skillicons_success | imports: pytest, readmeai | [tests generators test_badges.py]",
+    "role": "tests",
+    "loc": 81
+  },
+  {
+    "id": "tests\\generators\\test_builder.py",
+    "summary": "Test suite for MarkdownBuilder. | classes: TestMarkdownBuilder | functions: mock_theme_manager, mock_header_template, mock_toc_template, mock_tree_generator, mock_quickstart_builder, markdown_builder | imports: unittest, pytest, readmeai | [tests generators test_builder.py]",
+    "role": "tests",
+    "loc": 99
+  },
+  {
+    "id": "tests\\generators\\test_emojis.py",
+    "summary": "No description | [tests generators test_emojis.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\generators\\test_enums.py",
+    "summary": "No description | functions: test_badge_options, test_image_options | imports: readmeai | [tests generators test_enums.py]",
+    "role": "tests",
+    "loc": 16
+  },
+  {
+    "id": "tests\\generators\\test_headers.py",
+    "summary": "No description | [tests generators test_headers.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\generators\\test_navigation.py",
+    "summary": "Create a mock HeaderRegistry for testing. | classes: MockHeaderRegistry | functions: mock_header_registry, test_navigation_template_initialization, test_generate_anchor, test_to_roman, test_format_link, test_render_navigation | imports: pytest, readmeai | [tests generators test_navigation.py]",
+    "role": "tests",
+    "loc": 113
+  },
+  {
+    "id": "tests\\generators\\test_quickstart.py",
+    "summary": "Test QuickStartGenerator initialization | functions: test_quickstart_generator_init, test_get_primary_language, test_format_command, test_generate_commands, test_generate_quickstart, test_generate_quickstart_empty_args | imports: readmeai | [tests generators test_quickstart.py]",
+    "role": "tests",
+    "loc": 105
+  },
+  {
+    "id": "tests\\generators\\test_tables.py",
+    "summary": "No description | functions: sample_summaries, project_path, repository_url, test_format_summary, test_group_summaries_by_nested_module, test_generate_nested_module_tables | imports: pytest, readmeai | [tests generators test_tables.py]",
+    "role": "tests",
+    "loc": 178
+  },
+  {
+    "id": "tests\\generators\\test_tree.py",
+    "summary": "Fixture to create a TreeGenerator instance. | functions: tree_gen, test_initialization, test_generate, test_max_depth_param, test_tree_method, test_format_tree_simple | imports: pytest, readmeai | [tests generators test_tree.py]",
+    "role": "tests",
+    "loc": 66
+  },
+  {
+    "id": "tests\\generators\\__init__.py",
+    "summary": "Package initializer | [tests generators __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\generators\\banners\\test_ascii.py",
+    "summary": "Provide a temporary SVG file path. | functions: temp_svg_file, mock_logger, test_generate_banner_basic, test_generate_banner_empty, test_generate_banner_special_chars, test_generate_box_banner_basic | imports: unittest, pytest, readmeai | [tests generators banners test_ascii.py]",
+    "role": "tests",
+    "loc": 87
+  },
+  {
+    "id": "tests\\generators\\banners\\test_svg.py",
+    "summary": "Test cases for SVGBannerSettings validation | classes: TestSVGBannerSettings, TestSVGBannerGenerator | functions: mock_file_handler, valid_settings_dict, valid_config_dict | imports: unittest, pytest, pydantic, readmeai | [tests generators banners test_svg.py]",
+    "role": "tests",
+    "loc": 206
+  },
+  {
+    "id": "tests\\generators\\banners\\__init__.py",
+    "summary": "Package initializer | [tests generators banners __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\generators\\colors\\test_converters.py",
+    "summary": "Test hex to HLS color conversion. | functions: test_hex_to_hls | imports: pytest, readmeai | [tests generators colors test_converters.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "tests\\generators\\colors\\test_gradients.py",
+    "summary": "Test suite for color utility functions. | classes: TestColorUtils | imports: unittest, pytest, readmeai | [tests generators colors test_gradients.py]",
+    "role": "tests",
+    "loc": 116
+  },
+  {
+    "id": "tests\\generators\\colors\\__init__.py",
+    "summary": "Package initializer | [tests generators colors __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\models\\conftest.py",
+    "summary": "Fixtures for the LLM API clients. | functions: mock_config_loader, mock_config, mock_aiohttp_session, anthropic_handler, anthropic_handler_with_mock_session, gemini_handler | imports: unittest, aiohttp, pytest, readmeai | [tests models conftest.py]",
+    "role": "tests",
+    "loc": 93
+  },
+  {
+    "id": "tests\\models\\test_anthropic.py",
+    "summary": "No description | functions: test_anthropic_handler_sets_attributes, test_anthropic_endpoint_configuration_for_anthropic | imports: unittest, aiohttp, pytest, tenacity | [tests models test_anthropic.py]",
+    "role": "tests",
+    "loc": 92
+  },
+  {
+    "id": "tests\\models\\test_base.py",
+    "summary": "No description | [tests models test_base.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\models\\test_dalle.py",
+    "summary": "Cleanup mock png files. | functions: cleanup_mock_png_files | imports: unittest, pytest, readmeai | [tests models test_dalle.py]",
+    "role": "tests",
+    "loc": 86
+  },
+  {
+    "id": "tests\\models\\test_factory.py",
+    "summary": "Mock config loader that returns a config object with an unsupported service. | classes: UnsupportedConfig | functions: test_get_backend_openai, test_get_backend_anthropic, test_get_backend_gemini, test_get_backend_offline, test_get_backend_unsupported_service | imports: unittest, pytest, readmeai | ",
+    "role": "tests",
+    "loc": 66
+  },
+  {
+    "id": "tests\\models\\test_gemini.py",
+    "summary": "Test that the Gemini handler sets the correct attributes. | functions: test_gemini_handler_sets_attributes | imports: unittest, aiohttp, pytest, tenacity | [tests models test_gemini.py]",
+    "role": "tests",
+    "loc": 99
+  },
+  {
+    "id": "tests\\models\\test_offline.py",
+    "summary": "Fixture to provide an OfflineHandler instance. | functions: offline_handler | imports: pytest, readmeai | [tests models test_offline.py]",
+    "role": "tests",
+    "loc": 41
+  },
+  {
+    "id": "tests\\models\\test_openai.py",
+    "summary": "Test that the OpenAI handler sets the correct attributes. | functions: test_openai_handler_sets_attributes, test_openai_endpoint_configuration_for_openai, test_openai_endpoint_configuration_for_ollama | imports: unittest, aiohttp, pytest, tenacity | [tests models test_openai.py]",
+    "role": "tests",
+    "loc": 96
+  },
+  {
+    "id": "tests\\models\\test_prompts.py",
+    "summary": "Test the retrieval of a prompt context. | functions: test_get_prompt_context_found, test_get_prompt_context_not_found, test_get_prompt_template, test_inject_prompt_context_success, test_inject_prompt_context_missing_key, test_set_summary_context | imports: unittest, pytest, readmeai | [tests models ",
+    "role": "tests",
+    "loc": 80
+  },
+  {
+    "id": "tests\\models\\test_tokens.py",
+    "summary": "Mock the get_encoding function. | classes: MockEncoder | functions: mock_get_encoding, mock_encoder, test_count_tokens_edge_cases, test_count_tokens_exception, test_update_max_tokens_valid_prompt, test_update_max_tokens_invalid_prompt | imports: pytest, readmeai | [tests models test_tokens.py]",
+    "role": "tests",
+    "loc": 136
+  },
+  {
+    "id": "tests\\models\\__init__.py",
+    "summary": "Package initializer | [tests models __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\parsers\\conftest.py",
+    "summary": "Pytest fixtures to reuse across readmeai.parsers submodule. | functions: dockerfile_content, dockerfile_parser, docker_compose_content, docker_compose_parser, properties_content, properties_parser | imports: pytest, readmeai | [tests parsers conftest.py]",
+    "role": "tests",
+    "loc": 147
+  },
+  {
+    "id": "tests\\parsers\\test_cpp.py",
+    "summary": "Unit tests for C/C++ parsers. | functions: test_cmake_parser, cmake_parser, makefile_am_parser, configureac_parser, content_cmakelists, content_configureac | imports: pytest, readmeai | [tests parsers test_cpp.py]",
+    "role": "tests",
+    "loc": 169
+  },
+  {
+    "id": "tests\\parsers\\test_docker.py",
+    "summary": "Test parsing empty Dockerfile. | functions: test_dockerfile_empty, test_docker_compose_empty, test_dockerfile_parser, test_docker_compose_parser_services, test_docker_compose_parser_service_details | imports: readmeai | [tests parsers test_docker.py]",
+    "role": "tests",
+    "loc": 41
+  },
+  {
+    "id": "tests\\parsers\\test_factory.py",
+    "summary": "No description | functions: mock_parser, test_default_parser, test_registered_parsers, test_register_parser | imports: unittest, pytest, readmeai | [tests parsers test_factory.py]",
+    "role": "tests",
+    "loc": 63
+  },
+  {
+    "id": "tests\\parsers\\test_go.py",
+    "summary": "Unit tests for Go-based dependency parsers. | functions: test_go_mod | imports: readmeai | [tests parsers test_go.py]",
+    "role": "tests",
+    "loc": 20
+  },
+  {
+    "id": "tests\\parsers\\test_gradle.py",
+    "summary": "Unit tests for parsing build.gradle files. | functions: test_build_gradle, test_build_gradle_kts | imports: readmeai | [tests parsers test_gradle.py]",
+    "role": "tests",
+    "loc": 114
+  },
+  {
+    "id": "tests\\parsers\\test_maven.py",
+    "summary": "Unit tests for Java-based dependency parsers. | functions: test_maven_parser, test_maven_parser_exception_handling | imports: unittest, readmeai | [tests parsers test_maven.py]",
+    "role": "tests",
+    "loc": 140
+  },
+  {
+    "id": "tests\\parsers\\test_npm.py",
+    "summary": "Tests the JSON parser. | functions: test_package_json_parser, test_package_json_parser_success, test_package_json_parser_no_dependencies, test_package_json_parser_invalid_json | imports: json, readmeai | [tests parsers test_npm.py]",
+    "role": "tests",
+    "loc": 80
+  },
+  {
+    "id": "tests\\parsers\\test_properties.py",
+    "summary": "No description | functions: parser, test_parser_initialization, test_parse_properties_content, test_extracted_dependencies, test_version_extraction, test_camelcase_splitting | imports: pytest, readmeai | [tests parsers test_properties.py]",
+    "role": "tests",
+    "loc": 72
+  },
+  {
+    "id": "tests\\parsers\\test_python.py",
+    "summary": "Tests for Python dependency and package manager file parsers. | functions: test_requirements_parser, test_pipfile_parser, test_pyproject_poetry_parser, test_pyproject_flit_parser, test_conda_env_yaml_parser, test_requirements_parser_success | imports: readmeai | [tests parsers test_python.py]",
+    "role": "tests",
+    "loc": 131
+  },
+  {
+    "id": "tests\\parsers\\test_rust.py",
+    "summary": "Tests for parsing cargo.toml Rust files. | functions: test_cargo_toml_parser, test_cargo_toml_parser_missing_section, test_cargo_toml_parser_extended_dependency_tables, test_cargo_toml_parser_invalid_toml | imports: readmeai | [tests parsers test_rust.py]",
+    "role": "tests",
+    "loc": 67
+  },
+  {
+    "id": "tests\\parsers\\test_swift.py",
+    "summary": "Test the Swift parser. | functions: test_swift_parser | imports: pytest, readmeai | [tests parsers test_swift.py]",
+    "role": "tests",
+    "loc": 191
+  },
+  {
+    "id": "tests\\parsers\\__init__.py",
+    "summary": "Package initializer | [tests parsers __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\postprocessor\\test_markdown_to_html.py",
+    "summary": "No description | functions: converter, test_basic_markdown_conversion, test_unordered_list, test_ordered_list, test_mixed_formatting, test_nested_formatting | imports: pytest, readmeai | [tests postprocessor test_markdown_to_html.py]",
+    "role": "tests",
+    "loc": 86
+  },
+  {
+    "id": "tests\\postprocessor\\test_response_cleaner.py",
+    "summary": "Test that the markdown table is extracted from the input string. | functions: test_fix_markdown_table_rows, test_fix_markdown_table_rows_malformed, test_process_text, test_format_markdown_table_parametrize, test_process_markdown, test_process_text_unmatched_quotes | imports: pytest, readmeai | [test",
+    "role": "tests",
+    "loc": 131
+  },
+  {
+    "id": "tests\\postprocessor\\__init__.py",
+    "summary": "Package initializer | [tests postprocessor __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\preprocessor\\test_directory_cleaner.py",
+    "summary": "No description | [tests preprocessor test_directory_cleaner.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\preprocessor\\test_document_cleaner.py",
+    "summary": "No description | functions: test_remove_empty_lines, test_remove_extra_whitespaces, test_remove_trailing_whitespaces, test_normalize_indentation, test_clean_all | imports: pytest, readmeai | [tests preprocessor test_document_cleaner.py]",
+    "role": "tests",
+    "loc": 78
+  },
+  {
+    "id": "tests\\preprocessor\\test_file_filter.py",
+    "summary": "No description | functions: repo_path, ignore_list, test_is_excluded, test_is_excluded_empty_ignore_list, test_is_excluded_no_match, test_is_excluded_case_sensitivity | imports: pytest, readmeai | [tests preprocessor test_file_filter.py]",
+    "role": "tests",
+    "loc": 51
+  },
+  {
+    "id": "tests\\preprocessor\\__init__.py",
+    "summary": "Package initializer | [tests preprocessor __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\retrievers\\__init__.py",
+    "summary": "Package initializer | [tests retrievers __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\retrievers\\git\\test_metadata.py",
+    "summary": "No description | [tests retrievers git test_metadata.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\retrievers\\git\\test_providers.py",
+    "summary": "No description | [tests retrievers git test_providers.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\retrievers\\git\\test_repository.py",
+    "summary": "No description | functions: mock_git_repo | imports: unittest, git, pytest, readmeai | [tests retrievers git test_repository.py]",
+    "role": "tests",
+    "loc": 125
+  },
+  {
+    "id": "tests\\retrievers\\git\\__init__.py",
+    "summary": "Package initializer | [tests retrievers git __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\utilities\\test_fetch_badges.py",
+    "summary": "No description | [tests utilities test_fetch_badges.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "tests\\utilities\\test_file_handler.py",
+    "summary": "Test that a JSON file is read. | functions: test_read_json, test_read_json_cache, test_write_json, test_read_exception, test_write_exception, test_caching | imports: json, unittest, pytest, readmeai | [tests utilities test_file_handler.py]",
+    "role": "tests",
+    "loc": 112
+  },
+  {
+    "id": "tests\\utilities\\test_importer.py",
+    "summary": "Provides a mock for importlib.import_module. | functions: mock_import, test_existing_module, test_nonexistent_module, test_module_import_error, test_module_import_error_exception, test_empty_module_name | imports: unittest, pytest, readmeai | [tests utilities test_importer.py]",
+    "role": "tests",
+    "loc": 72
+  },
+  {
+    "id": "tests\\utilities\\test_resource_manager.py",
+    "summary": "Test build_resource_path with default module and submodule. | classes: MockPath | functions: test_build_resource_path_default_module, mock_files, test_build_resource_path_custom_module, test_build_resource_path_fallback, test_build_resource_path_failure, test_build_resource_path_multiple_files | imp",
+    "role": "tests",
+    "loc": 90
+  },
+  {
+    "id": "tests\\utilities\\__init__.py",
+    "summary": "Package initializer | [tests utilities __init__.py]",
+    "role": "tests",
+    "loc": 0
+  }
+]

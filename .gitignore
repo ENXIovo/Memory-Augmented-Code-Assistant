@@ -173,3 +173,5 @@ cython_debug/
 analysis_results/cloned_repos/
 
 analysis_results/analysis_results/*/*.json
+
+temp_repos/
