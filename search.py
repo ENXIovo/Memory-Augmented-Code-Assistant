@@ -5,7 +5,7 @@ from langchain.vectorstores import Pinecone as LangchainPinecone
 from langchain.llms import OpenAI
 
 # --- 配置你的密钥和索引信息 ---
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 PINECONE_API_KEY = "pcsk_7UkkDg_6ihCp883iLLthEBfRa9e1BXCDBTJzFCryyqjjLCaoEtobByTatuN1kZGrN96UVN"
 PINECONE_ENV = "us-east-1-aws"
 GIST_INDEX = "repo-gist-index"
