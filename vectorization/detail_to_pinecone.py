@@ -24,6 +24,17 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import config as C
 
+MAX_META_TEXT_BYTES = 40000
+MAX_SAFE_BYTES = 30000
+TRUNCATED_SUFFIX = "\n...[truncated]"
+
+def safe_truncate_text(text: str) -> str:
+    encoded = text.encode("utf-8")
+    if len(encoded) <= MAX_SAFE_BYTES:
+        return text
+    truncated = encoded[:MAX_SAFE_BYTES - len(TRUNCATED_SUFFIX.encode("utf-8"))]
+    return truncated.decode("utf-8", errors="ignore") + TRUNCATED_SUFFIX
+
 def normalize_id(s: str) -> str:
     return unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode('ascii')
 
@@ -90,7 +101,8 @@ for detail_file in tqdm(detail_files, desc="Repos"):
                     "type": seg["type"],
                     "name": seg["name"],
                     "role": seg["role"],
-                    "loc": seg["loc"]
+                    "loc": seg["loc"],
+                    "text": safe_truncate_text(seg["text"])
                 }
             })
 

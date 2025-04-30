@@ -29,3 +29,5 @@ PROCESSED_DETAIL_ROOT = Path("processed_detail")
 
 # batch size for embedding calls
 EMBED_BATCH = 96
+
+LLM_MODEL = "gpt-4o"

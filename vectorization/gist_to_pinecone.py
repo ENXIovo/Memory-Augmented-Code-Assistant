@@ -79,6 +79,7 @@ for file_path in tqdm(summary_files, desc="Repos"):
                     "path": r["id"],
                     "role": r["role"],
                     "loc" : r["loc"],
+                    "text": r["summary"],
                 },
             }
             for r, v in zip(chunk, vectors)

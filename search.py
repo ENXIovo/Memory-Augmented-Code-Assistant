@@ -1,85 +1,149 @@
+#!/usr/bin/env python3
+"""
+Generate a README.md for a GitHub repo using indexed gist and detail embeddings in Pinecone.
+Optimizations included:
+- Token-aware truncation (tiktoken)
+- Structured prompt formatting
+- Improved retrieval prompts
+"""
 import os
-import pinecone
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Pinecone as LangchainPinecone
-from langchain.llms import OpenAI
+import tiktoken
+from pinecone import Pinecone
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+import config as C
 
-# --- 配置你的密钥和索引信息 ---
-os.environ["OPENAI_API_KEY"] = ""
-PINECONE_API_KEY = "pcsk_7UkkDg_6ihCp883iLLthEBfRa9e1BXCDBTJzFCryyqjjLCaoEtobByTatuN1kZGrN96UVN"
-PINECONE_ENV = "us-east-1-aws"
-GIST_INDEX = "repo-gist-index"
-DETAIL_INDEX = "repo-detail-index"
-REPO_NAME = "django"
-TOP_K_GIST = 5
-TOP_K_DETAIL = 10
-OUTPUT_FILE = "README.md"
+# 配置
+PINECONE_API_KEY = C.PINECONE_API_KEY
+GIST_INDEX    = C.GIST_INDEX_NAME
+DETAIL_INDEX  = C.DETAIL_INDEX_NAME
+REPO_NAME     = "django"
+TOP_K_GIST    = 5
+TOP_K_DETAIL  = 10
+OUTPUT_FILE   = "README-TEST.md"
 
 SUB_QUESTIONS = [
-    "What is the purpose of this project?",
-    "What are the key modules or components?",
-    "How can I install or set it up?",
-    "What are the important functions or APIs?",
-    "Are there any examples or usage instructions?"
+    f"Overview of the {REPO_NAME} project and its purpose",
+    f"What are the main components or modules in {REPO_NAME}?",
+    f"Installation or setup instructions for {REPO_NAME}",
+    f"Key functions, classes or APIs exposed by {REPO_NAME}",
+    f"Examples or usage patterns in {REPO_NAME}"
 ]
 
-# ---------- 初始化 Pinecone ----------
-pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
-embedding = OpenAIEmbeddings()
+# Token 限制（防止 GPT 调用超出 TPM）
+MAX_GIST_TOKENS = 4000
+MAX_DETAIL_TOKENS = 6000
 
-# ---------- 多轮检索 gist 和 detail ----------
-def retrieve_top_chunks(repo_name: str, questions: list, top_k_gist=5, top_k_detail=10):
-    # gist summaries
-    gist_store = LangchainPinecone.from_existing_index(GIST_INDEX, embedding)
-    gist_chunks = set()
+# 截断函数（基于 tiktoken）
+def get_token_length(text: str) -> int:
+    enc = tiktoken.encoding_for_model(C.LLM_MODEL)
+    return len(enc.encode(text))
+
+def truncate_chunks(chunks, max_tokens):
+    result, total = [], 0
+    for chunk in chunks:
+        tokens = get_token_length(chunk)
+        if total + tokens > max_tokens:
+            break
+        result.append(chunk)
+        total += tokens
+    return result
+
+# 初始化 Pinecone 客户端
+pc = Pinecone(api_key=PINECONE_API_KEY)
+
+# 连接已存在的索引
+gist_index   = pc.Index(GIST_INDEX)
+detail_index = pc.Index(DETAIL_INDEX)
+
+# 嵌入模型
+embeddings = OpenAIEmbeddings(model=C.EMBED_MODEL)
+
+# 向量存储
+gist_store = PineconeVectorStore(
+    index=gist_index,
+    embedding=embeddings,
+    namespace=C.GIST_NAMESPACE
+)
+detail_store = PineconeVectorStore(
+    index=detail_index,
+    embedding=embeddings,
+    namespace=C.DETAIL_NAMESPACE
+)
+
+# 检索函数
+def retrieve_top_chunks(repo_name: str, questions: list, top_k_gist: int = TOP_K_GIST, top_k_detail: int = TOP_K_DETAIL):
+    gist_chunks = []
     for q in questions:
-        results = gist_store.similarity_search(query=q, k=top_k_gist, filter={"repo": repo_name})
-        for r in results:
-            gist_chunks.add(r.page_content.strip())
+        docs = gist_store.similarity_search(
+            query=q,
+            k=top_k_gist,
+            filter={"repo": repo_name}
+        )
+        for d in docs:
+            meta = d.metadata or {}
+            filename = meta.get("path", "unknown")
+            gist_chunks.append(f"### {filename}\n{d.page_content.strip()}")
 
-    # detail code chunks
-    detail_store = LangchainPinecone.from_existing_index(DETAIL_INDEX, embedding)
-    detail_chunks = set()
+    detail_chunks = []
     for q in questions:
-        results = detail_store.similarity_search(query=q, k=top_k_detail, filter={"repo": repo_name})
-        for r in results:
-            # 拼接函数信息
-            meta = r.metadata
-            code_label = f"[{meta.get('type', 'code')} {meta.get('name', '')} in {meta.get('path', '')}]:"
-            detail_chunks.add(code_label + "\n" + r.page_content.strip())
+        docs = detail_store.similarity_search(
+            query=q,
+            k=top_k_detail,
+            filter={"repo": repo_name}
+        )
+        for d in docs:
+            meta = d.metadata or {}
+            label = f"### [{meta.get('type', 'code')} {meta.get('name', '')} in {meta.get('path', '')}]"
+            detail_chunks.append(f"{label}\n{d.page_content.strip()}")
 
-    return list(gist_chunks), list(detail_chunks)
+    # 截断到安全的 token 范围
+    gist_chunks = truncate_chunks(gist_chunks, MAX_GIST_TOKENS)
+    detail_chunks = truncate_chunks(detail_chunks, MAX_DETAIL_TOKENS)
 
-# ---------- 构造 prompt 并生成 README ----------
-def generate_readme(gist_chunks, detail_chunks):
-    llm = OpenAI(model="gpt-4o")
+    return gist_chunks, detail_chunks
+
+# 生成 README
+EXAMPLE_README_STYLE = """
+# Project Name
+A short and clear description of what this project does.
+
+## Installation
+Step-by-step instructions for setting up the project.
+
+## Components
+An outline of the important files or modules.
+
+## Usage
+Code examples or typical workflows.
+
+## API Overview
+Key functions or classes with descriptions.
+"""
+
+def generate_readme(gist_chunks: list, detail_chunks: list) -> str:
+    llm = ChatOpenAI(model=C.LLM_MODEL)
     prompt = (
-        "Below are two types of retrieved information from a GitHub repository:\n\n"
-        "1. **File-level summaries** (high-level descriptions of files)\n"
-        "2. **Detail-level code units** (important class/function definitions)\n\n"
-        "Please use these to generate a comprehensive, clear, and well-structured README.md file in English. "
-        "It should include: project purpose, key components, installation, important functions, and examples.\n\n"
-        "## File-level Summaries (Gists):\n"
-        + "\n\n".join(gist_chunks) +
-        "\n\n## Detail-level Functions and Classes:\n"
-        + "\n\n".join(detail_chunks)
+        "You are an expert technical writer. Using the retrieved documentation below, write a professional, complete, and clear README.md file.\n\n"
+        "Use the following README style as reference:\n\n"
+        f"{EXAMPLE_README_STYLE}\n\n"
+        "Now generate the README based on this information:\n\n"
+        f"## File-level Summaries (Gists):\n\n" + "\n\n".join(gist_chunks) +
+        f"\n\n## Detail-level Code Units:\n\n" + "\n\n".join(detail_chunks)
     )
-    return llm.invoke(prompt)
+    return llm.invoke(prompt).content
 
-# ---------- 保存到文件 ----------
-def save_readme(text: str, path="README.md"):
+# 保存 README
+def save_readme(text: str, path: str = OUTPUT_FILE):
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
-    print(f"✅ README saved to: {path}")
+    print(f"✅ README saved to {path}")
 
-# ---------- 主流程 ----------
+# 主流程
 if __name__ == "__main__":
-    print("🔍 Retrieving summaries from both gist and detail indexes...")
-    gist_chunks, detail_chunks = retrieve_top_chunks(REPO_NAME, SUB_QUESTIONS, TOP_K_GIST, TOP_K_DETAIL)
-
-    print(f"✅ Retrieved {len(gist_chunks)} gist chunks and {len(detail_chunks)} detail chunks.")
-
-    print("🧠 Generating README with GPT...")
-    readme = generate_readme(gist_chunks, detail_chunks)
-
-    save_readme(readme, OUTPUT_FILE)
+    print("🔍 Retrieving gist & detail chunks...")
+    gist_chunks, detail_chunks = retrieve_top_chunks(REPO_NAME, SUB_QUESTIONS)
+    print(f"✅ Retrieved {len(gist_chunks)} gist and {len(detail_chunks)} detail chunks.")
+    print("🧠 Generating README...")
+    readme_text = generate_readme(gist_chunks, detail_chunks)
+    save_readme(readme_text)
