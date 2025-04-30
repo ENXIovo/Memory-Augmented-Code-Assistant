@@ -1,0 +1,218 @@
+[
+  {
+    "id": "setup.py",
+    "summary": "No description | imports: codecs, setuptools | [setup.py]",
+    "role": "src",
+    "loc": 95
+  },
+  {
+    "id": "docs\\conf.py",
+    "summary": "No description | imports: requests | [docs conf.py]",
+    "role": "docs",
+    "loc": 77
+  },
+  {
+    "id": "docs\\_themes\\flask_theme_support.py",
+    "summary": "No description | classes: FlaskyStyle | imports: pygments | [docs _themes flask_theme_support.py]",
+    "role": "docs",
+    "loc": 68
+  },
+  {
+    "id": "src\\requests\\adapters.py",
+    "summary": "requests.adapters | classes: BaseAdapter, HTTPAdapter | functions: SOCKSProxyManager, _urllib3_request_context | imports: socket, urllib3, auth, compat | [src requests adapters.py]",
+    "role": "src",
+    "loc": 585
+  },
+  {
+    "id": "src\\requests\\api.py",
+    "summary": "requests.api | functions: request, get, options, head, post, put | [src requests api.py]",
+    "role": "src",
+    "loc": 117
+  },
+  {
+    "id": "src\\requests\\auth.py",
+    "summary": "requests.auth | classes: AuthBase, HTTPBasicAuth, HTTPProxyAuth, HTTPDigestAuth | functions: _basic_auth_str | imports: hashlib, threading, base64, _internal_utils | [src requests auth.py]",
+    "role": "src",
+    "loc": 223
+  },
+  {
+    "id": "src\\requests\\certs.py",
+    "summary": "requests.certs | imports: certifi | [src requests certs.py]",
+    "role": "src",
+    "loc": 12
+  },
+  {
+    "id": "src\\requests\\compat.py",
+    "summary": "requests.compat | functions: _resolve_char_detection | imports: importlib, urllib3, simplejson, json | [src requests compat.py]",
+    "role": "src",
+    "loc": 68
+  },
+  {
+    "id": "src\\requests\\cookies.py",
+    "summary": "requests.cookies | classes: MockRequest, MockResponse, CookieConflictError, RequestsCookieJar | functions: extract_cookies_to_jar, get_cookie_header, remove_cookie_by_name, _copy_cookie_jar, create_cookie, morsel_to_cookie | imports: calendar, copy, _internal_utils, compat | [src requests cookies.py",
+    "role": "src",
+    "loc": 439
+  },
+  {
+    "id": "src\\requests\\exceptions.py",
+    "summary": "requests.exceptions | classes: RequestException, InvalidJSONError, JSONDecodeError, HTTPError, ConnectionError, ProxyError | imports: urllib3, compat | [src requests exceptions.py]",
+    "role": "src",
+    "loc": 91
+  },
+  {
+    "id": "src\\requests\\help.py",
+    "summary": "Module containing bug report helper(s). | functions: _implementation, info, main | imports: json, platform, ssl, idna | [src requests help.py]",
+    "role": "src",
+    "loc": 112
+  },
+  {
+    "id": "src\\requests\\hooks.py",
+    "summary": "requests.hooks | functions: default_hooks, dispatch_hook | [src requests hooks.py]",
+    "role": "src",
+    "loc": 23
+  },
+  {
+    "id": "src\\requests\\models.py",
+    "summary": "requests.models | classes: RequestEncodingMixin, RequestHooksMixin, Request, PreparedRequest, Response | imports: datetime, encodings, io, urllib3 | [src requests models.py]",
+    "role": "src",
+    "loc": 741
+  },
+  {
+    "id": "src\\requests\\packages.py",
+    "summary": "No description | imports: compat | [src requests packages.py]",
+    "role": "src",
+    "loc": 15
+  },
+  {
+    "id": "src\\requests\\sessions.py",
+    "summary": "requests.sessions | classes: SessionRedirectMixin, Session | functions: merge_setting, merge_hooks, session | imports: datetime, _internal_utils, adapters, auth | [src requests sessions.py]",
+    "role": "src",
+    "loc": 566
+  },
+  {
+    "id": "src\\requests\\status_codes.py",
+    "summary": "The ``codes`` object defines a mapping from common names for HTTP statuses | functions: _init, doc | imports: structures | [src requests status_codes.py]",
+    "role": "src",
+    "loc": 112
+  },
+  {
+    "id": "src\\requests\\structures.py",
+    "summary": "requests.structures | classes: CaseInsensitiveDict, LookupDict | imports: compat | [src requests structures.py]",
+    "role": "src",
+    "loc": 67
+  },
+  {
+    "id": "src\\requests\\utils.py",
+    "summary": "requests.utils | functions: proxy_bypass_registry, proxy_bypass, dict_to_sequence, super_len, get_netrc_auth, guess_filename | imports: codecs, io, socket, struct | [src requests utils.py]",
+    "role": "src",
+    "loc": 777
+  },
+  {
+    "id": "src\\requests\\_internal_utils.py",
+    "summary": "requests._internal_utils | functions: to_native_string, unicode_is_ascii | imports: compat | [src requests _internal_utils.py]",
+    "role": "src",
+    "loc": 40
+  },
+  {
+    "id": "src\\requests\\__init__.py",
+    "summary": "Requests HTTP Library | functions: check_compatibility, _check_cryptography | imports: urllib3, exceptions, charset_normalizer, chardet | [src requests __init__.py]",
+    "role": "src",
+    "loc": 132
+  },
+  {
+    "id": "src\\requests\\__version__.py",
+    "summary": "No description | [src requests __version__.py]",
+    "role": "src",
+    "loc": 10
+  },
+  {
+    "id": "tests\\compat.py",
+    "summary": "No description | functions: u | imports: StringIO, io, cStringIO | [tests compat.py]",
+    "role": "tests",
+    "loc": 19
+  },
+  {
+    "id": "tests\\conftest.py",
+    "summary": "No description | functions: prepare_url, inner, httpbin, httpbin_secure, nosan_server | imports: http, BaseHTTPServer, SimpleHTTPServer, ssl | [tests conftest.py]",
+    "role": "tests",
+    "loc": 37
+  },
+  {
+    "id": "tests\\test_adapters.py",
+    "summary": "See also https://github.com/psf/requests/issues/6643. | functions: test_request_url_trims_leading_path_separators | imports: requests | [tests test_adapters.py]",
+    "role": "tests",
+    "loc": 6
+  },
+  {
+    "id": "tests\\test_help.py",
+    "summary": "Verify we're actually setting system_ssl when it should be available. | classes: VersionedPackage | functions: test_system_ssl, test_idna_without_version_attribute, test_idna_with_version_attribute | imports: unittest, requests | [tests test_help.py]",
+    "role": "tests",
+    "loc": 18
+  },
+  {
+    "id": "tests\\test_hooks.py",
+    "summary": "No description | functions: hook, test_hooks, test_default_hooks | imports: pytest, requests | [tests test_hooks.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "tests\\test_lowlevel.py",
+    "summary": "Simple handler that will take request and echo it back to requester. | functions: echo_response_handler, test_chunked_upload, test_chunked_encoding_error, incomplete_chunked_response_handler, test_chunked_upload_uses_only_specified_host_header, test_chunked_upload_doesnt_skip_host_header | imports: ",
+    "role": "tests",
+    "loc": 307
+  },
+  {
+    "id": "tests\\test_packages.py",
+    "summary": "No description | functions: test_can_access_urllib3_attribute, test_can_access_idna_attribute, test_can_access_chardet_attribute | imports: requests | [tests test_packages.py]",
+    "role": "tests",
+    "loc": 7
+  },
+  {
+    "id": "tests\\test_requests.py",
+    "summary": "Tests for Requests. | classes: TestStream, CustomMapping, DummyAuth, MyCookiePolicy, MyString, MyBytes | functions: test_json_encodes_as_bytes, test_requests_are_updated_each_time, test_proxy_env_vars_override_default, test_data_argument_accepts_tuples, test_prepared_copy, test_urllib3_retries | imp",
+    "role": "tests",
+    "loc": 2438
+  },
+  {
+    "id": "tests\\test_structures.py",
+    "summary": "No description | classes: TestCaseInsensitiveDict, TestLookupDict | imports: pytest, requests | [tests test_structures.py]",
+    "role": "tests",
+    "loc": 61
+  },
+  {
+    "id": "tests\\test_testserver.py",
+    "summary": "No description | classes: TestTestServer | imports: socket, threading, pytest, tests | [tests test_testserver.py]",
+    "role": "tests",
+    "loc": 123
+  },
+  {
+    "id": "tests\\test_utils.py",
+    "summary": "No description | classes: BoomFile, NoLenBoomFile, LenFile, TestSuperLen, TestToKeyValList, TestUnquoteHeaderValue | functions: test_get_auth_from_url, test_requote_uri_with_unquoted_percents, test_unquote_unreserved, test_dotted_netmask, test_select_proxies, test_parse_dict_header | imports: copy, ",
+    "role": "tests",
+    "loc": 812
+  },
+  {
+    "id": "tests\\utils.py",
+    "summary": "No description | functions: override_environ | [tests utils.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "tests\\__init__.py",
+    "summary": "Requests test package initialisation. | imports: urllib3 | [tests __init__.py]",
+    "role": "tests",
+    "loc": 7
+  },
+  {
+    "id": "tests\\testserver\\server.py",
+    "summary": "Dummy server using for unit testing | classes: Server, TLSServer | functions: consume_socket_content | imports: select, socket, ssl, threading | [tests testserver server.py]",
+    "role": "tests",
+    "loc": 138
+  },
+  {
+    "id": "tests\\testserver\\__init__.py",
+    "summary": "Package initializer | [tests testserver __init__.py]",
+    "role": "tests",
+    "loc": 0
+  }
+]

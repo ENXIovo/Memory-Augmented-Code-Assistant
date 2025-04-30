@@ -1,0 +1,3470 @@
+[
+  {
+    "id": "pavement.py",
+    "summary": "This paver file is intended to help with the release process as much as | functions: _compute_hash, compute_md5, compute_sha256, write_release_task, write_release | imports: hashlib, textwrap, paver | [pavement.py]",
+    "role": "src",
+    "loc": 122
+  },
+  {
+    "id": "benchmarks\\asv_pip_nopep517.py",
+    "summary": "This file is used by asv_compare.conf.json.tpl. | imports: subprocess | [benchmarks asv_pip_nopep517.py]",
+    "role": "benchmarks",
+    "loc": 14
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_app.py",
+    "summary": "No description | classes: LaplaceInplace, MaxesOfDots | imports: common, numpy | [benchmarks benchmarks bench_app.py]",
+    "role": "benchmarks",
+    "loc": 67
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_array_coercion.py",
+    "summary": "No description | classes: ArrayCoercionSmall | imports: common, numpy | [benchmarks benchmarks bench_array_coercion.py]",
+    "role": "benchmarks",
+    "loc": 36
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_clip.py",
+    "summary": "No description | classes: ClipFloat, ClipInteger | imports: common, numpy | [benchmarks benchmarks bench_clip.py]",
+    "role": "benchmarks",
+    "loc": 26
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_core.py",
+    "summary": "No description | classes: Core, Temporaries, CorrConv, CountNonzero, Nonzero, PackBits | imports: common, numpy | [benchmarks benchmarks bench_core.py]",
+    "role": "benchmarks",
+    "loc": 213
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_creation.py",
+    "summary": "Benchmark meshgrid generation | classes: MeshGrid, Create, UfuncsFromDLP | imports: common, numpy | [benchmarks benchmarks bench_creation.py]",
+    "role": "benchmarks",
+    "loc": 54
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_function_base.py",
+    "summary": "No description | classes: Linspace, Histogram1D, Histogram2D, Bincount, Mean, Median | functions: memoize, wrapped | imports: common, numpy, asv_runner | [benchmarks benchmarks bench_function_base.py]",
+    "role": "benchmarks",
+    "loc": 273
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_import.py",
+    "summary": "No description | classes: Import | imports: subprocess, timeit, common | [benchmarks benchmarks bench_import.py]",
+    "role": "benchmarks",
+    "loc": 22
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_indexing.py",
+    "summary": "No description | classes: Indexing, IndexingWith1DArr, ScalarIndexing, IndexingSeparate, IndexingStructured0D, FlatIterIndexing | imports: common, shutil, numpy, tempfile | [benchmarks benchmarks bench_indexing.py]",
+    "role": "benchmarks",
+    "loc": 103
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_io.py",
+    "summary": "No description | classes: Copy, CopyTo, Savez, LoadNpyOverhead, LoadtxtCSVComments, LoadtxtCSVdtypes | imports: common, numpy, io | [benchmarks benchmarks bench_io.py]",
+    "role": "benchmarks",
+    "loc": 151
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_itemselection.py",
+    "summary": "No description | classes: Take, PutMask, Put | imports: common, numpy | [benchmarks benchmarks bench_itemselection.py]",
+    "role": "benchmarks",
+    "loc": 44
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_lib.py",
+    "summary": "Benchmarks for `numpy.lib`. | classes: Pad, Nan, Unique, Isin | imports: common, numpy | [benchmarks benchmarks bench_lib.py]",
+    "role": "benchmarks",
+    "loc": 117
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_linalg.py",
+    "summary": "No description | classes: Eindot, Linalg, LinalgNorm, LinalgSmallArrays, Lstsq, Einsum | imports: common, numpy | [benchmarks benchmarks bench_linalg.py]",
+    "role": "benchmarks",
+    "loc": 142
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_ma.py",
+    "summary": "No description | classes: MA, MACreation, Indexing, UFunc, Concatenate, MAFunctions1v | imports: common, numpy | [benchmarks benchmarks bench_ma.py]",
+    "role": "benchmarks",
+    "loc": 232
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_manipulate.py",
+    "summary": "No description | classes: BroadcastArrays, BroadcastArraysTo, ConcatenateStackArrays, ConcatenateNestedArrays, DimsManipulations | imports: common, numpy | [benchmarks benchmarks bench_manipulate.py]",
+    "role": "benchmarks",
+    "loc": 79
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_overrides.py",
+    "summary": "No description | classes: DuckArray, ArrayFunction | functions: array_function_dispatch, wrap, _broadcast_to_dispatcher, mock_broadcast_to, _concatenate_dispatcher, mock_concatenate | imports: common, numpy | [benchmarks benchmarks bench_overrides.py]",
+    "role": "benchmarks",
+    "loc": 45
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_polynomial.py",
+    "summary": "No description | classes: Polynomial | imports: common, numpy | [benchmarks benchmarks bench_polynomial.py]",
+    "role": "benchmarks",
+    "loc": 18
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_random.py",
+    "summary": "No description | classes: Random, Shuffle, Randint, Randint_dtype, Permutation, RNG | imports: common, numpy | [benchmarks benchmarks bench_random.py]",
+    "role": "benchmarks",
+    "loc": 145
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_records.py",
+    "summary": "No description | classes: Records | imports: common, numpy | [benchmarks benchmarks bench_records.py]",
+    "role": "benchmarks",
+    "loc": 30
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_reduce.py",
+    "summary": "No description | classes: AddReduce, AddReduceSeparate, AnyAll, StatsReductions, FMinMax, ArgMax | imports: common, numpy | [benchmarks benchmarks bench_reduce.py]",
+    "role": "benchmarks",
+    "loc": 77
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_scalar.py",
+    "summary": "No description | classes: ScalarMath, ScalarStr | imports: common, numpy | [benchmarks benchmarks bench_scalar.py]",
+    "role": "benchmarks",
+    "loc": 55
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_shape_base.py",
+    "summary": "No description | classes: Block, Block2D, Block3D, Kron, AtLeast1D | imports: common, numpy | [benchmarks benchmarks bench_shape_base.py]",
+    "role": "benchmarks",
+    "loc": 121
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_strings.py",
+    "summary": "No description | classes: StringComparisons | imports: common, numpy, operator | [benchmarks benchmarks bench_strings.py]",
+    "role": "benchmarks",
+    "loc": 32
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_trim_zeros.py",
+    "summary": "No description | classes: TrimZeros | imports: common, numpy | [benchmarks benchmarks bench_trim_zeros.py]",
+    "role": "benchmarks",
+    "loc": 21
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_ufunc.py",
+    "summary": "No description | classes: ArrayFunctionDispatcher, Broadcast, At, UFunc, MethodsV0, NDArrayLRShifts | imports: common, numpy, packaging, operator | [benchmarks benchmarks bench_ufunc.py]",
+    "role": "benchmarks",
+    "loc": 459
+  },
+  {
+    "id": "benchmarks\\benchmarks\\bench_ufunc_strides.py",
+    "summary": "No description | classes: _AbstractBinary, _AbstractUnary, UnaryFP, UnaryFPSpecial, BinaryFP, BinaryFPSpecial | imports: common, numpy | [benchmarks benchmarks bench_ufunc_strides.py]",
+    "role": "benchmarks",
+    "loc": 192
+  },
+  {
+    "id": "benchmarks\\benchmarks\\common.py",
+    "summary": "No description | classes: Benchmark | functions: get_values, get_square, get_squares, get_square_, get_squares_, get_indexes | imports: numpy, random, functools | [benchmarks benchmarks common.py]",
+    "role": "benchmarks",
+    "loc": 159
+  },
+  {
+    "id": "benchmarks\\benchmarks\\__init__.py",
+    "summary": "Package initializer | functions: show_cpu_features, dirty_lock | imports: numpy | [benchmarks benchmarks __init__.py]",
+    "role": "benchmarks",
+    "loc": 39
+  },
+  {
+    "id": "doc\\conftest.py",
+    "summary": "Pytest configuration and fixtures for the Numpy test suite. | classes: SkipMatplotlibOutputChecker | functions: add_np | imports: pytest, numpy, matplotlib, doctest | [doc conftest.py]",
+    "role": "docs",
+    "loc": 22
+  },
+  {
+    "id": "doc\\postprocess.py",
+    "summary": "Post-processes HTML and Latex files output by Sphinx. | functions: main, process_html, process_tex | imports: argparse | [doc postprocess.py]",
+    "role": "docs",
+    "loc": 38
+  },
+  {
+    "id": "doc\\preprocess.py",
+    "summary": "No description | classes: DoxyTpl | functions: main, doxy_gen, doxy_config | imports: string | [doc preprocess.py]",
+    "role": "docs",
+    "loc": 40
+  },
+  {
+    "id": "doc\\neps\\conf.py",
+    "summary": "No description | imports: datetime | [doc neps conf.py]",
+    "role": "docs",
+    "loc": 63
+  },
+  {
+    "id": "doc\\neps\\nep-0016-benchmark.py",
+    "summary": "No description | classes: NotArray, AttrArray, ArrayBase, ABCArray1, ABCArray2 | functions: t | imports: perf, abc, numpy | [doc neps nep-0016-benchmark.py]",
+    "role": "docs",
+    "loc": 34
+  },
+  {
+    "id": "doc\\neps\\tools\\build_index.py",
+    "summary": "Scan the directory of nep files and extract their metadata.  The | functions: render, nep_metadata, parse_replaces_metadata | imports: jinja2, glob | [doc neps tools build_index.py]",
+    "role": "docs",
+    "loc": 96
+  },
+  {
+    "id": "doc\\source\\conf.py",
+    "summary": "Rename numpy types to use the canonical names to make sphinx behave | classes: PyObject, PyTypeObject, LegacyDirective, NumPyLexer | functions: replace_scalar_type_names, setup, _get_c_source_file, linkcode_resolve | imports: importlib, docutils, datetime, ctypes | [doc source conf.py]",
+    "role": "docs",
+    "loc": 392
+  },
+  {
+    "id": "doc\\source\\f2py\\code\\setup_example.py",
+    "summary": "No description | imports: numpy | [doc source f2py code setup_example.py]",
+    "role": "docs",
+    "loc": 13
+  },
+  {
+    "id": "doc\\source\\f2py\\code\\setup_skbuild.py",
+    "summary": "No description | imports: skbuild | [doc source f2py code setup_skbuild.py]",
+    "role": "docs",
+    "loc": 9
+  },
+  {
+    "id": "doc\\source\\reference\\random\\performance.py",
+    "summary": "No description | imports: timeit, pandas, numpy | [doc source reference random performance.py]",
+    "role": "docs",
+    "loc": 71
+  },
+  {
+    "id": "doc\\source\\reference\\simd\\gen_features.py",
+    "summary": "Generate CPU features tables from CCompilerOpt | classes: FakeCCompilerOpt, Features | functions: wrapper_section, wrapper_tab | imports: numpy | [doc source reference simd gen_features.py]",
+    "role": "docs",
+    "loc": 162
+  },
+  {
+    "id": "doc\\source\\user\\conftest.py",
+    "summary": "No description | imports: numpy | [doc source user conftest.py]",
+    "role": "docs",
+    "loc": 1
+  },
+  {
+    "id": "doc\\source\\user\\plots\\matplotlib1.py",
+    "summary": "No description | imports: matplotlib, numpy | [doc source user plots matplotlib1.py]",
+    "role": "docs",
+    "loc": 5
+  },
+  {
+    "id": "doc\\source\\user\\plots\\matplotlib2.py",
+    "summary": "No description | imports: matplotlib, numpy | [doc source user plots matplotlib2.py]",
+    "role": "docs",
+    "loc": 7
+  },
+  {
+    "id": "doc\\source\\user\\plots\\matplotlib3.py",
+    "summary": "No description | imports: numpy, matplotlib | [doc source user plots matplotlib3.py]",
+    "role": "docs",
+    "loc": 11
+  },
+  {
+    "id": "doc\\source\\user\\plots\\meshgrid_plot.py",
+    "summary": "No description | imports: numpy, matplotlib | [doc source user plots meshgrid_plot.py]",
+    "role": "docs",
+    "loc": 6
+  },
+  {
+    "id": "numpy\\conftest.py",
+    "summary": "Pytest configuration and fixtures for the Numpy test suite. | functions: pytest_configure, pytest_addoption, pytest_sessionstart, pytest_terminal_summary, pytest_itemcollected, check_fpu_mode | imports: string, tempfile, hypothesis, pytest | [numpy conftest.py]",
+    "role": "src",
+    "loc": 194
+  },
+  {
+    "id": "numpy\\dtypes.py",
+    "summary": "This module is home to specific dtypes related functionality and their classes. | functions: _add_dtype_helper | imports: numpy | [numpy dtypes.py]",
+    "role": "src",
+    "loc": 26
+  },
+  {
+    "id": "numpy\\exceptions.py",
+    "summary": "Exceptions and Warnings | classes: ComplexWarning, ModuleDeprecationWarning, VisibleDeprecationWarning, RankWarning, TooHardError, AxisError | [numpy exceptions.py]",
+    "role": "src",
+    "loc": 178
+  },
+  {
+    "id": "numpy\\matlib.py",
+    "summary": "Return a new matrix of given shape and type, without initializing entries. | functions: empty, ones, zeros, identity, eye, rand | imports: numpy | [numpy matlib.py]",
+    "role": "src",
+    "loc": 308
+  },
+  {
+    "id": "numpy\\_array_api_info.py",
+    "summary": "Array API Inspection namespace | classes: __array_namespace_info__ | imports: numpy | [numpy _array_api_info.py]",
+    "role": "src",
+    "loc": 296
+  },
+  {
+    "id": "numpy\\_configtool.py",
+    "summary": "No description | functions: main | imports: argparse, version, lib | [numpy _configtool.py]",
+    "role": "src",
+    "loc": 34
+  },
+  {
+    "id": "numpy\\_distributor_init.py",
+    "summary": "Distributor init file | [numpy _distributor_init.py]",
+    "role": "src",
+    "loc": 11
+  },
+  {
+    "id": "numpy\\_expired_attrs_2_0.py",
+    "summary": "Dict of expired attributes that are discontinued since 2.0 release. | [numpy _expired_attrs_2_0.py]",
+    "role": "src",
+    "loc": 79
+  },
+  {
+    "id": "numpy\\_globals.py",
+    "summary": "Module defining global singleton classes. | classes: _NoValueType, _CopyMode | imports: _utils | [numpy _globals.py]",
+    "role": "src",
+    "loc": 66
+  },
+  {
+    "id": "numpy\\_pytesttester.py",
+    "summary": "Pytest test running. | classes: PytestTester | functions: _show_numpy_info | imports: numpy, pytest | [numpy _pytesttester.py]",
+    "role": "src",
+    "loc": 145
+  },
+  {
+    "id": "numpy\\__init__.py",
+    "summary": "NumPy | functions: __getattr__, __dir__, _sanity_check, _mac_os_check, hugepage_setup, _pyinstaller_hooks_dir | imports: _globals, _expired_attrs_2_0, version, numpy | [numpy __init__.py]",
+    "role": "src",
+    "loc": 449
+  },
+  {
+    "id": "numpy\\char\\__init__.py",
+    "summary": "Package initializer | imports: numpy | [numpy char __init__.py]",
+    "role": "src",
+    "loc": 2
+  },
+  {
+    "id": "numpy\\compat\\py3k.py",
+    "summary": "Python 3.X compatibility tools. | classes: contextlib_nullcontext | functions: asunicode, asbytes, asstr, isfileobj, open_latin1, sixu | imports: io, pickle5, pickle, importlib | [numpy compat py3k.py]",
+    "role": "src",
+    "loc": 107
+  },
+  {
+    "id": "numpy\\compat\\__init__.py",
+    "summary": "Compatibility module. | imports: _utils, py3k | [numpy compat __init__.py]",
+    "role": "src",
+    "loc": 21
+  },
+  {
+    "id": "numpy\\compat\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy compat tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\core\\arrayprint.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core arrayprint.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\defchararray.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core defchararray.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\einsumfunc.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core einsumfunc.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\fromnumeric.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core fromnumeric.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\function_base.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core function_base.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\getlimits.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core getlimits.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\multiarray.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core multiarray.py]",
+    "role": "src",
+    "loc": 14
+  },
+  {
+    "id": "numpy\\core\\numeric.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core numeric.py]",
+    "role": "src",
+    "loc": 10
+  },
+  {
+    "id": "numpy\\core\\numerictypes.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core numerictypes.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\overrides.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core overrides.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\records.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core records.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\shape_base.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core shape_base.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\umath.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core umath.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\_dtype.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core _dtype.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\_dtype_ctypes.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils | [numpy core _dtype_ctypes.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\core\\_internal.py",
+    "summary": "No description | functions: _reconstruct, __getattr__ | imports: numpy, _utils | [numpy core _internal.py]",
+    "role": "src",
+    "loc": 14
+  },
+  {
+    "id": "numpy\\core\\_multiarray_umath.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy, _utils, textwrap, traceback | [numpy core _multiarray_umath.py]",
+    "role": "src",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\core\\_utils.py",
+    "summary": "No description | functions: _raise_warning | [numpy core _utils.py]",
+    "role": "src",
+    "loc": 19
+  },
+  {
+    "id": "numpy\\core\\__init__.py",
+    "summary": "The `numpy.core` submodule exists solely for backward compatibility | functions: _ufunc_reconstruct, __getattr__ | imports: numpy, _utils | [numpy core __init__.py]",
+    "role": "src",
+    "loc": 18
+  },
+  {
+    "id": "numpy\\ctypeslib\\_ctypeslib.py",
+    "summary": "``ctypes`` Utility Functions | classes: _ndptr, _concrete_ndptr | functions: _dummy, load_library, _num_fromflags, _flags_fromnum, ndpointer, _ctype_ndarray | imports: numpy, ctypes, sysconfig | [numpy ctypeslib _ctypeslib.py]",
+    "role": "src",
+    "loc": 474
+  },
+  {
+    "id": "numpy\\ctypeslib\\__init__.py",
+    "summary": "Package initializer | imports: _ctypeslib | [numpy ctypeslib __init__.py]",
+    "role": "src",
+    "loc": 13
+  },
+  {
+    "id": "numpy\\distutils\\armccompiler.py",
+    "summary": "Arm compiler. | classes: ArmCCompiler | imports: distutils | [numpy distutils armccompiler.py]",
+    "role": "src",
+    "loc": 22
+  },
+  {
+    "id": "numpy\\distutils\\ccompiler.py",
+    "summary": "Check if an objects needs to be rebuild based on its dependencies | functions: _needs_build, replace_method, CCompiler_find_executables, CCompiler_spawn, CCompiler_object_filenames, CCompiler_compile | imports: platform, shlex, subprocess, copy | [numpy distutils ccompiler.py]",
+    "role": "src",
+    "loc": 642
+  },
+  {
+    "id": "numpy\\distutils\\ccompiler_opt.py",
+    "summary": "Provides the `CCompilerOpt` class, used for handling the CPU/hardware | classes: _Config, _Distutils, _Cache, _CCompiler, _Feature, _Parse | functions: new_ccompiler_opt | imports: atexit, inspect, pprint, subprocess | [numpy distutils ccompiler_opt.py]",
+    "role": "src",
+    "loc": 2257
+  },
+  {
+    "id": "numpy\\distutils\\conv_template.py",
+    "summary": "takes templated file .xxx.src and produces .xxx file  where .xxx is | functions: parse_structure, paren_repl, parse_values, parse_loop_header, parse_string, replace | [numpy distutils conv_template.py]",
+    "role": "src",
+    "loc": 242
+  },
+  {
+    "id": "numpy\\distutils\\core.py",
+    "summary": "No description | functions: _dict_append, _command_line_ok, get_distribution, setup, _check_append_library, _check_append_ext_library | imports: distutils, setuptools, numpy | [numpy distutils core.py]",
+    "role": "src",
+    "loc": 179
+  },
+  {
+    "id": "numpy\\distutils\\cpuinfo.py",
+    "summary": "cpuinfo | classes: CPUInfoBase, LinuxCPUInfo, IRIXCPUInfo, DarwinCPUInfo, SunOSCPUInfo, Win32CPUInfo | functions: getoutput, command_info, command_by_line, key_value_from_command | imports: platform, types, subprocess, winreg | [numpy distutils cpuinfo.py]",
+    "role": "src",
+    "loc": 513
+  },
+  {
+    "id": "numpy\\distutils\\exec_command.py",
+    "summary": "exec_command | functions: filepath_from_subprocess_output, forward_bytes_to_stdout, temp_file_name, get_pythonexe, find_executable, _preserve_environment | imports: subprocess, locale, numpy | [numpy distutils exec_command.py]",
+    "role": "src",
+    "loc": 241
+  },
+  {
+    "id": "numpy\\distutils\\extension.py",
+    "summary": "distutils.extension | classes: Extension | imports: distutils | [numpy distutils extension.py]",
+    "role": "src",
+    "loc": 78
+  },
+  {
+    "id": "numpy\\distutils\\from_template.py",
+    "summary": "process_file(filename) | functions: parse_structure, find_repl_patterns, find_and_remove_repl_patterns, conv, unique_key, expand_sub | [numpy distutils from_template.py]",
+    "role": "src",
+    "loc": 215
+  },
+  {
+    "id": "numpy\\distutils\\fujitsuccompiler.py",
+    "summary": "Fujitsu compiler. | classes: FujitsuCCompiler | imports: distutils | [numpy distutils fujitsuccompiler.py]",
+    "role": "src",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\distutils\\intelccompiler.py",
+    "summary": "A modified Intel compiler compatible with a GCC-built Python. | classes: IntelCCompiler, IntelItaniumCCompiler, IntelEM64TCCompiler, IntelCCompilerW, IntelEM64TCCompilerW | imports: platform, distutils, numpy | [numpy distutils intelccompiler.py]",
+    "role": "src",
+    "loc": 87
+  },
+  {
+    "id": "numpy\\distutils\\lib2def.py",
+    "summary": "Parses the command-line arguments. | functions: parse_cmd, getnm, parse_nm, output_def | imports: subprocess | [numpy distutils lib2def.py]",
+    "role": "src",
+    "loc": 93
+  },
+  {
+    "id": "numpy\\distutils\\line_endings.py",
+    "summary": "Functions for converting from DOS to UNIX line endings | functions: dos2unix, dos2unix_one_dir, dos2unix_dir, unix2dos, unix2dos_one_dir, unix2dos_dir | [numpy distutils line_endings.py]",
+    "role": "src",
+    "loc": 64
+  },
+  {
+    "id": "numpy\\distutils\\log.py",
+    "summary": "No description | classes: Log | functions: _fix_args, set_threshold, get_threshold, set_verbosity, error, warn | imports: distutils, numpy | [numpy distutils log.py]",
+    "role": "src",
+    "loc": 81
+  },
+  {
+    "id": "numpy\\distutils\\mingw32ccompiler.py",
+    "summary": "Support code for building Python extensions on Windows. | classes: Mingw32CCompiler | functions: get_build_msvc_version, get_msvcr_replacement, find_python_dll, dump_table, generate_def, find_dll | imports: subprocess, textwrap, numpy, distutils | [numpy distutils mingw32ccompiler.py]",
+    "role": "src",
+    "loc": 400
+  },
+  {
+    "id": "numpy\\distutils\\misc_util.py",
+    "summary": "Container to hold information on an installable library. | classes: InstallableLib, Configuration | functions: clean_up_temporary_directory, get_num_build_jobs, quote_args, allpath, rel_path, get_path_from_frame | imports: copy, glob, atexit, tempfile | [numpy distutils misc_util.py]",
+    "role": "src",
+    "loc": 2062
+  },
+  {
+    "id": "numpy\\distutils\\msvc9compiler.py",
+    "summary": "Concatenate two environment paths avoiding repeats. | classes: MSVCCompiler | functions: _merge | imports: distutils, system_info | [numpy distutils msvc9compiler.py]",
+    "role": "src",
+    "loc": 43
+  },
+  {
+    "id": "numpy\\distutils\\msvccompiler.py",
+    "summary": "Concatenate two environment paths avoiding repeats. | classes: MSVCCompiler | functions: _merge, lib_opts_if_msvc | imports: distutils, system_info | [numpy distutils msvccompiler.py]",
+    "role": "src",
+    "loc": 51
+  },
+  {
+    "id": "numpy\\distutils\\npy_pkg_config.py",
+    "summary": "Exception thrown when there is a problem parsing a configuration file. | classes: FormatError, PkgNotFound, LibraryInfo, VariableSet | functions: parse_flags, _escape_backslash, parse_meta, parse_variables, parse_sections, pkg_to_filename | imports: configparser, optparse, glob | [numpy distutils np",
+    "role": "src",
+    "loc": 333
+  },
+  {
+    "id": "numpy\\distutils\\numpy_distribution.py",
+    "summary": "No description | classes: NumpyDistribution | imports: distutils | [numpy distutils numpy_distribution.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\distutils\\pathccompiler.py",
+    "summary": "PathScale compiler compatible with an gcc built Python. | classes: PathScaleCCompiler | imports: distutils | [numpy distutils pathccompiler.py]",
+    "role": "src",
+    "loc": 17
+  },
+  {
+    "id": "numpy\\distutils\\system_info.py",
+    "summary": "This file defines a set of system_info classes for getting | classes: NotFoundError, AliasedOptionError, AtlasNotFoundError, FlameNotFoundError, LapackNotFoundError, LapackSrcNotFoundError | functions: customized_ccompiler, _c_string_literal, libpaths, add_system_root, get_standard_file, _parse_env_",
+    "role": "src",
+    "loc": 2650
+  },
+  {
+    "id": "numpy\\distutils\\unixccompiler.py",
+    "summary": "unixccompiler - can handle very long argument lists for ar. | functions: UnixCCompiler__compile, UnixCCompiler_create_static_lib | imports: subprocess, shlex, distutils, numpy | [numpy distutils unixccompiler.py]",
+    "role": "src",
+    "loc": 104
+  },
+  {
+    "id": "numpy\\distutils\\_shell_utils.py",
+    "summary": "Helper functions for interacting with the shell, and consuming shell-style | classes: CommandLineParser, WindowsParser, PosixParser | imports: shlex, subprocess, ctypes | [numpy distutils _shell_utils.py]",
+    "role": "src",
+    "loc": 65
+  },
+  {
+    "id": "numpy\\distutils\\__init__.py",
+    "summary": "An enhanced distutils, providing support for Fortran compilers, for BLAS, | functions: customized_fcompiler, customized_ccompiler | imports: npy_pkg_config, numpy | [numpy distutils __init__.py]",
+    "role": "src",
+    "loc": 45
+  },
+  {
+    "id": "numpy\\distutils\\command\\autodist.py",
+    "summary": "This module implements additional tests ala autoconf which can be useful. | functions: check_inline, check_restrict, check_compiler_gcc, check_gcc_version_at_least, check_gcc_function_attribute, check_gcc_function_attribute_with_intrinsics | imports: textwrap | [numpy distutils command autodist.py]",
+    "role": "src",
+    "loc": 107
+  },
+  {
+    "id": "numpy\\distutils\\command\\bdist_rpm.py",
+    "summary": "No description | classes: bdist_rpm | imports: setuptools, distutils | [numpy distutils command bdist_rpm.py]",
+    "role": "src",
+    "loc": 17
+  },
+  {
+    "id": "numpy\\distutils\\command\\build.py",
+    "summary": "No description | classes: build | imports: distutils, numpy | [numpy distutils command build.py]",
+    "role": "src",
+    "loc": 55
+  },
+  {
+    "id": "numpy\\distutils\\command\\build_clib.py",
+    "summary": "Modified version of build_clib that handles fortran source files. | classes: build_clib | imports: glob, shutil, distutils, numpy | [numpy distutils command build_clib.py]",
+    "role": "src",
+    "loc": 382
+  },
+  {
+    "id": "numpy\\distutils\\command\\build_ext.py",
+    "summary": "Modified version of build_ext that handles fortran source files. | classes: build_ext | imports: subprocess, glob, distutils, numpy | [numpy distutils command build_ext.py]",
+    "role": "src",
+    "loc": 590
+  },
+  {
+    "id": "numpy\\distutils\\command\\build_py.py",
+    "summary": "No description | classes: build_py | imports: distutils, numpy | [numpy distutils command build_py.py]",
+    "role": "src",
+    "loc": 20
+  },
+  {
+    "id": "numpy\\distutils\\command\\build_scripts.py",
+    "summary": "Modified version of build_scripts that handles building scripts from functions. | classes: build_scripts | imports: distutils, numpy | [numpy distutils command build_scripts.py]",
+    "role": "src",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\distutils\\command\\build_src.py",
+    "summary": "Build swig and f2py sources. | classes: build_src | functions: subst_vars, get_swig_target, get_swig_modulename, _find_swig_target, get_f2py_modulename | imports: shlex, copy, distutils, numpy | [numpy distutils command build_src.py]",
+    "role": "src",
+    "loc": 647
+  },
+  {
+    "id": "numpy\\distutils\\command\\config.py",
+    "summary": "No description | classes: config, GrabStdout | imports: signal, subprocess, textwrap, distutils | [numpy distutils command config.py]",
+    "role": "src",
+    "loc": 415
+  },
+  {
+    "id": "numpy\\distutils\\command\\config_compiler.py",
+    "summary": "Distutils command to hold user specified options | classes: config_fc, config_cc | functions: show_fortran_compilers | imports: distutils, numpy | [numpy distutils command config_compiler.py]",
+    "role": "src",
+    "loc": 105
+  },
+  {
+    "id": "numpy\\distutils\\command\\develop.py",
+    "summary": "Override the develop command from setuptools so we can ensure that our | classes: develop | imports: setuptools | [numpy distutils command develop.py]",
+    "role": "src",
+    "loc": 11
+  },
+  {
+    "id": "numpy\\distutils\\command\\egg_info.py",
+    "summary": "No description | classes: egg_info | imports: setuptools, textwrap | [numpy distutils command egg_info.py]",
+    "role": "src",
+    "loc": 17
+  },
+  {
+    "id": "numpy\\distutils\\command\\install.py",
+    "summary": "No description | classes: install | imports: setuptools, distutils | [numpy distutils command install.py]",
+    "role": "src",
+    "loc": 52
+  },
+  {
+    "id": "numpy\\distutils\\command\\install_clib.py",
+    "summary": "No description | classes: install_clib | imports: distutils, numpy | [numpy distutils command install_clib.py]",
+    "role": "src",
+    "loc": 30
+  },
+  {
+    "id": "numpy\\distutils\\command\\install_data.py",
+    "summary": "No description | classes: install_data | imports: distutils | [numpy distutils command install_data.py]",
+    "role": "src",
+    "loc": 14
+  },
+  {
+    "id": "numpy\\distutils\\command\\install_headers.py",
+    "summary": "No description | classes: install_headers | imports: distutils | [numpy distutils command install_headers.py]",
+    "role": "src",
+    "loc": 21
+  },
+  {
+    "id": "numpy\\distutils\\command\\sdist.py",
+    "summary": "No description | classes: sdist | imports: setuptools, distutils, numpy | [numpy distutils command sdist.py]",
+    "role": "src",
+    "loc": 20
+  },
+  {
+    "id": "numpy\\distutils\\command\\__init__.py",
+    "summary": "distutils.command | functions: test_na_writable_attributes_deletion | [numpy distutils command __init__.py]",
+    "role": "src",
+    "loc": 34
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\absoft.py",
+    "summary": "No description | classes: AbsoftFCompiler | imports: numpy, distutils | [numpy distutils fcompiler absoft.py]",
+    "role": "src",
+    "loc": 117
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\arm.py",
+    "summary": "No description | classes: ArmFlangCompiler | imports: numpy, functools, distutils | [numpy distutils fcompiler arm.py]",
+    "role": "src",
+    "loc": 52
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\compaq.py",
+    "summary": "No description | classes: CompaqFCompiler, CompaqVisualFCompiler | imports: numpy, distutils | [numpy distutils fcompiler compaq.py]",
+    "role": "src",
+    "loc": 97
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\environment.py",
+    "summary": "No description | classes: EnvironmentConfig | imports: distutils | [numpy distutils fcompiler environment.py]",
+    "role": "src",
+    "loc": 74
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\fujitsu.py",
+    "summary": "fujitsu | classes: FujitsuFCompiler | imports: numpy, distutils | [numpy distutils fcompiler fujitsu.py]",
+    "role": "src",
+    "loc": 37
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\g95.py",
+    "summary": "No description | classes: G95FCompiler | imports: numpy, distutils | [numpy distutils fcompiler g95.py]",
+    "role": "src",
+    "loc": 29
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\gnu.py",
+    "summary": "No description | classes: GnuFCompiler, Gnu95FCompiler | functions: is_win64, _can_target | imports: platform, tempfile, hashlib, base64 | [numpy distutils fcompiler gnu.py]",
+    "role": "src",
+    "loc": 431
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\hpux.py",
+    "summary": "No description | classes: HPUXFCompiler | imports: numpy, distutils | [numpy distutils fcompiler hpux.py]",
+    "role": "src",
+    "loc": 34
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\ibm.py",
+    "summary": "No description | classes: IBMFCompiler | imports: subprocess, numpy, distutils | [numpy distutils fcompiler ibm.py]",
+    "role": "src",
+    "loc": 79
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\intel.py",
+    "summary": "No description | classes: BaseIntelFCompiler, IntelFCompiler, IntelItaniumFCompiler, IntelEM64TFCompiler, IntelVisualFCompiler, IntelItaniumVisualFCompiler | functions: intel_version_match | imports: numpy, distutils | [numpy distutils fcompiler intel.py]",
+    "role": "src",
+    "loc": 152
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\lahey.py",
+    "summary": "No description | classes: LaheyFCompiler | imports: numpy, distutils | [numpy distutils fcompiler lahey.py]",
+    "role": "src",
+    "loc": 37
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\mips.py",
+    "summary": "No description | classes: MIPSFCompiler | imports: numpy | [numpy distutils fcompiler mips.py]",
+    "role": "src",
+    "loc": 48
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\nag.py",
+    "summary": "No description | classes: BaseNAGFCompiler, NAGFCompiler, NAGFORCompiler | imports: numpy, distutils | [numpy distutils fcompiler nag.py]",
+    "role": "src",
+    "loc": 73
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\none.py",
+    "summary": "No description | classes: NoneFCompiler | imports: numpy, distutils | [numpy distutils fcompiler none.py]",
+    "role": "src",
+    "loc": 21
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\nv.py",
+    "summary": "NVIDIA High Performance Computing (HPC) SDK Fortran Compiler | classes: NVHPCFCompiler | imports: numpy, distutils | [numpy distutils fcompiler nv.py]",
+    "role": "src",
+    "loc": 40
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\pathf95.py",
+    "summary": "No description | classes: PathScaleFCompiler | imports: numpy, distutils | [numpy distutils fcompiler pathf95.py]",
+    "role": "src",
+    "loc": 27
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\pg.py",
+    "summary": "No description | classes: PGroupFCompiler, PGroupFlangCompiler | imports: numpy, functools, distutils | [numpy distutils fcompiler pg.py]",
+    "role": "src",
+    "loc": 97
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\sun.py",
+    "summary": "No description | classes: SunFCompiler | imports: numpy, distutils | [numpy distutils fcompiler sun.py]",
+    "role": "src",
+    "loc": 42
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\vast.py",
+    "summary": "No description | classes: VastFCompiler | imports: numpy, distutils | [numpy distutils fcompiler vast.py]",
+    "role": "src",
+    "loc": 41
+  },
+  {
+    "id": "numpy\\distutils\\fcompiler\\__init__.py",
+    "summary": "numpy.distutils.fcompiler | classes: CompilerNotFound, FCompiler | functions: flaglist, str2bool, is_sequence_of_strings, load_all_fcompiler_classes, _find_existing_fcompiler, available_fcompilers_for_platform | imports: distutils, numpy, environment, glob | [numpy distutils fcompiler __init__.py]",
+    "role": "src",
+    "loc": 842
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_build_ext.py",
+    "summary": "Tests for numpy.distutils.build_ext. | functions: test_multi_fortran_libs_link | imports: subprocess, textwrap, pytest, numpy | [numpy distutils tests test_build_ext.py]",
+    "role": "tests",
+    "loc": 58
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_ccompiler_opt.py",
+    "summary": "No description | classes: FakeCCompilerOpt, _Test_CCompilerOpt | functions: tempdir, assert_, new_test | imports: textwrap, distutils, unittest, tempfile | [numpy distutils tests test_ccompiler_opt.py]",
+    "role": "tests",
+    "loc": 721
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_ccompiler_opt_conf.py",
+    "summary": "No description | classes: FakeCCompilerOpt, _TestConfFeatures, TestConfFeatures | imports: unittest, ccompiler_opt, numpy | [numpy distutils tests test_ccompiler_opt_conf.py]",
+    "role": "tests",
+    "loc": 150
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_exec_command.py",
+    "summary": "Context manager to redirect stdout for exec_command test. | classes: redirect_stdout, redirect_stderr, emulate_nonposix, TestExecCommand | functions: test_exec_command_stdout, test_exec_command_stderr | imports: pytest, tempfile, numpy, io | [numpy distutils tests test_exec_command.py]",
+    "role": "tests",
+    "loc": 159
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_fcompiler.py",
+    "summary": "No description | functions: test_fcompiler_flags | imports: numpy | [numpy distutils tests test_fcompiler.py]",
+    "role": "tests",
+    "loc": 33
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_fcompiler_gnu.py",
+    "summary": "No description | classes: TestG77Versions, TestGFortranVersions | imports: numpy | [numpy distutils tests test_fcompiler_gnu.py]",
+    "role": "tests",
+    "loc": 48
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_fcompiler_intel.py",
+    "summary": "No description | classes: TestIntelFCompilerVersions, TestIntelEM64TFCompilerVersions | imports: numpy | [numpy distutils tests test_fcompiler_intel.py]",
+    "role": "tests",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_fcompiler_nagfor.py",
+    "summary": "No description | classes: TestNagFCompilerVersions | imports: numpy | [numpy distutils tests test_fcompiler_nagfor.py]",
+    "role": "tests",
+    "loc": 20
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_from_template.py",
+    "summary": "Remove leading and trailing whitespace, and convert internal | functions: normalize_whitespace, test_from_template | imports: numpy | [numpy distutils tests test_from_template.py]",
+    "role": "tests",
+    "loc": 36
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_log.py",
+    "summary": "No description | functions: setup_module, teardown_module, test_log_prefix | imports: io, pytest, numpy | [numpy distutils tests test_log.py]",
+    "role": "tests",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_mingw32ccompiler.py",
+    "summary": "Test the mingw32ccompiler.build_import_library, which builds a | functions: test_build_import | imports: shutil, subprocess, pytest, numpy | [numpy distutils tests test_mingw32ccompiler.py]",
+    "role": "tests",
+    "loc": 35
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_misc_util.py",
+    "summary": "No description | classes: TestAppendpath, TestMinrelpath, TestGpaths, TestSharedExtension | functions: test_installed_npymath_ini | imports: pytest, numpy | [numpy distutils tests test_misc_util.py]",
+    "role": "tests",
+    "loc": 69
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_npy_pkg_config.py",
+    "summary": "No description | classes: TestLibraryInfo, TestParseFlags | imports: numpy | [numpy distutils tests test_npy_pkg_config.py]",
+    "role": "tests",
+    "loc": 69
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_shell_utils.py",
+    "summary": "No description | functions: Parser, runner, test_join_matches_subprocess, test_roundtrip | imports: pytest, subprocess, json, numpy | [numpy distutils tests test_shell_utils.py]",
+    "role": "tests",
+    "loc": 63
+  },
+  {
+    "id": "numpy\\distutils\\tests\\test_system_info.py",
+    "summary": "notfound_action: | classes: _system_info, Temp1Info, Temp2Info, DuplicateOptionInfo, TestSystemInfoReading | functions: get_class, have_compiler, test_distutils_parse_env_order | imports: shutil, pytest, tempfile, subprocess | [numpy distutils tests test_system_info.py]",
+    "role": "tests",
+    "loc": 260
+  },
+  {
+    "id": "numpy\\distutils\\tests\\utilities.py",
+    "summary": "No description | functions: _get_compiler_status, has_c_compiler, has_f77_compiler, has_f90_compiler | imports: numpy, textwrap, shutil, tempfile | [numpy distutils tests utilities.py]",
+    "role": "tests",
+    "loc": 63
+  },
+  {
+    "id": "numpy\\distutils\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy distutils tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\doc\\ufuncs.py",
+    "summary": "Universal Functions | [numpy doc ufuncs.py]",
+    "role": "docs",
+    "loc": 107
+  },
+  {
+    "id": "numpy\\f2py\\auxfuncs.py",
+    "summary": "Auxiliary functions for f2py2e. | classes: F2PYError, throw_error | functions: outmess, debugcapi, _ischaracter, _isstring, ischaracter_or_characterarray, ischaracter | imports: pprint, types, functools, cfuncs | [numpy f2py auxfuncs.py]",
+    "role": "src",
+    "loc": 738
+  },
+  {
+    "id": "numpy\\f2py\\capi_maps.py",
+    "summary": "Copyright 1999 -- 2011 Pearu Peterson all rights reserved. | functions: load_f2cmap_file, getctype, f2cexpr, getstrlength, getarrdims, getpydocsign | imports: copy, crackfortran, _isocbind, auxfuncs | [numpy f2py capi_maps.py]",
+    "role": "src",
+    "loc": 738
+  },
+  {
+    "id": "numpy\\f2py\\cb_rules.py",
+    "summary": "Build call-back mechanism for f2py2e. | functions: buildcallbacks, buildcallback | imports: auxfuncs | [numpy f2py cb_rules.py]",
+    "role": "src",
+    "loc": 542
+  },
+  {
+    "id": "numpy\\f2py\\cfuncs.py",
+    "summary": "C declarations, CPP macros, and C functions for f2py2e. | functions: errmess, buildcfuncs, append_needs, get_needs | imports: copy, capi_maps | [numpy f2py cfuncs.py]",
+    "role": "src",
+    "loc": 1199
+  },
+  {
+    "id": "numpy\\f2py\\common_rules.py",
+    "summary": "Build common block mechanism for f2py2e. | functions: findcommonblocks, buildhooks, fadd, cadd, iadd, dadd | imports: auxfuncs, crackfortran | [numpy f2py common_rules.py]",
+    "role": "src",
+    "loc": 135
+  },
+  {
+    "id": "numpy\\f2py\\crackfortran.py",
+    "summary": "crackfortran --- read fortran (77,90) code and extract declaration information. | functions: reset_global_f2py_vars, outmess, rmbadname1, rmbadname, undo_rmbadname1, undo_rmbadname | imports: string, fileinput, copy, platform | [numpy f2py crackfortran.py]",
+    "role": "src",
+    "loc": 3296
+  },
+  {
+    "id": "numpy\\f2py\\diagnose.py",
+    "summary": "No description | functions: run_command, run | imports: tempfile, numpy, numpy_distutils | [numpy f2py diagnose.py]",
+    "role": "src",
+    "loc": 143
+  },
+  {
+    "id": "numpy\\f2py\\f2py2e.py",
+    "summary": "f2py2e - Fortran to Python C/API generator. 2nd Edition. | classes: CombineIncludePaths | functions: scaninputline, callcrackfortran, buildmodules, dict_append, run_main, filter_files | imports: pprint, argparse, cfuncs, numpy | [numpy f2py f2py2e.py]",
+    "role": "src",
+    "loc": 675
+  },
+  {
+    "id": "numpy\\f2py\\f90mod_rules.py",
+    "summary": "Build F90 module support for f2py2e. | functions: findf90modules, buildhooks, fadd, dadd, cadd, iadd | imports: numpy, crackfortran, auxfuncs | [numpy f2py f90mod_rules.py]",
+    "role": "src",
+    "loc": 241
+  },
+  {
+    "id": "numpy\\f2py\\func2subr.py",
+    "summary": "Rules for building C/API module with f2py2e. | functions: var2fixfortran, useiso_c_binding, createfuncwrapper, add, createsubrwrapper, assubr | imports: copy, auxfuncs, _isocbind | [numpy f2py func2subr.py]",
+    "role": "src",
+    "loc": 282
+  },
+  {
+    "id": "numpy\\f2py\\rules.py",
+    "summary": "Rules for building C/API module with f2py2e. | functions: buildmodule, buildapi | imports: copy, auxfuncs | [numpy f2py rules.py]",
+    "role": "src",
+    "loc": 1349
+  },
+  {
+    "id": "numpy\\f2py\\symbolic.py",
+    "summary": "Fortran/C symbolic expressions | classes: Language, Op, RelOp, ArithOp, OpError, Precedence | functions: _pairs_add, ewarn, normalize, as_expr, as_symbol, as_number | [numpy f2py symbolic.py]",
+    "role": "src",
+    "loc": 1225
+  },
+  {
+    "id": "numpy\\f2py\\use_rules.py",
+    "summary": "Build 'use others module data' mechanism for f2py2e. | functions: buildusevars, buildusevar | imports: auxfuncs | [numpy f2py use_rules.py]",
+    "role": "src",
+    "loc": 86
+  },
+  {
+    "id": "numpy\\f2py\\_isocbind.py",
+    "summary": "ISO_C_BINDING maps for f2py2e. | [numpy f2py _isocbind.py]",
+    "role": "src",
+    "loc": 56
+  },
+  {
+    "id": "numpy\\f2py\\_src_pyf.py",
+    "summary": "Return a list of tuples for each function or subroutine each | functions: parse_structure, find_repl_patterns, find_and_remove_repl_patterns, conv, unique_key, expand_sub | [numpy f2py _src_pyf.py]",
+    "role": "src",
+    "loc": 196
+  },
+  {
+    "id": "numpy\\f2py\\__init__.py",
+    "summary": "Fortran to Python Interface Generator. | functions: get_include, __getattr__, __dir__ | imports: subprocess, numpy | [numpy f2py __init__.py]",
+    "role": "src",
+    "loc": 62
+  },
+  {
+    "id": "numpy\\f2py\\__main__.py",
+    "summary": "No description | imports: numpy | [numpy f2py __main__.py]",
+    "role": "src",
+    "loc": 2
+  },
+  {
+    "id": "numpy\\f2py\\__version__.py",
+    "summary": "No description | imports: numpy | [numpy f2py __version__.py]",
+    "role": "src",
+    "loc": 1
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_abstract_interface.py",
+    "summary": "No description | classes: TestAbstractInterface | imports: pytest, numpy | [numpy f2py tests test_abstract_interface.py]",
+    "role": "tests",
+    "loc": 18
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_array_from_pyobj.py",
+    "summary": "No description | classes: Intent, Type, Array, TestIntent, TestSharedMemory | functions: get_testdir, setup_module, flags_info, flags2names | imports: copy, platform, pytest, numpy | [numpy f2py tests test_array_from_pyobj.py]",
+    "role": "tests",
+    "loc": 565
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_assumed_shape.py",
+    "summary": "No description | classes: TestAssumedShapeSumExample, TestF2cmapOption | imports: pytest, tempfile | [numpy f2py tests test_assumed_shape.py]",
+    "role": "tests",
+    "loc": 37
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_block_docstring.py",
+    "summary": "No description | classes: TestBlockDocString | imports: pytest, numpy | [numpy f2py tests test_block_docstring.py]",
+    "role": "tests",
+    "loc": 14
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_callback.py",
+    "summary": "No description | classes: A, TestF77Callback, TestF77CallbackPythonTLS, TestF90Callback, TestGH18335, TestGH25211 | imports: textwrap, pytest, threading, traceback | [numpy f2py tests test_callback.py]",
+    "role": "tests",
+    "loc": 199
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_character.py",
+    "summary": "No description | classes: TestCharacterString, TestCharacter, TestMiscCharacter, TestStringScalarArr, TestStringAssumedLength, TestStringOptionalInOut | imports: pytest, textwrap, numpy | [numpy f2py tests test_character.py]",
+    "role": "tests",
+    "loc": 522
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_common.py",
+    "summary": "No description | classes: TestCommonBlock, TestCommonWithUse | imports: pytest, numpy | [numpy f2py tests test_common.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_crackfortran.py",
+    "summary": "No description | classes: TestNoSpace, TestPublicPrivate, TestModuleProcedure, TestExternal, TestCrackFortran, TestMarkinnerspaces | imports: importlib, pytest, numpy, textwrap | [numpy f2py tests test_crackfortran.py]",
+    "role": "tests",
+    "loc": 323
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_data.py",
+    "summary": "No description | classes: TestData, TestDataF77, TestDataMultiplierF77, TestDataWithCommentsF77 | imports: pytest, numpy | [numpy f2py tests test_data.py]",
+    "role": "tests",
+    "loc": 52
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_docs.py",
+    "summary": "No description | classes: TestDocAdvanced | functions: get_docdir, _path | imports: pytest, numpy | [numpy f2py tests test_docs.py]",
+    "role": "tests",
+    "loc": 47
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_f2cmap.py",
+    "summary": "No description | classes: TestF2Cmap | imports: numpy | [numpy f2py tests test_f2cmap.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_f2py2e.py",
+    "summary": "No description | functions: compiler_check_f2pycli, get_io_paths, hello_world_f90, gh23598_warn, gh22819_cli, hello_world_f77 | imports: shlex, subprocess, textwrap, platform | [numpy f2py tests test_f2py2e.py]",
+    "role": "tests",
+    "loc": 729
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_isoc.py",
+    "summary": "No description | classes: TestISOC | functions: test_process_f2cmap_dict | imports: numpy, pytest | [numpy f2py tests test_isoc.py]",
+    "role": "tests",
+    "loc": 36
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_kind.py",
+    "summary": "No description | classes: TestKind | imports: pytest, platform, numpy | [numpy f2py tests test_kind.py]",
+    "role": "tests",
+    "loc": 40
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_mixed.py",
+    "summary": "No description | classes: TestMixed | imports: textwrap, pytest, numpy | [numpy f2py tests test_mixed.py]",
+    "role": "tests",
+    "loc": 26
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_modules.py",
+    "summary": "No description | classes: TestModuleFilterPublicEntities, TestModuleWithoutPublicEntities, TestModuleDocString, TestModuleAndSubroutine, TestUsedModule | imports: pytest, textwrap, numpy | [numpy f2py tests test_modules.py]",
+    "role": "tests",
+    "loc": 62
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_parameter.py",
+    "summary": "No description | classes: TestParameters | imports: pytest, numpy | [numpy f2py tests test_parameter.py]",
+    "role": "tests",
+    "loc": 87
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_pyf_src.py",
+    "summary": "Remove leading and trailing whitespace, and convert internal | functions: normalize_whitespace, test_from_template | imports: numpy | [numpy f2py tests test_pyf_src.py]",
+    "role": "tests",
+    "loc": 36
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_quoted_character.py",
+    "summary": "See https://github.com/numpy/numpy/pull/10676. | classes: TestQuotedCharacter | imports: pytest | [numpy f2py tests test_quoted_character.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_regression.py",
+    "summary": "No description | classes: TestIntentInOut, TestDataOnlyMultiModule, TestNegativeBounds, TestNumpyVersionAttribute, TestIncludeFiles, TestF77Comments | functions: test_include_path, test_gh26623, test_gh25784 | imports: pytest, platform, numpy | [numpy f2py tests test_regression.py]",
+    "role": "tests",
+    "loc": 118
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_return_character.py",
+    "summary": "No description | classes: TestReturnCharacter, TestFReturnCharacter | imports: pytest, numpy, platform | [numpy f2py tests test_return_character.py]",
+    "role": "tests",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_return_complex.py",
+    "summary": "No description | classes: TestReturnComplex, TestFReturnComplex | imports: pytest, numpy | [numpy f2py tests test_return_complex.py]",
+    "role": "tests",
+    "loc": 52
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_return_integer.py",
+    "summary": "No description | classes: TestReturnInteger, TestFReturnInteger | imports: pytest, numpy | [numpy f2py tests test_return_integer.py]",
+    "role": "tests",
+    "loc": 42
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_return_logical.py",
+    "summary": "No description | classes: TestReturnLogical, TestFReturnLogical | imports: pytest, numpy | [numpy f2py tests test_return_logical.py]",
+    "role": "tests",
+    "loc": 57
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_return_real.py",
+    "summary": "No description | classes: TestReturnReal, TestCReturnReal, TestFReturnReal | imports: platform, pytest, numpy | [numpy f2py tests test_return_real.py]",
+    "role": "tests",
+    "loc": 93
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_routines.py",
+    "summary": "No description | classes: TestRenamedFunc, TestRenamedSubroutine | imports: pytest | [numpy f2py tests test_routines.py]",
+    "role": "tests",
+    "loc": 22
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_semicolon_split.py",
+    "summary": "No description | classes: TestMultiline, TestCallstatement | imports: platform, pytest, numpy | [numpy f2py tests test_semicolon_split.py]",
+    "role": "tests",
+    "loc": 68
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_size.py",
+    "summary": "No description | classes: TestSizeSumExample | imports: pytest, numpy | [numpy f2py tests test_size.py]",
+    "role": "tests",
+    "loc": 31
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_string.py",
+    "summary": "No description | classes: TestString, TestDocStringArguments, TestFixedString | imports: pytest, numpy | [numpy f2py tests test_string.py]",
+    "role": "tests",
+    "loc": 80
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_symbolic.py",
+    "summary": "No description | classes: TestSymbolic | imports: pytest, numpy | [numpy f2py tests test_symbolic.py]",
+    "role": "tests",
+    "loc": 418
+  },
+  {
+    "id": "numpy\\f2py\\tests\\test_value_attrspec.py",
+    "summary": "No description | classes: TestValueAttr | imports: pytest | [numpy f2py tests test_value_attrspec.py]",
+    "role": "tests",
+    "loc": 10
+  },
+  {
+    "id": "numpy\\f2py\\tests\\util.py",
+    "summary": "Utility functions for | classes: CompilerChecker, SimplifiedMesonBackend, F2PyTest | functions: check_language, has_c_compiler, has_f77_compiler, has_f90_compiler, has_fortran_compiler, _cleanup | imports: glob, subprocess, tempfile, shutil | [numpy f2py tests util.py]",
+    "role": "tests",
+    "loc": 324
+  },
+  {
+    "id": "numpy\\f2py\\tests\\__init__.py",
+    "summary": "Package initializer | imports: numpy, pytest | [numpy f2py tests __init__.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\f2py\\_backends\\_backend.py",
+    "summary": "No description | classes: Backend | imports: abc | [numpy f2py _backends _backend.py]",
+    "role": "src",
+    "loc": 42
+  },
+  {
+    "id": "numpy\\f2py\\_backends\\_distutils.py",
+    "summary": "No description | classes: DistutilsBackend | imports: _backend, numpy, shutil | [numpy f2py _backends _distutils.py]",
+    "role": "src",
+    "loc": 65
+  },
+  {
+    "id": "numpy\\f2py\\_backends\\_meson.py",
+    "summary": "Template meson build file generation class. | classes: MesonTemplate, MesonBackend | functions: _prepare_sources, _get_flags | imports: errno, shutil, subprocess, _backend | [numpy f2py _backends _meson.py]",
+    "role": "src",
+    "loc": 201
+  },
+  {
+    "id": "numpy\\f2py\\_backends\\__init__.py",
+    "summary": "Package initializer | functions: f2py_build_generator | imports: _meson, _distutils | [numpy f2py _backends __init__.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\fft\\helper.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy | [numpy fft helper.py]",
+    "role": "src",
+    "loc": 16
+  },
+  {
+    "id": "numpy\\fft\\_helper.py",
+    "summary": "Discrete Fourier Transforms - _helper.py | functions: _fftshift_dispatcher, fftshift, ifftshift, fftfreq, rfftfreq | imports: numpy | [numpy fft _helper.py]",
+    "role": "src",
+    "loc": 188
+  },
+  {
+    "id": "numpy\\fft\\_pocketfft.py",
+    "summary": "Discrete Fourier Transforms | functions: _raw_fft, _swap_direction, _fft_dispatcher, fft, ifft, rfft | imports: functools, numpy | [numpy fft _pocketfft.py]",
+    "role": "src",
+    "loc": 1340
+  },
+  {
+    "id": "numpy\\fft\\__init__.py",
+    "summary": "Discrete Fourier Transform | imports: _pocketfft, _helper, numpy | [numpy fft __init__.py]",
+    "role": "src",
+    "loc": 165
+  },
+  {
+    "id": "numpy\\fft\\tests\\test_helper.py",
+    "summary": "Test functions for fftpack.helper module | classes: TestFFTShift, TestFFTFreq, TestRFFTFreq, TestIRFFTN | imports: numpy | [numpy fft tests test_helper.py]",
+    "role": "tests",
+    "loc": 130
+  },
+  {
+    "id": "numpy\\fft\\tests\\test_pocketfft.py",
+    "summary": "No description | classes: TestFFTShift, TestFFT1D, TestFFTThreadSafe | functions: fft1, test_fft_with_order, test_fft_output_order, test_irfft_with_n_1_regression, test_irfft_with_n_large_regression, test_fft_with_integer_or_bool_input | imports: numpy, pytest, threading, queue | [numpy fft tests te",
+    "role": "tests",
+    "loc": 491
+  },
+  {
+    "id": "numpy\\fft\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy fft tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\lib\\array_utils.py",
+    "summary": "No description | imports: _array_utils_impl | [numpy lib array_utils.py]",
+    "role": "src",
+    "loc": 7
+  },
+  {
+    "id": "numpy\\lib\\format.py",
+    "summary": "No description | imports: _format_impl | [numpy lib format.py]",
+    "role": "src",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\lib\\introspect.py",
+    "summary": "Introspection helper functions. | functions: opt_func_info | imports: numpy | [numpy lib introspect.py]",
+    "role": "src",
+    "loc": 84
+  },
+  {
+    "id": "numpy\\lib\\mixins.py",
+    "summary": "Mixin classes for custom array types that don't inherit from ndarray. | classes: NDArrayOperatorsMixin | functions: _disables_array_ufunc, _binary_method, func, _reflected_binary_method, _inplace_binary_method, _numeric_methods | imports: numpy | [numpy lib mixins.py]",
+    "role": "src",
+    "loc": 146
+  },
+  {
+    "id": "numpy\\lib\\npyio.py",
+    "summary": "No description | imports: _npyio_impl | [numpy lib npyio.py]",
+    "role": "src",
+    "loc": 3
+  },
+  {
+    "id": "numpy\\lib\\recfunctions.py",
+    "summary": "Collection of utilities to manipulate structured arrays. | functions: _recursive_fill_fields_dispatcher, recursive_fill_fields, _get_fieldspec, get_names, get_names_flat, flatten_descr | imports: numpy | [numpy lib recfunctions.py]",
+    "role": "src",
+    "loc": 1354
+  },
+  {
+    "id": "numpy\\lib\\scimath.py",
+    "summary": "No description | imports: _scimath_impl | [numpy lib scimath.py]",
+    "role": "src",
+    "loc": 4
+  },
+  {
+    "id": "numpy\\lib\\stride_tricks.py",
+    "summary": "No description | imports: _stride_tricks_impl | [numpy lib stride_tricks.py]",
+    "role": "src",
+    "loc": 3
+  },
+  {
+    "id": "numpy\\lib\\user_array.py",
+    "summary": "No description | imports: _user_array_impl | [numpy lib user_array.py]",
+    "role": "src",
+    "loc": 1
+  },
+  {
+    "id": "numpy\\lib\\_arraypad_impl.py",
+    "summary": "The arraypad module contains a group of functions to pad values onto the edges | functions: _round_if_needed, _slice_at_axis, _view_roi, _pad_simple, _set_pad_area, _get_edges | imports: numpy | [numpy lib _arraypad_impl.py]",
+    "role": "src",
+    "loc": 654
+  },
+  {
+    "id": "numpy\\lib\\_arraysetops_impl.py",
+    "summary": "Set operations for arrays based on sorting. | classes: UniqueAllResult, UniqueCountsResult, UniqueInverseResult | functions: _ediff1d_dispatcher, ediff1d, _unpack_tuple, _unique_dispatcher, unique, reshape_uniq | imports: functools, numpy | [numpy lib _arraysetops_impl.py]",
+    "role": "src",
+    "loc": 959
+  },
+  {
+    "id": "numpy\\lib\\_arrayterator_impl.py",
+    "summary": "A buffered iterator for big arrays. | classes: Arrayterator | imports: operator, functools | [numpy lib _arrayterator_impl.py]",
+    "role": "src",
+    "loc": 172
+  },
+  {
+    "id": "numpy\\lib\\_array_utils_impl.py",
+    "summary": "Miscellaneous utils. | functions: byte_bounds | imports: numpy | [numpy lib _array_utils_impl.py]",
+    "role": "src",
+    "loc": 53
+  },
+  {
+    "id": "numpy\\lib\\_datasource.py",
+    "summary": "A file interface for handling local and remote data files. | classes: _FileOpeners, DataSource, Repository | functions: _check_mode, open | imports: _utils, bz2, gzip, lzma | [numpy lib _datasource.py]",
+    "role": "src",
+    "loc": 513
+  },
+  {
+    "id": "numpy\\lib\\_format_impl.py",
+    "summary": "Binary serialization | functions: _check_version, magic, read_magic, dtype_to_descr, descr_to_dtype, header_data_from_array_1_0 | imports: io, pickle, numpy, struct | [numpy lib _format_impl.py]",
+    "role": "src",
+    "loc": 782
+  },
+  {
+    "id": "numpy\\lib\\_function_base_impl.py",
+    "summary": "vectorize(pyfunc=np._NoValue, otypes=None, doc=None, excluded=None, | classes: vectorize | functions: _rot90_dispatcher, rot90, _flip_dispatcher, flip, iterable, _weights_are_valid | imports: builtins, functools, numpy | [numpy lib _function_base_impl.py]",
+    "role": "src",
+    "loc": 4623
+  },
+  {
+    "id": "numpy\\lib\\_histograms_impl.py",
+    "summary": "Histogram-related functions | functions: _ptp, _hist_bin_sqrt, _hist_bin_sturges, _hist_bin_rice, _hist_bin_scott, _hist_bin_stone | imports: functools, operator, numpy | [numpy lib _histograms_impl.py]",
+    "role": "src",
+    "loc": 823
+  },
+  {
+    "id": "numpy\\lib\\_index_tricks_impl.py",
+    "summary": "Construct a multi-dimensional \"meshgrid\". | classes: nd_grid, MGridClass, OGridClass, AxisConcatenator, RClass, CClass | functions: _ix__dispatcher, ix_, _fill_diagonal_dispatcher, fill_diagonal, diag_indices, _diag_indices_from | imports: functools, numpy, _utils | [numpy lib _index_tricks_impl.py]",
+    "role": "src",
+    "loc": 831
+  },
+  {
+    "id": "numpy\\lib\\_iotools.py",
+    "summary": "A collection of functions designed to help I/O with ascii files. | classes: LineSplitter, NameValidator, ConverterError, ConverterLockError, ConversionWarning, StringConverter | functions: _decode_line, _is_string_like, _is_bytes_like, has_nested_fields, flatten_dtype, str2bool | imports: numpy | [n",
+    "role": "src",
+    "loc": 718
+  },
+  {
+    "id": "numpy\\lib\\_nanfunctions_impl.py",
+    "summary": "Functions that ignore NaN. | functions: _nan_mask, _replace_nan, _copyto, _remove_nan_1d, _divide_by_count, _nanmin_dispatcher | imports: functools, numpy | [numpy lib _nanfunctions_impl.py]",
+    "role": "src",
+    "loc": 1675
+  },
+  {
+    "id": "numpy\\lib\\_npyio_impl.py",
+    "summary": "IO related functions. | classes: BagObj, NpzFile, WriteWrap | functions: zipfile_factory, load, _save_dispatcher, save, _savez_dispatcher, savez | imports: functools, weakref, operator, pickle | [numpy lib _npyio_impl.py]",
+    "role": "src",
+    "loc": 2045
+  },
+  {
+    "id": "numpy\\lib\\_polynomial_impl.py",
+    "summary": "Functions to operate on polynomials. | classes: poly1d | functions: _poly_dispatcher, poly, _roots_dispatcher, roots, _polyint_dispatcher, polyint | imports: functools, _utils, numpy | [numpy lib _polynomial_impl.py]",
+    "role": "src",
+    "loc": 1143
+  },
+  {
+    "id": "numpy\\lib\\_scimath_impl.py",
+    "summary": "Wrapper functions to more user-friendly calling of certain math functions | functions: _tocomplex, _fix_real_lt_zero, _fix_int_lt_zero, _fix_real_abs_gt_1, _unary_dispatcher, sqrt | imports: numpy | [numpy lib _scimath_impl.py]",
+    "role": "src",
+    "loc": 482
+  },
+  {
+    "id": "numpy\\lib\\_shape_base_impl.py",
+    "summary": "No description | functions: _make_along_axis_idx, _take_along_axis_dispatcher, take_along_axis, _put_along_axis_dispatcher, put_along_axis, _apply_along_axis_dispatcher | imports: functools, numpy | [numpy lib _shape_base_impl.py]",
+    "role": "src",
+    "loc": 1011
+  },
+  {
+    "id": "numpy\\lib\\_stride_tricks_impl.py",
+    "summary": "Utilities that manipulate strides to achieve desirable effects. | classes: DummyArray | functions: _maybe_view_as_subclass, as_strided, _sliding_window_view_dispatcher, sliding_window_view, _broadcast_to, _broadcast_to_dispatcher | imports: numpy | [numpy lib _stride_tricks_impl.py]",
+    "role": "src",
+    "loc": 431
+  },
+  {
+    "id": "numpy\\lib\\_twodim_base_impl.py",
+    "summary": "Basic functions for manipulating 2d arrays | functions: _min_int, _flip_dispatcher, fliplr, flipud, eye, _diag_dispatcher | imports: functools, operator, numpy | [numpy lib _twodim_base_impl.py]",
+    "role": "src",
+    "loc": 943
+  },
+  {
+    "id": "numpy\\lib\\_type_check_impl.py",
+    "summary": "Automatically adapted for numpy Sep 19, 2005 by convertcode.py | functions: mintypecode, _real_dispatcher, real, _imag_dispatcher, imag, _is_type_dispatcher | imports: functools, _utils, numpy, _ufunclike_impl | [numpy lib _type_check_impl.py]",
+    "role": "src",
+    "loc": 564
+  },
+  {
+    "id": "numpy\\lib\\_ufunclike_impl.py",
+    "summary": "Module of functions that are like ufuncs in acting on arrays and optionally | functions: _dispatcher, fix, isposinf, isneginf | imports: numpy | [numpy lib _ufunclike_impl.py]",
+    "role": "src",
+    "loc": 168
+  },
+  {
+    "id": "numpy\\lib\\_user_array_impl.py",
+    "summary": "Container class for backward compatibility with NumArray. | classes: container | imports: numpy | [numpy lib _user_array_impl.py]",
+    "role": "src",
+    "loc": 204
+  },
+  {
+    "id": "numpy\\lib\\_utils_impl.py",
+    "summary": "Decorator class to deprecate old functions. | classes: _Deprecate | functions: show_runtime, get_include, _get_indent, deprecate, deprecate_with_doc, _split_line | imports: textwrap, types, functools, platform | [numpy lib _utils_impl.py]",
+    "role": "src",
+    "loc": 611
+  },
+  {
+    "id": "numpy\\lib\\_version.py",
+    "summary": "Utility to compare (NumPy) version strings. | classes: NumpyVersion | [numpy lib _version.py]",
+    "role": "src",
+    "loc": 121
+  },
+  {
+    "id": "numpy\\lib\\__init__.py",
+    "summary": "``numpy.lib`` is mostly a space for implementing functions that don't | functions: __getattr__ | imports: _arrayterator_impl, _version, numpy | [numpy lib __init__.py]",
+    "role": "src",
+    "loc": 79
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_arraypad.py",
+    "summary": "Tests for the array padding functions. | classes: TestAsPairs, TestConditionalShortcuts, TestStatistic, TestConstant, TestLinearRamp, TestReflect | functions: test_legacy_vector_functionality, _padwithtens, test_unicode_mode, test_object_input, test_kwargs, test_constant_zero_default | imports: pyte",
+    "role": "tests",
+    "loc": 1199
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_arraysetops.py",
+    "summary": "Test functions for 1D array set operations. | classes: Test, TestSetOps, Subclass, TestUnique | imports: numpy, pytest | [numpy lib tests test_arraysetops.py]",
+    "role": "tests",
+    "loc": 827
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_arrayterator.py",
+    "summary": "No description | functions: test | imports: operator, functools, numpy | [numpy lib tests test_arrayterator.py]",
+    "role": "tests",
+    "loc": 28
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_array_utils.py",
+    "summary": "No description | classes: TestByteBounds | imports: numpy | [numpy lib tests test_array_utils.py]",
+    "role": "tests",
+    "loc": 23
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_format.py",
+    "summary": "Test the .npy file format. | classes: BytesIOSRandomSize | functions: roundtrip, roundtrip_randsize, roundtrip_truncated, assert_equal_, test_roundtrip, test_roundtrip_randsize | imports: pytest, io, numpy, random | [numpy lib tests test_format.py]",
+    "role": "tests",
+    "loc": 811
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_function_base.py",
+    "summary": "No description | classes: TestRot90, TestFlip, TestAny, TestAll, TestCopy, subclass | functions: get_mat, _make_complex, test_any_and_all_result_dtype, test_cumulative_include_initial, _foo1, _foo2 | imports: operator, decimal, fractions, pytest | [numpy lib tests test_function_base.py]",
+    "role": "tests",
+    "loc": 3497
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_histograms.py",
+    "summary": "No description | classes: TestHistogram, TestHistogramOptimBinNums, TestHistogramdd | imports: numpy, pytest, decimal | [numpy lib tests test_histograms.py]",
+    "role": "tests",
+    "loc": 611
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_index_tricks.py",
+    "summary": "No description | classes: TestRavelUnravelIndex, TestGrid, TestConcatenator, TestNdenumerate, TestIndexExpression, TestIx_ | functions: test_c_, test_diag_indices, test_ndindex | imports: pytest, numpy | [numpy lib tests test_index_tricks.py]",
+    "role": "tests",
+    "loc": 423
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_io.py",
+    "summary": "Helper IO class. | classes: TextIO, RoundtripTest, TestSaveLoad, TestSavezLoad, CustomWriter, TestSaveTxt | functions: strptime, test_gzip_load, test_ducktyping, test_gzip_loadtxt, test_gzip_loadtxt_from_string, test_npzfile_dict | imports: gc, gzip, threading, pytest | [numpy lib tests test_io.py]",
+    "role": "tests",
+    "loc": 2233
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_loadtxt.py",
+    "summary": "Tests specific to `np.loadtxt` added during the move of loadtxt to be backed | classes: BadSequence, BadFileLike, TestCReaderUnitTests | functions: test_scientific_notation, test_comment_multiple_chars, mixed_types_structured, test_structured_dtype_and_skiprows_no_empty_lines, test_unpack_structured",
+    "role": "tests",
+    "loc": 817
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_mixins.py",
+    "summary": "No description | classes: ArrayLike, OptOut, SubArrayLike, TestNDArrayOperatorsMixin | functions: wrap_array_like, _assert_equal_type_and_value | imports: numbers, operator, numpy | [numpy lib tests test_mixins.py]",
+    "role": "tests",
+    "loc": 159
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_nanfunctions.py",
+    "summary": "No description | classes: TestSignatureMatch, MyNDArray, TestNanFunctions_MinMax, TestNanFunctions_ArgminArgmax, TestNanFunctions_NumberTypes, SharedNanFunctionsTestsMixin | functions: test__nan_mask, test__replace_nan | imports: pytest, inspect, functools, numpy | [numpy lib tests test_nanfunctions",
+    "role": "tests",
+    "loc": 1147
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_packbits.py",
+    "summary": "No description | classes: TestCount | functions: test_packbits, test_packbits_empty, test_packbits_empty_with_axis, test_packbits_large, test_packbits_very_large, test_unpackbits | imports: numpy, pytest | [numpy lib tests test_packbits.py]",
+    "role": "tests",
+    "loc": 324
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_polynomial.py",
+    "summary": "No description | classes: TestPolynomial | imports: numpy, pytest, decimal | [numpy lib tests test_polynomial.py]",
+    "role": "tests",
+    "loc": 237
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_recfunctions.py",
+    "summary": "No description | classes: TestRecFunctions, TestRecursiveFillFields, TestMergeArrays, TestAppendFields, TestStackArrays, TestJoinBy | imports: numpy, datetime | [numpy lib tests test_recfunctions.py]",
+    "role": "tests",
+    "loc": 795
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_regression.py",
+    "summary": "Old-style class in python2, normal class in python3 | classes: C, TestRegression | imports: numpy, io | [numpy lib tests test_regression.py]",
+    "role": "tests",
+    "loc": 163
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_shape_base.py",
+    "summary": "hack in keepdims behavior into a function taking an axis | classes: TestTakeAlongAxis, TestPutAlongAxis, MyNDArray, MinimalSubclass, TestApplyAlongAxis, TestApplyOverAxes | functions: _add_keepdims, wrapped, compare_results | imports: numpy, functools, pytest | [numpy lib tests test_shape_base.py]",
+    "role": "tests",
+    "loc": 623
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_stride_tricks.py",
+    "summary": "No description | classes: MyArray, TestSlidingWindowView, VerySimpleSubClass, SimpleSubClass | functions: assert_shapes_correct, assert_incompatible_shapes_raise, assert_same_as_ufunc, test_same, test_broadcast_kwargs, test_one_off | imports: numpy, pytest | [numpy lib tests test_stride_tricks.py]",
+    "role": "tests",
+    "loc": 492
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_twodim_base.py",
+    "summary": "Test functions for matrix module | classes: TestEye, TestDiag, TestFliplr, TestFlipud, ShouldDispatch, TestHistogram2d | functions: get_mat, test_tril_triu_ndim2, test_tril_triu_ndim3, test_tril_triu_with_inf, test_tril_triu_dtype, test_mask_indices | imports: numpy, pytest | [numpy lib tests test_t",
+    "role": "tests",
+    "loc": 444
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_type_check.py",
+    "summary": "No description | classes: TestCommonType, TestMintypecode, TestIsscalar, TestReal, TestImag, TestIscomplex | functions: assert_all | imports: numpy | [numpy lib tests test_type_check.py]",
+    "role": "tests",
+    "loc": 347
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_ufunclike.py",
+    "summary": "No description | classes: MyArray, TestUfunclike | imports: numpy | [numpy lib tests test_ufunclike.py]",
+    "role": "tests",
+    "loc": 80
+  },
+  {
+    "id": "numpy\\lib\\tests\\test_utils.py",
+    "summary": "No description | classes: NoPublicMethods, WithPublicMethods | functions: test_assert_raises_regex_context_manager, test_info_method_heading, _has_method_heading, test_drop_metadata, _compare_dtypes, test_drop_metadata_identity_and_copy | imports: pytest, numpy, io | [numpy lib tests test_utils.py]",
+    "role": "tests",
+    "loc": 54
+  },
+  {
+    "id": "numpy\\lib\\tests\\test__datasource.py",
+    "summary": "Stub to replace urlopen for testing. | classes: TestDataSourceOpen, TestDataSourceExists, TestDataSourceAbspath, TestRepositoryAbspath, TestRepositoryExists, TestOpenFunc | functions: urlopen_stub, setup_module, teardown_module, valid_textfile, invalid_textfile, valid_httpurl | imports: pytest, temp",
+    "role": "tests",
+    "loc": 242
+  },
+  {
+    "id": "numpy\\lib\\tests\\test__iotools.py",
+    "summary": "Tests the LineSplitter class. | classes: TestLineSplitter, TestNameValidator, TestStringConverter, TestMiscFunctions | functions: _bytes_to_date | imports: datetime, numpy | [numpy lib tests test__iotools.py]",
+    "role": "tests",
+    "loc": 269
+  },
+  {
+    "id": "numpy\\lib\\tests\\test__version.py",
+    "summary": "Tests for the NumpyVersion class. | functions: test_main_versions, test_version_1_point_10, test_alpha_beta_rc, test_dev_version, test_dev_a_b_rc_mixed, test_dev0_version | imports: numpy | [numpy lib tests test__version.py]",
+    "role": "tests",
+    "loc": 41
+  },
+  {
+    "id": "numpy\\lib\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy lib tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\linalg\\linalg.py",
+    "summary": "No description | functions: __getattr__ | imports: numpy | [numpy linalg linalg.py]",
+    "role": "src",
+    "loc": 16
+  },
+  {
+    "id": "numpy\\linalg\\_linalg.py",
+    "summary": "Lite version of scipy.linalg. | classes: EigResult, EighResult, QRResult, SlogdetResult, SVDResult, LinAlgError | functions: _raise_linalgerror_singular, _raise_linalgerror_nonposdef, _raise_linalgerror_eigenvalues_nonconvergence, _raise_linalgerror_svd_nonconvergence, _raise_linalgerror_lstsq, _rai",
+    "role": "src",
+    "loc": 2872
+  },
+  {
+    "id": "numpy\\linalg\\__init__.py",
+    "summary": "``numpy.linalg`` | imports: _linalg, numpy | [numpy linalg __init__.py]",
+    "role": "src",
+    "loc": 72
+  },
+  {
+    "id": "numpy\\linalg\\lapack_lite\\clapack_scrub.py",
+    "summary": "No description | classes: MyScanner, LenSubsScanner, LineQueue, CommentQueue | functions: sep_seq, runScanner, scrubFtnlen, cleanSource, cleanComments, isCommentLine | imports: plex, io | [numpy linalg lapack_lite clapack_scrub.py]",
+    "role": "src",
+    "loc": 247
+  },
+  {
+    "id": "numpy\\linalg\\lapack_lite\\fortran.py",
+    "summary": "LineIterator(iterable) | classes: LineIterator, PushbackIterator | functions: isBlank, isLabel, isComment, isContinuation, lineType, fortranSourceLines | [numpy linalg lapack_lite fortran.py]",
+    "role": "src",
+    "loc": 100
+  },
+  {
+    "id": "numpy\\linalg\\lapack_lite\\make_lite.py",
+    "summary": "Usage: make_lite.py <wrapped_routines_file> <lapack_dir> | classes: FortranRoutine, UnknownFortranRoutine, FortranLibrary, LapackLibrary, F2CError | functions: printRoutineNames, getLapackRoutines, getWrappedRoutineNames, dumpRoutineNames, concatenateRoutines, runF2C | imports: subprocess, shutil, f",
+    "role": "src",
+    "loc": 299
+  },
+  {
+    "id": "numpy\\linalg\\tests\\test_deprecations.py",
+    "summary": "Test deprecation and future warnings. | functions: test_qr_mode_full_future_warning | imports: numpy | [numpy linalg tests test_deprecations.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "numpy\\linalg\\tests\\test_linalg.py",
+    "summary": "Test functions for linalg module | classes: LinalgCase, LinalgTestCase, LinalgSquareTestCase, LinalgNonsquareTestCase, HermitianTestCase, LinalgGeneralizedSquareTestCase | functions: consistent_subclass, assert_almost_equal, get_real_dtype, get_complex_dtype, get_rtol, apply_tag | imports: threading",
+    "role": "tests",
+    "loc": 1747
+  },
+  {
+    "id": "numpy\\linalg\\tests\\test_regression.py",
+    "summary": "Test functions for linalg module | classes: TestRegression | imports: pytest, numpy | [numpy linalg tests test_regression.py]",
+    "role": "tests",
+    "loc": 130
+  },
+  {
+    "id": "numpy\\linalg\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy linalg tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\ma\\core.py",
+    "summary": "numpy.ma : a package to handle missing or invalid values. | classes: MaskedArrayFutureWarning, MAError, MaskError, _DomainCheckInterval, _DomainTan, _DomainSafeDivide | functions: _deprecate_argsort_axis, doc_note, get_object_signature, _recursive_fill_value, _get_dtype_of, default_fill_value | impo",
+    "role": "src",
+    "loc": 7018
+  },
+  {
+    "id": "numpy\\ma\\extras.py",
+    "summary": "Masked arrays add-ons. | classes: _fromnxfunction, _fromnxfunction_single, _fromnxfunction_seq, _fromnxfunction_args, _fromnxfunction_allargs, MAxisConcatenator | functions: issequence, count_masked, masked_all, masked_all_like, flatten_inplace, apply_along_axis | imports: core, numpy | [numpy ma ex",
+    "role": "src",
+    "loc": 1868
+  },
+  {
+    "id": "numpy\\ma\\mrecords.py",
+    "summary": ":mod:`numpy.ma..mrecords` | classes: MaskedRecords | functions: _checknames, _get_fieldmask, _mrreconstruct, fromarrays, fromrecords, _guessvartypes | imports: numpy | [numpy ma mrecords.py]",
+    "role": "src",
+    "loc": 603
+  },
+  {
+    "id": "numpy\\ma\\testutils.py",
+    "summary": "Miscellaneous functions for testing masked arrays and subclasses | functions: approx, almost, _assert_equal_on_sequences, assert_equal_records, assert_equal, fail_if_equal | imports: operator, numpy, core, unittest | [numpy ma testutils.py]",
+    "role": "src",
+    "loc": 224
+  },
+  {
+    "id": "numpy\\ma\\timer_comparison.py",
+    "summary": "No description | classes: ModuleTester | imports: functools, timeit, numpy | [numpy ma timer_comparison.py]",
+    "role": "src",
+    "loc": 388
+  },
+  {
+    "id": "numpy\\ma\\__init__.py",
+    "summary": "Masked Arrays | imports: core, extras, numpy | [numpy ma __init__.py]",
+    "role": "src",
+    "loc": 39
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_arrayobject.py",
+    "summary": "No description | functions: test_matrix_transpose_raises_error_for_1d, test_matrix_transpose_equals_transpose_2d, test_matrix_transpose_equals_swapaxes | imports: pytest, numpy | [numpy ma tests test_arrayobject.py]",
+    "role": "tests",
+    "loc": 29
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_core.py",
+    "summary": "Tests suite for MaskedArray & subclassing. | classes: NotBool, TestMaskedArray, TestMaskedArrayArithmetic, TestMaskedArrayAttributes, TestFillingValues, MyClass | functions: test_masked_array, test_masked_array_no_copy, test_append_masked_array, test_append_masked_array_along_axis, test_default_fill",
+    "role": "tests",
+    "loc": 4446
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_deprecations.py",
+    "summary": "Test deprecation and future warnings. | classes: TestArgsort, TestMinimumMaximum, TestFromtextfile | imports: pytest, numpy, io, textwrap | [numpy ma tests test_deprecations.py]",
+    "role": "tests",
+    "loc": 57
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_extras.py",
+    "summary": "Tests suite for MaskedArray. | classes: TestGeneric, TestAverage, TestConcatenator, TestNotMasked, TestCompressFunctions, TestApplyAlongAxis | imports: pytest, numpy | [numpy ma tests test_extras.py]",
+    "role": "tests",
+    "loc": 1576
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_mrecords.py",
+    "summary": "Tests suite for mrecords. | classes: TestMRecords, TestView, TestMRecordsImport | functions: test_record_array_with_object_field | imports: pickle, numpy | [numpy ma tests test_mrecords.py]",
+    "role": "tests",
+    "loc": 395
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_old_ma.py",
+    "summary": "No description | classes: TestMa, TestUfuncs, TestArrayMethods | functions: eq, eqmask | imports: functools, pickle, pytest, numpy | [numpy ma tests test_old_ma.py]",
+    "role": "tests",
+    "loc": 771
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_regression.py",
+    "summary": "No description | classes: TestRegression | imports: numpy | [numpy ma tests test_regression.py]",
+    "role": "tests",
+    "loc": 66
+  },
+  {
+    "id": "numpy\\ma\\tests\\test_subclassing.py",
+    "summary": "Tests suite for MaskedArray & subclassing. | classes: SubArray, SubMaskedArray, MSubArray, CSAIterator, ComplicatedSubArray, WrappedArray | functions: assert_startswith, test_array_no_inheritance | imports: numpy | [numpy ma tests test_subclassing.py]",
+    "role": "tests",
+    "loc": 327
+  },
+  {
+    "id": "numpy\\ma\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy ma tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\matrixlib\\defmatrix.py",
+    "summary": "matrix(data, dtype=None, copy=True) | classes: matrix | functions: _convert_from_string, asmatrix, _from_string, bmat | imports: ast, _utils, numpy | [numpy matrixlib defmatrix.py]",
+    "role": "src",
+    "loc": 914
+  },
+  {
+    "id": "numpy\\matrixlib\\__init__.py",
+    "summary": "Sub-package containing the matrix class and related functions. | imports: defmatrix, numpy | [numpy matrixlib __init__.py]",
+    "role": "src",
+    "loc": 8
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_defmatrix.py",
+    "summary": "No description | classes: TestCtor, TestProperties, TestCasting, TestAlgebra, TestMatrixReturn, TestIndexing | imports: numpy | [numpy matrixlib tests test_defmatrix.py]",
+    "role": "tests",
+    "loc": 367
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_interaction.py",
+    "summary": "Tests of interaction of matrix with other parts of numpy. | classes: TestConcatenatorMatrix | functions: test_fancy_indexing, test_polynomial_mapdomain, test_sort_matrix_none, test_partition_matrix_none, test_dot_scalar_and_matrix_of_objects, test_inner_scalar_and_matrix | imports: pytest, textwrap,",
+    "role": "tests",
+    "loc": 232
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_masked_matrix.py",
+    "summary": "No description | classes: MMatrix, TestMaskedMatrix, TestSubclassing, TestConcatenator | imports: pickle, numpy | [numpy matrixlib tests test_masked_matrix.py]",
+    "role": "tests",
+    "loc": 179
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_matrix_linalg.py",
+    "summary": "Test functions for linalg module using the matrix class. | classes: MatrixTestCase, TestSolveMatrix, TestInvMatrix, TestEigvalsMatrix, TestEigMatrix, TestSVDMatrix | imports: numpy | [numpy matrixlib tests test_matrix_linalg.py]",
+    "role": "tests",
+    "loc": 55
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_multiarray.py",
+    "summary": "No description | classes: TestView | imports: numpy | [numpy matrixlib tests test_multiarray.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_numeric.py",
+    "summary": "No description | classes: TestDot | functions: test_diagonal | imports: numpy | [numpy matrixlib tests test_numeric.py]",
+    "role": "tests",
+    "loc": 13
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\test_regression.py",
+    "summary": "No description | classes: TestRegression | imports: numpy | [numpy matrixlib tests test_regression.py]",
+    "role": "tests",
+    "loc": 21
+  },
+  {
+    "id": "numpy\\matrixlib\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy matrixlib tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\polynomial\\chebyshev.py",
+    "summary": "Chebyshev Series (:mod:`numpy.polynomial.chebyshev`) | classes: Chebyshev | functions: _cseries_to_zseries, _zseries_to_cseries, _zseries_mul, _zseries_div, _zseries_der, _zseries_int | imports: numpy, _polybase, polynomial | [numpy polynomial chebyshev.py]",
+    "role": "src",
+    "loc": 1591
+  },
+  {
+    "id": "numpy\\polynomial\\hermite.py",
+    "summary": "Hermite Series, \"Physicists\" (:mod:`numpy.polynomial.hermite`) | classes: Hermite | functions: poly2herm, herm2poly, hermline, hermfromroots, hermadd, hermsub | imports: numpy, _polybase, polynomial | [numpy polynomial hermite.py]",
+    "role": "src",
+    "loc": 1386
+  },
+  {
+    "id": "numpy\\polynomial\\hermite_e.py",
+    "summary": "HermiteE Series, \"Probabilists\" (:mod:`numpy.polynomial.hermite_e`) | classes: HermiteE | functions: poly2herme, herme2poly, hermeline, hermefromroots, hermeadd, hermesub | imports: numpy, _polybase, polynomial | [numpy polynomial hermite_e.py]",
+    "role": "src",
+    "loc": 1307
+  },
+  {
+    "id": "numpy\\polynomial\\laguerre.py",
+    "summary": "Laguerre Series (:mod:`numpy.polynomial.laguerre`) | classes: Laguerre | functions: poly2lag, lag2poly, lagline, lagfromroots, lagadd, lagsub | imports: numpy, _polybase, polynomial | [numpy polynomial laguerre.py]",
+    "role": "src",
+    "loc": 1334
+  },
+  {
+    "id": "numpy\\polynomial\\legendre.py",
+    "summary": "Legendre Series (:mod:`numpy.polynomial.legendre`) | classes: Legendre | functions: poly2leg, leg2poly, legline, legfromroots, legadd, legsub | imports: numpy, _polybase, polynomial | [numpy polynomial legendre.py]",
+    "role": "src",
+    "loc": 1275
+  },
+  {
+    "id": "numpy\\polynomial\\polynomial.py",
+    "summary": "Power Series (:mod:`numpy.polynomial.polynomial`) | classes: Polynomial | functions: polyline, polyfromroots, polyadd, polysub, polymulx, polymul | imports: numpy, _polybase | [numpy polynomial polynomial.py]",
+    "role": "src",
+    "loc": 1298
+  },
+  {
+    "id": "numpy\\polynomial\\polyutils.py",
+    "summary": "Utility classes and functions for the polynomial modules. | functions: trimseq, as_series, trimcoef, getdomain, mapparms, mapdomain | imports: operator, functools, numpy | [numpy polynomial polyutils.py]",
+    "role": "src",
+    "loc": 611
+  },
+  {
+    "id": "numpy\\polynomial\\_polybase.py",
+    "summary": "Abstract base class for the various polynomial Classes. | classes: ABCPolyBase | imports: abc, numbers, numpy | [numpy polynomial _polybase.py]",
+    "role": "src",
+    "loc": 956
+  },
+  {
+    "id": "numpy\\polynomial\\__init__.py",
+    "summary": "A sub-package for efficiently dealing with polynomials. | functions: set_default_printstyle | imports: polynomial, chebyshev, legendre, hermite | [numpy polynomial __init__.py]",
+    "role": "src",
+    "loc": 156
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_chebyshev.py",
+    "summary": "Tests for chebyshev module. | classes: TestPrivate, TestConstants, TestArithmetic, TestEvaluation, TestIntegral, TestDerivative | functions: trim | imports: functools, numpy | [numpy polynomial tests test_chebyshev.py]",
+    "role": "tests",
+    "loc": 446
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_classes.py",
+    "summary": "Test inter-conversion of different polynomial classes. | classes: TestInterpolate | functions: Poly, assert_poly_almost_equal, test_conversion, test_cast, test_identity, test_basis | imports: operator, numbers, pytest, numpy | [numpy polynomial tests test_classes.py]",
+    "role": "tests",
+    "loc": 463
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_hermite.py",
+    "summary": "Tests for hermite module. | classes: TestConstants, TestArithmetic, TestEvaluation, TestIntegral, TestDerivative, TestVander | functions: trim | imports: functools, numpy | [numpy polynomial tests test_hermite.py]",
+    "role": "tests",
+    "loc": 401
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_hermite_e.py",
+    "summary": "Tests for hermite_e module. | classes: TestConstants, TestArithmetic, TestEvaluation, TestIntegral, TestDerivative, TestVander | functions: trim | imports: functools, numpy | [numpy polynomial tests test_hermite_e.py]",
+    "role": "tests",
+    "loc": 402
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_laguerre.py",
+    "summary": "Tests for laguerre module. | classes: TestConstants, TestArithmetic, TestEvaluation, TestIntegral, TestDerivative, TestVander | functions: trim | imports: functools, numpy | [numpy polynomial tests test_laguerre.py]",
+    "role": "tests",
+    "loc": 386
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_legendre.py",
+    "summary": "Tests for legendre module. | classes: TestConstants, TestArithmetic, TestEvaluation, TestIntegral, TestDerivative, TestVander | functions: trim | imports: functools, numpy | [numpy polynomial tests test_legendre.py]",
+    "role": "tests",
+    "loc": 411
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_polynomial.py",
+    "summary": "Tests for polynomial module. | classes: TestConstants, TestArithmetic, TestFraction, C, TestEvaluation, TestIntegral | functions: trim | imports: functools, fractions, numpy, pickle | [numpy polynomial tests test_polynomial.py]",
+    "role": "tests",
+    "loc": 471
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_polyutils.py",
+    "summary": "Tests for polyutils module. | classes: TestMisc, MyNDArray, TestDomain | imports: numpy | [numpy polynomial tests test_polyutils.py]",
+    "role": "tests",
+    "loc": 88
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_printing.py",
+    "summary": "No description | classes: TestStrUnicodeSuperSubscripts, TestStrAscii, TestLinebreaking, TestFormat, TestRepr, TestLatexRepr | functions: test_set_default_printoptions, test_complex_coefficients, test_numeric_object_coefficients, test_nonnumeric_object_coefficients, test_symbol | imports: pytest, nu",
+    "role": "tests",
+    "loc": 456
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\test_symbol.py",
+    "summary": "Tests related to the ``symbol`` attribute of the ABCPolyBase class. | classes: TestInit, TestUnaryOperators, TestBinaryOperatorsSameSymbol, TestBinaryOperatorsDifferentSymbol, TestEquality, TestExtraMethods | functions: test_composition, test_fit, test_froomroots, test_identity, test_basis | imports",
+    "role": "tests",
+    "loc": 161
+  },
+  {
+    "id": "numpy\\polynomial\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy polynomial tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\random\\_pickle.py",
+    "summary": "Pickling helper function that returns a bit generator object | functions: __bit_generator_ctor, __generator_ctor, __randomstate_ctor | imports: bit_generator, mtrand, _philox, _pcg64 | [numpy random _pickle.py]",
+    "role": "src",
+    "loc": 73
+  },
+  {
+    "id": "numpy\\random\\__init__.py",
+    "summary": "Random Number Generation | functions: __RandomState_ctor | imports: _generator, bit_generator, _mt19937, _pcg64 | [numpy random __init__.py]",
+    "role": "src",
+    "loc": 188
+  },
+  {
+    "id": "numpy\\random\\tests\\test_direct.py",
+    "summary": "No description | classes: FakeSeedSequence, Base, TestPhilox, TestPCG64, TestPCG64DXSM, TestMT19937 | functions: assert_state_equal, uint32_to_float32, uniform32_from_uint64, uniform32_from_uint53, uniform32_from_uint32, uniform32_from_uint | imports: numpy, pytest, cffi, ctypes | [numpy random test",
+    "role": "tests",
+    "loc": 463
+  },
+  {
+    "id": "numpy\\random\\tests\\test_extending.py",
+    "summary": "No description | functions: test_cython, load, test_numba, test_cffi | imports: importlib, pytest, shutil, subprocess | [numpy random tests test_extending.py]",
+    "role": "tests",
+    "loc": 98
+  },
+  {
+    "id": "numpy\\random\\tests\\test_generator_mt19937.py",
+    "summary": "No description | classes: TestSeed, TestBinomial, TestMultinomial, TestMultivariateHypergeometric, TestSetState, TestIntegers | functions: endpoint, test_jumped, test_broadcast_size_error, test_broadcast_size_scalar, test_ragged_shuffle, test_single_arg_integer_exception | imports: hashlib, pytest, ",
+    "role": "tests",
+    "loc": 2223
+  },
+  {
+    "id": "numpy\\random\\tests\\test_generator_mt19937_regressions.py",
+    "summary": "No description | classes: N, M, TestRegression | imports: numpy, pytest, gc | [numpy random tests test_generator_mt19937_regressions.py]",
+    "role": "tests",
+    "loc": 117
+  },
+  {
+    "id": "numpy\\random\\tests\\test_random.py",
+    "summary": "No description | classes: TestSeed, TestBinomial, TestMultinomial, TestSetState, TestRandint, MyArr | imports: pytest, numpy, hashlib, threading | [numpy random tests test_random.py]",
+    "role": "tests",
+    "loc": 1375
+  },
+  {
+    "id": "numpy\\random\\tests\\test_randomstate.py",
+    "summary": "No description | classes: TestSeed, TestBinomial, TestMultinomial, TestSetState, TestRandint, ThrowingFloat | functions: int_func, restore_singleton_bitgen, assert_mt19937_state_equal, test_integer_dtype, test_integer_repeat, test_broadcast_size_error | imports: hashlib, pickle, numpy, pytest | [num",
+    "role": "tests",
+    "loc": 1687
+  },
+  {
+    "id": "numpy\\random\\tests\\test_randomstate_regression.py",
+    "summary": "No description | classes: N, M, TestRegression | functions: test_multinomial_empty, test_multinomial_1d_pval | imports: pytest, numpy, gc | [numpy random tests test_randomstate_regression.py]",
+    "role": "tests",
+    "loc": 140
+  },
+  {
+    "id": "numpy\\random\\tests\\test_regression.py",
+    "summary": "No description | classes: N, M, TestRegression | imports: numpy, gc | [numpy random tests test_regression.py]",
+    "role": "tests",
+    "loc": 97
+  },
+  {
+    "id": "numpy\\random\\tests\\test_seed_sequence.py",
+    "summary": "Check that SeedSequence generates data the same as the C++ reference. | functions: test_reference_data, test_zero_padding | imports: numpy | [numpy random tests test_seed_sequence.py]",
+    "role": "tests",
+    "loc": 66
+  },
+  {
+    "id": "numpy\\random\\tests\\test_smoke.py",
+    "summary": "No description | classes: RNG, TestMT19937, TestPhilox, TestSFC64, TestPCG64, TestPCG64DXSM | functions: dtype, params_0, params_1, comp_state, warmup | imports: pickle, functools, numpy, pytest | [numpy random tests test_smoke.py]",
+    "role": "tests",
+    "loc": 692
+  },
+  {
+    "id": "numpy\\random\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy random tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\random\\tests\\data\\__init__.py",
+    "summary": "Package initializer | [numpy random tests data __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\random\\_examples\\cffi\\extending.py",
+    "summary": "Use cffi to access any of the underlying C functions from distributions.h | imports: numpy, cffi, parse | [numpy random _examples cffi extending.py]",
+    "role": "src",
+    "loc": 26
+  },
+  {
+    "id": "numpy\\random\\_examples\\cffi\\parse.py",
+    "summary": "Parse distributions.h located in inc_dir for CFFI, filling in the ffi.cdef | functions: parse_distributions_h | [numpy random _examples cffi parse.py]",
+    "role": "src",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\random\\_examples\\numba\\extending.py",
+    "summary": "No description | functions: normals, numbacall, numpycall, bounded_uint, bounded_uints | imports: numpy, numba, timeit | [numpy random _examples numba extending.py]",
+    "role": "src",
+    "loc": 58
+  },
+  {
+    "id": "numpy\\random\\_examples\\numba\\extending_distributions.py",
+    "summary": "Building the required library in this example requires a source distribution | functions: normals | imports: numba, numpy, cffi | [numpy random _examples numba extending_distributions.py]",
+    "role": "src",
+    "loc": 50
+  },
+  {
+    "id": "numpy\\rec\\__init__.py",
+    "summary": "Package initializer | imports: numpy | [numpy rec __init__.py]",
+    "role": "src",
+    "loc": 2
+  },
+  {
+    "id": "numpy\\strings\\__init__.py",
+    "summary": "Package initializer | imports: numpy | [numpy strings __init__.py]",
+    "role": "src",
+    "loc": 2
+  },
+  {
+    "id": "numpy\\testing\\overrides.py",
+    "summary": "Tools for testing implementations of __array_function__ and ufunc overrides | functions: get_overridable_numpy_ufuncs, allows_array_ufunc_override, get_overridable_numpy_array_functions, allows_array_function_override | imports: numpy | [numpy testing overrides.py]",
+    "role": "src",
+    "loc": 61
+  },
+  {
+    "id": "numpy\\testing\\print_coercion_tables.py",
+    "summary": "Prints type-coercion tables for the built-in NumPy types | classes: GenericObject | functions: print_cancast_table, print_coercion_table, print_new_cast_table, sorter, print_table | imports: numpy | [numpy testing print_coercion_tables.py]",
+    "role": "src",
+    "loc": 173
+  },
+  {
+    "id": "numpy\\testing\\__init__.py",
+    "summary": "Common test support for all numpy test scripts. | imports: unittest, _private, numpy | [numpy testing __init__.py]",
+    "role": "src",
+    "loc": 17
+  },
+  {
+    "id": "numpy\\testing\\tests\\test_utils.py",
+    "summary": "No description | classes: _GenericTest, MyArray, TestArrayEqual, TestBuildErrorMessage, TestEqual, TestArrayAlmostEqual | functions: assert_warn_len_equal, test_warn_len_equal_call_scenarios, _get_fresh_mod, test_clear_and_catch_warnings, test_suppress_warnings_module, warn_other_module | imports: p",
+    "role": "tests",
+    "loc": 1412
+  },
+  {
+    "id": "numpy\\testing\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy testing tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\testing\\_private\\extbuild.py",
+    "summary": "Build a c-extension module on-the-fly in tests. | functions: build_and_import_extension, compile_extension_module, _convert_str_to_file, _make_methods, _make_source, _c_compile | imports: subprocess, sysconfig, textwrap, importlib | [numpy testing _private extbuild.py]",
+    "role": "src",
+    "loc": 215
+  },
+  {
+    "id": "numpy\\testing\\_private\\utils.py",
+    "summary": "Utility function to facilitate testing. | classes: KnownFailureException, _Dummy, IgnoreException, clear_and_catch_warnings, suppress_warnings | functions: assert_, GetPerformanceAttributes, memusage, jiffies, build_err_msg, assert_equal | imports: platform, gc, operator, functools | [numpy testing ",
+    "role": "src",
+    "loc": 2198
+  },
+  {
+    "id": "numpy\\testing\\_private\\__init__.py",
+    "summary": "Package initializer | [numpy testing _private __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\tests\\test_configtool.py",
+    "summary": "No description | classes: TestNumpyConfig | functions: test_pkg_config_entrypoint, test_pkg_config_config_exists | imports: importlib, subprocess, sysconfig, pytest | [numpy tests test_configtool.py]",
+    "role": "tests",
+    "loc": 37
+  },
+  {
+    "id": "numpy\\tests\\test_ctypeslib.py",
+    "summary": "No description | classes: TestLoadLibrary, TestNdpointer, TestNdpointerCFunc, Struct, TestAsArray, TestAsCtypesType | imports: sysconfig, weakref, pytest, numpy | [numpy tests test_ctypeslib.py]",
+    "role": "tests",
+    "loc": 299
+  },
+  {
+    "id": "numpy\\tests\\test_lazyloading.py",
+    "summary": "No description | functions: test_lazy_load | imports: importlib, pytest, numpy | [numpy tests test_lazyloading.py]",
+    "role": "tests",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\tests\\test_matlib.py",
+    "summary": "No description | functions: test_empty, test_ones, test_zeros, test_identity, test_eye, test_rand | imports: numpy | [numpy tests test_matlib.py]",
+    "role": "tests",
+    "loc": 45
+  },
+  {
+    "id": "numpy\\tests\\test_numpy_config.py",
+    "summary": "Check the numpy config is valid. | classes: TestNumPyConfigs | imports: numpy, pytest, unittest | [numpy tests test_numpy_config.py]",
+    "role": "tests",
+    "loc": 36
+  },
+  {
+    "id": "numpy\\tests\\test_numpy_version.py",
+    "summary": "Check the numpy version is valid. | functions: test_valid_numpy_version, test_short_version, test_version_module | imports: numpy | [numpy tests test_numpy_version.py]",
+    "role": "tests",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\tests\\test_public_api.py",
+    "summary": "Returns a mapping of all objects with the wrong __module__ attribute. | functions: check_dir, test_numpy_namespace, test_import_lazy_import, test_dir_testing, test_numpy_linalg, test_numpy_fft | imports: functools, sysconfig, subprocess, pkgutil | [numpy tests test_public_api.py]",
+    "role": "tests",
+    "loc": 637
+  },
+  {
+    "id": "numpy\\tests\\test_reloading.py",
+    "summary": "No description | functions: test_numpy_reloading, test_novalue, test_full_reimport | imports: subprocess, textwrap, importlib, pickle | [numpy tests test_reloading.py]",
+    "role": "tests",
+    "loc": 58
+  },
+  {
+    "id": "numpy\\tests\\test_scripts.py",
+    "summary": "Test scripts | functions: find_f2py_commands, test_f2py, test_pep338 | imports: pytest, subprocess, numpy | [numpy tests test_scripts.py]",
+    "role": "tests",
+    "loc": 33
+  },
+  {
+    "id": "numpy\\tests\\test_warnings.py",
+    "summary": "Tests which scan for certain occurrences in the code, they may not find | classes: ParseCall, FindFuncs | functions: test_warning_calls | imports: pytest, ast, tokenize, numpy | [numpy tests test_warnings.py]",
+    "role": "tests",
+    "loc": 57
+  },
+  {
+    "id": "numpy\\tests\\test__all__.py",
+    "summary": "No description | functions: test_no_duplicates_in_np__all__ | imports: numpy | [numpy tests test__all__.py]",
+    "role": "tests",
+    "loc": 5
+  },
+  {
+    "id": "numpy\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\typing\\mypy_plugin.py",
+    "summary": "A mypy_ plugin for managing a number of platform-specific annotations. | classes: _NumpyPlugin | functions: _get_precision_dict, _get_extended_precision_list, _get_c_intp_name, plugin, _hook, _index | imports: numpy, mypy | [numpy typing mypy_plugin.py]",
+    "role": "src",
+    "loc": 154
+  },
+  {
+    "id": "numpy\\typing\\__init__.py",
+    "summary": "Typing (:mod:`numpy.typing`) | imports: numpy | [numpy typing __init__.py]",
+    "role": "src",
+    "loc": 122
+  },
+  {
+    "id": "numpy\\typing\\tests\\test_isfile.py",
+    "summary": "No description | classes: TestIsFile | imports: numpy | [numpy typing tests test_isfile.py]",
+    "role": "tests",
+    "loc": 28
+  },
+  {
+    "id": "numpy\\typing\\tests\\test_runtime.py",
+    "summary": "Test the runtime usage of `numpy.typing`. | classes: TypeTup, TestRuntimeProtocol | functions: test_get_args, test_get_origin, test_get_type_hints, func, test_get_type_hints_str, test_keys | imports: pytest, numpy | [numpy typing tests test_runtime.py]",
+    "role": "tests",
+    "loc": 78
+  },
+  {
+    "id": "numpy\\typing\\tests\\test_typing.py",
+    "summary": "Split at the first occurrence of the ``:`` character. | functions: _key_func, _strip_filename, strip_func, run_mypy, get_test_cases, test_success | imports: importlib, shutil, pytest, numpy | [numpy typing tests test_typing.py]",
+    "role": "tests",
+    "loc": 214
+  },
+  {
+    "id": "numpy\\typing\\tests\\__init__.py",
+    "summary": "Package initializer | [numpy typing tests __init__.py]",
+    "role": "tests",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\arithmetic.py",
+    "summary": "No description | classes: Object | imports: numpy, pytest | [numpy typing tests data pass arithmetic.py]",
+    "role": "tests",
+    "loc": 492
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\arrayprint.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass arrayprint.py]",
+    "role": "tests",
+    "loc": 34
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\arrayterator.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass arrayterator.py]",
+    "role": "tests",
+    "loc": 20
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\array_constructors.py",
+    "summary": "No description | classes: Index, SubClass | functions: func | imports: numpy | [numpy typing tests data pass array_constructors.py]",
+    "role": "tests",
+    "loc": 102
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\array_like.py",
+    "summary": "No description | classes: A | imports: numpy | [numpy typing tests data pass array_like.py]",
+    "role": "tests",
+    "loc": 32
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\bitwise_ops.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass bitwise_ops.py]",
+    "role": "tests",
+    "loc": 106
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\comparisons.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass comparisons.py]",
+    "role": "tests",
+    "loc": 254
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\dtype.py",
+    "summary": "No description | classes: Test | imports: numpy | [numpy typing tests data pass dtype.py]",
+    "role": "tests",
+    "loc": 41
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\einsumfunc.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass einsumfunc.py]",
+    "role": "tests",
+    "loc": 29
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\flatiter.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass flatiter.py]",
+    "role": "tests",
+    "loc": 16
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\fromnumeric.py",
+    "summary": "Tests for :mod:`numpy._core.fromnumeric`. | imports: numpy | [numpy typing tests data pass fromnumeric.py]",
+    "role": "tests",
+    "loc": 230
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\index_tricks.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass index_tricks.py]",
+    "role": "tests",
+    "loc": 47
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\lib_user_array.py",
+    "summary": "Based on the `if __name__ == \"__main__\"` test code in `lib/_user_array_impl.py`. | imports: numpy | [numpy typing tests data pass lib_user_array.py]",
+    "role": "tests",
+    "loc": 13
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\lib_utils.py",
+    "summary": "No description | functions: func | imports: io, numpy | [numpy typing tests data pass lib_utils.py]",
+    "role": "tests",
+    "loc": 11
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\lib_version.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass lib_version.py]",
+    "role": "tests",
+    "loc": 15
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\literal.py",
+    "summary": "No description | imports: functools, pytest, numpy | [numpy typing tests data pass literal.py]",
+    "role": "tests",
+    "loc": 42
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ma.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass ma.py]",
+    "role": "tests",
+    "loc": 4
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\mod.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass mod.py]",
+    "role": "tests",
+    "loc": 121
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\modules.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass modules.py]",
+    "role": "tests",
+    "loc": 41
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\multiarray.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass multiarray.py]",
+    "role": "tests",
+    "loc": 56
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ndarray_conversion.py",
+    "summary": "No description | imports: tempfile, numpy | [numpy typing tests data pass ndarray_conversion.py]",
+    "role": "tests",
+    "loc": 51
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ndarray_misc.py",
+    "summary": "Tests for miscellaneous (non-magic) ``np.ndarray``/``np.generic`` methods. | classes: SubClass | imports: operator, numpy | [numpy typing tests data pass ndarray_misc.py]",
+    "role": "tests",
+    "loc": 136
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ndarray_shape_manipulation.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass ndarray_shape_manipulation.py]",
+    "role": "tests",
+    "loc": 27
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\nditer.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass nditer.py]",
+    "role": "tests",
+    "loc": 3
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\numeric.py",
+    "summary": "Tests for :mod:`numpy._core.numeric`. | classes: SubClass | imports: numpy | [numpy typing tests data pass numeric.py]",
+    "role": "tests",
+    "loc": 67
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\numerictypes.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass numerictypes.py]",
+    "role": "tests",
+    "loc": 13
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\random.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass random.py]",
+    "role": "tests",
+    "loc": 1325
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\recfunctions.py",
+    "summary": "These tests are based on the doctests from `numpy/lib/recfunctions.py`. | functions: test_recursive_fill_fields, test_get_names, test_get_names_flat, test_flatten_descr, test_get_fieldstructure, test_merge_arrays | imports: typing_extensions, numpy | [numpy typing tests data pass recfunctions.py]",
+    "role": "tests",
+    "loc": 121
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\scalars.py",
+    "summary": "No description | classes: D, C, B, A | imports: datetime, pytest, numpy | [numpy typing tests data pass scalars.py]",
+    "role": "tests",
+    "loc": 206
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\shape.py",
+    "summary": "No description | classes: XYGrid | functions: accepts_2d | imports: numpy | [numpy typing tests data pass shape.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\simple.py",
+    "summary": "Simple expression that should pass with mypy. | functions: ndarray_func, iterable_func | imports: operator, numpy | [numpy typing tests data pass simple.py]",
+    "role": "tests",
+    "loc": 121
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\simple_py3.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass simple_py3.py]",
+    "role": "tests",
+    "loc": 3
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ufunclike.py",
+    "summary": "No description | classes: Object | imports: numpy | [numpy typing tests data pass ufunclike.py]",
+    "role": "tests",
+    "loc": 37
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ufuncs.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass ufuncs.py]",
+    "role": "tests",
+    "loc": 10
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\ufunc_config.py",
+    "summary": "Typing tests for `numpy._core._ufunc_config`. | classes: Write1, Write2, Write3 | functions: func1, func2, func3 | imports: numpy | [numpy typing tests data pass ufunc_config.py]",
+    "role": "tests",
+    "loc": 44
+  },
+  {
+    "id": "numpy\\typing\\tests\\data\\pass\\warnings_and_errors.py",
+    "summary": "No description | imports: numpy | [numpy typing tests data pass warnings_and_errors.py]",
+    "role": "tests",
+    "loc": 5
+  },
+  {
+    "id": "numpy\\_build_utils\\gcc_build_bitness.py",
+    "summary": "Detect bitness (32 or 64) of Mingw-w64 gcc build target on Windows. | functions: main | imports: subprocess | [numpy _build_utils gcc_build_bitness.py]",
+    "role": "src",
+    "loc": 15
+  },
+  {
+    "id": "numpy\\_build_utils\\gitversion.py",
+    "summary": "No description | functions: init_version, git_version | imports: textwrap, subprocess, argparse | [numpy _build_utils gitversion.py]",
+    "role": "src",
+    "loc": 76
+  },
+  {
+    "id": "numpy\\_build_utils\\process_src_template.py",
+    "summary": "No description | functions: get_processor, process_and_write_file, main | imports: argparse, importlib | [numpy _build_utils process_src_template.py]",
+    "role": "src",
+    "loc": 51
+  },
+  {
+    "id": "numpy\\_build_utils\\tempita.py",
+    "summary": "Process tempita templated file and write out the result. | functions: process_tempita, main | imports: argparse, tempita | [numpy _build_utils tempita.py]",
+    "role": "src",
+    "loc": 43
+  },
+  {
+    "id": "numpy\\_build_utils\\__init__.py",
+    "summary": "Import a file directly, avoiding importing scipy | functions: import_file | imports: importlib | [numpy _build_utils __init__.py]",
+    "role": "src",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\_build_utils\\tempita\\_looper.py",
+    "summary": "Helper for looping over sequences, particular in templates. | classes: looper, looper_iter, loop_pos | [numpy _build_utils tempita _looper.py]",
+    "role": "src",
+    "loc": 122
+  },
+  {
+    "id": "numpy\\_build_utils\\tempita\\_tempita.py",
+    "summary": "A small templating language | classes: TemplateError, _TemplateContinue, _TemplateBreak, Template, bunch, TemplateDef | functions: coerce_text, get_file_template, sub, paste_script_template_renderer, lex, trim_lex | imports: tokenize, io, _looper, optparse | [numpy _build_utils tempita _tempita.py]",
+    "role": "src",
+    "loc": 1002
+  },
+  {
+    "id": "numpy\\_build_utils\\tempita\\__init__.py",
+    "summary": "Package initializer | imports: _tempita | [numpy _build_utils tempita __init__.py]",
+    "role": "src",
+    "loc": 1
+  },
+  {
+    "id": "numpy\\_core\\arrayprint.py",
+    "summary": "Array printing function | classes: FloatingFormat, IntegerFormat, BoolFormat, ComplexFloatingFormat, _TimelikeFormat, DatetimeFormat | functions: _make_options_dict, set_printoptions, _set_printoptions, get_printoptions, _get_legacy_print_mode, printoptions | imports: functools, numbers, _thread, _d",
+    "role": "src",
+    "loc": 1386
+  },
+  {
+    "id": "numpy\\_core\\cversions.py",
+    "summary": "Simple script to compute the api hash of the current API. | imports: code_generators | [numpy _core cversions.py]",
+    "role": "src",
+    "loc": 9
+  },
+  {
+    "id": "numpy\\_core\\defchararray.py",
+    "summary": "This module contains a set of functions for vectorized string | classes: chararray | functions: _binary_op_dispatcher, equal, not_equal, greater_equal, less_equal, greater | imports: functools, numpy, _utils, numerictypes | [numpy _core defchararray.py]",
+    "role": "src",
+    "loc": 1103
+  },
+  {
+    "id": "numpy\\_core\\einsumfunc.py",
+    "summary": "Implementation of optimized einsum. | functions: _flop_count, _compute_size_by_dict, _find_contraction, _optimal_path, _parse_possible_contraction, _update_other_results | imports: operator, numpy | [numpy _core einsumfunc.py]",
+    "role": "src",
+    "loc": 1116
+  },
+  {
+    "id": "numpy\\_core\\fromnumeric.py",
+    "summary": "Module containing non-deprecated functions borrowed from Numeric. | functions: _wrapit, _wrapfunc, _wrapreduction, _wrapreduction_any_all, _take_dispatcher, take | imports: functools, types, numpy, _utils | [numpy _core fromnumeric.py]",
+    "role": "src",
+    "loc": 3457
+  },
+  {
+    "id": "numpy\\_core\\function_base.py",
+    "summary": "No description | functions: _linspace_dispatcher, linspace, _logspace_dispatcher, logspace, _geomspace_dispatcher, geomspace | imports: functools, operator, types, numpy | [numpy _core function_base.py]",
+    "role": "src",
+    "loc": 437
+  },
+  {
+    "id": "numpy\\_core\\getlimits.py",
+    "summary": "Machine limits for Float32 and Float64 and (long double) if available... | classes: MachArLike, finfo, iinfo | functions: _fr0, _fr1, _register_type, _register_known_types, _get_machar, _discovered_machar | imports: types, _utils, _machar, numeric | [numpy _core getlimits.py]",
+    "role": "src",
+    "loc": 605
+  },
+  {
+    "id": "numpy\\_core\\memmap.py",
+    "summary": "Create a memory-map to an array stored in a *binary* file on disk. | classes: memmap | imports: operator, numpy, _utils, numeric | [numpy _core memmap.py]",
+    "role": "src",
+    "loc": 277
+  },
+  {
+    "id": "numpy\\_core\\multiarray.py",
+    "summary": "Create the numpy._core.multiarray namespace for backward compatibility. | functions: _override___module__, empty_like, concatenate, inner, where, lexsort | imports: functools, _multiarray_umath | [numpy _core multiarray.py]",
+    "role": "src",
+    "loc": 1434
+  },
+  {
+    "id": "numpy\\_core\\numeric.py",
+    "summary": "No description | functions: _zeros_like_dispatcher, zeros_like, ones, _ones_like_dispatcher, ones_like, _full_dispatcher | imports: functools, operator, numbers, builtins | [numpy _core numeric.py]",
+    "role": "src",
+    "loc": 2161
+  },
+  {
+    "id": "numpy\\_core\\numerictypes.py",
+    "summary": "numerictypes: Define the numeric type objects | classes: _PreprocessDTypeError | functions: maximum_sctype, issctype, obj2sctype, issubclass_, issubsctype, _preprocess_dtype | imports: numbers, multiarray, _utils, _string_helpers | [numpy _core numerictypes.py]",
+    "role": "src",
+    "loc": 494
+  },
+  {
+    "id": "numpy\\_core\\overrides.py",
+    "summary": "Implementation of __array_function__ overrides from NEP-18. | functions: get_array_function_like_doc, finalize_array_function_like, verify_matching_signatures, array_function_dispatch, decorator, array_function_from_dispatcher | imports: functools, _utils, numpy | [numpy _core overrides.py]",
+    "role": "src",
+    "loc": 142
+  },
+  {
+    "id": "numpy\\_core\\printoptions.py",
+    "summary": "Stores and defines the low-level format_options context variable. | imports: contextvars | [numpy _core printoptions.py]",
+    "role": "src",
+    "loc": 25
+  },
+  {
+    "id": "numpy\\_core\\records.py",
+    "summary": "This module contains a set of functions for record arrays. | classes: format_parser, record, recarray | functions: find_duplicate, _deprecate_shape_0_as_None, fromarrays, fromrecords, fromstring, get_remaining_size | imports: _utils, arrayprint | [numpy _core records.py]",
+    "role": "src",
+    "loc": 851
+  },
+  {
+    "id": "numpy\\_core\\shape_base.py",
+    "summary": "No description | functions: _atleast_1d_dispatcher, atleast_1d, _atleast_2d_dispatcher, atleast_2d, _atleast_3d_dispatcher, atleast_3d | imports: functools, operator, multiarray | [numpy _core shape_base.py]",
+    "role": "src",
+    "loc": 757
+  },
+  {
+    "id": "numpy\\_core\\strings.py",
+    "summary": "This module contains a set of functions for vectorized string | functions: _override___module__, _get_num_chars, _to_bytes_or_str_array, _clean_args, multiply, mod | imports: numpy | [numpy _core strings.py]",
+    "role": "src",
+    "loc": 1340
+  },
+  {
+    "id": "numpy\\_core\\umath.py",
+    "summary": "Create the numpy._core.umath namespace for backward compatibility. In v1.16 | imports: numpy, _multiarray_umath | [numpy _core umath.py]",
+    "role": "src",
+    "loc": 33
+  },
+  {
+    "id": "numpy\\_core\\_add_newdocs.py",
+    "summary": "This is only meant to add docs to objects defined in C-extension modules. | functions: refer_to_array_attribute | imports: numpy | [numpy _core _add_newdocs.py]",
+    "role": "src",
+    "loc": 5268
+  },
+  {
+    "id": "numpy\\_core\\_add_newdocs_scalars.py",
+    "summary": "This file is separate from ``_add_newdocs.py`` so that it can be mocked out by | functions: numeric_type_aliases, type_aliases_gen, _get_platform_and_machine, add_newdoc_for_scalar_type | imports: numpy | [numpy _core _add_newdocs_scalars.py]",
+    "role": "src",
+    "loc": 303
+  },
+  {
+    "id": "numpy\\_core\\_asarray.py",
+    "summary": "Functions in the ``as*array`` family that promote array-likes into arrays. | functions: require | imports: overrides, multiarray | [numpy _core _asarray.py]",
+    "role": "src",
+    "loc": 110
+  },
+  {
+    "id": "numpy\\_core\\_dtype.py",
+    "summary": "A place for code to be called from the implementation of np.dtype | functions: _kind_name, __str__, __repr__, _unpack_field, _isunsized, _construction_repr | imports: numpy | [numpy _core _dtype.py]",
+    "role": "src",
+    "loc": 260
+  },
+  {
+    "id": "numpy\\_core\\_dtype_ctypes.py",
+    "summary": "Conversion from ctypes to dtype. | functions: _from_ctypes_array, _from_ctypes_structure, _from_ctypes_scalar, _from_ctypes_union, dtype_from_ctypes_type | imports: numpy, ctypes, _ctypes | [numpy _core _dtype_ctypes.py]",
+    "role": "src",
+    "loc": 90
+  },
+  {
+    "id": "numpy\\_core\\_exceptions.py",
+    "summary": "Various richly-typed exceptions, that also help us deal with string formatting | classes: UFuncTypeError, _UFuncNoLoopError, _UFuncBinaryResolutionError, _UFuncCastingError, _UFuncInputCastingError, _UFuncOutputCastingError | functions: _unpack_tuple, _display_as_base | imports: _utils | [numpy _cor",
+    "role": "src",
+    "loc": 131
+  },
+  {
+    "id": "numpy\\_core\\_internal.py",
+    "summary": "A place for internal code | classes: dummy_ctype, c_void_p, _missing_ctypes, _ctypes, _Stream | functions: _makenames_list, _usefields, _array_descr, _commastring, _getintp_ctype, _newnames | imports: ast, exceptions, multiarray, numpy | [numpy _core _internal.py]",
+    "role": "src",
+    "loc": 751
+  },
+  {
+    "id": "numpy\\_core\\_machar.py",
+    "summary": "Machine arithmetic - determine the parameters of the | classes: MachAr | imports: fromnumeric, _ufunc_config, _utils | [numpy _core _machar.py]",
+    "role": "src",
+    "loc": 310
+  },
+  {
+    "id": "numpy\\_core\\_methods.py",
+    "summary": "Array methods which are called by both the C-code for the method | functions: _amax, _amin, _sum, _prod, _any, _all | imports: pickle, numpy | [numpy _core _methods.py]",
+    "role": "src",
+    "loc": 183
+  },
+  {
+    "id": "numpy\\_core\\_string_helpers.py",
+    "summary": "String-handling utilities to avoid locale-dependence. | functions: english_lower, english_upper, english_capitalize | [numpy _core _string_helpers.py]",
+    "role": "src",
+    "loc": 78
+  },
+  {
+    "id": "numpy\\_core\\_type_aliases.py",
+    "summary": "Due to compatibility, numpy has a very large number of different naming | imports: numpy | [numpy _core _type_aliases.py]",
+    "role": "src",
+    "loc": 84
+  },
+  {
+    "id": "numpy\\_core\\_ufunc_config.py",
+    "summary": "Functions for changing global ufunc configuration | classes: _unspecified, errstate | functions: seterr, geterr, setbufsize, getbufsize, seterrcall, geterrcall | imports: contextvars, functools, _utils, umath | [numpy _core _ufunc_config.py]",
+    "role": "src",
+    "loc": 376
+  },
+  {
+    "id": "numpy\\_core\\__init__.py",
+    "summary": "Contains the core of NumPy: ndarray, ufuncs, dtypes, etc. | functions: _ufunc_reduce, _DType_reconstruct, _DType_reduce, __getattr__ | imports: numpy, numerictypes, numeric, fromnumeric | [numpy _core __init__.py]",
+    "role": "src",
+    "loc": 122
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\genapi.py",
+    "summary": "Get API information encoded in C files. | classes: MinVersion, StealRef, Function, ParseError, TypeApi, GlobalVarApi | functions: get_processor, file_in_this_dir, remove_whitespace, _repl, skip_brackets, split_arguments | imports: hashlib, io, importlib, textwrap | [numpy _core code_generators genap",
+    "role": "src",
+    "loc": 461
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\generate_numpy_api.py",
+    "summary": "No description | functions: generate_api, do_generate_api, main | imports: argparse, genapi, numpy_api | [numpy _core code_generators generate_numpy_api.py]",
+    "role": "src",
+    "loc": 237
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\generate_ufunc_api.py",
+    "summary": "No description | functions: generate_api, do_generate_api, main | imports: argparse, genapi, numpy_api | [numpy _core code_generators generate_ufunc_api.py]",
+    "role": "src",
+    "loc": 152
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\generate_umath.py",
+    "summary": "Generate the code to build all the internal ufuncs. At the base is the defdict: | classes: docstrings, FullTypeDescr, FuncNameSuffix, TypeDescription, Ufunc | functions: _check_order, check_td_order, build_func_data, TD, english_upper, indent | imports: textwrap, argparse, string | [numpy _core code",
+    "role": "src",
+    "loc": 1512
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\generate_umath_doc.py",
+    "summary": "No description | functions: normalize_doc, write_code, main | imports: textwrap, argparse, ufunc_docstrings | [numpy _core code_generators generate_umath_doc.py]",
+    "role": "src",
+    "loc": 38
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\numpy_api.py",
+    "summary": "Here we define the exported functions, types, etc... which need to be | functions: get_annotations | imports: importlib | [numpy _core code_generators numpy_api.py]",
+    "role": "src",
+    "loc": 386
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\ufunc_docstrings.py",
+    "summary": "Docstrings for generated ufuncs | functions: add_newdoc | imports: textwrap | [numpy _core code_generators ufunc_docstrings.py]",
+    "role": "src",
+    "loc": 4369
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\verify_c_api_version.py",
+    "summary": "Return current C API checksum and the recorded checksum. | classes: MismatchCAPIError | functions: get_api_versions, check_api_version, main | imports: argparse | [numpy _core code_generators verify_c_api_version.py]",
+    "role": "src",
+    "loc": 43
+  },
+  {
+    "id": "numpy\\_core\\code_generators\\__init__.py",
+    "summary": "Package initializer | [numpy _core code_generators __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_abc.py",
+    "summary": "No description | classes: TestABC | imports: numpy, numbers | [numpy _core tests test_abc.py]",
+    "role": "tests",
+    "loc": 45
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_api.py",
+    "summary": "No description | classes: MyNDArray | functions: test_array_array, custom__array__, test_array_impossible_casts, test_array_astype, test_array_astype_to_string_discovery_empty, test_array_astype_to_void | imports: numpy, pytest | [numpy _core tests test_api.py]",
+    "role": "tests",
+    "loc": 437
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_argparse.py",
+    "summary": "Tests for the private NumPy argument parsing functionality. | functions: test_thread_safe_argparse_cache, call_thread_func, test_invalid_integers, test_missing_arguments, test_too_many_positional, test_multiple_values | imports: threading, pytest, numpy | [numpy _core tests test_argparse.py]",
+    "role": "tests",
+    "loc": 63
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_arraymethod.py",
+    "summary": "This file tests the generic aspects of ArrayMethod.  At the time of writing | classes: TestResolveDescriptors, TestSimpleStridedCall, TestClassGetItem | imports: types, pytest, numpy | [numpy _core tests test_arraymethod.py]",
+    "role": "tests",
+    "loc": 64
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_arrayobject.py",
+    "summary": "No description | classes: MyArr, MyArrNoWrap | functions: test_matrix_transpose_raises_error_for_1d, test_matrix_transpose_equals_transpose_2d, test_matrix_transpose_equals_swapaxes, test_array_wrap | imports: pytest, numpy | [numpy _core tests test_arrayobject.py]",
+    "role": "tests",
+    "loc": 43
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_arrayprint.py",
+    "summary": "No description | classes: sub, DuckCounter, TestArrayRepr, TestComplexArray, MultiLine, MultiLineLong | functions: test_unicode_object_array, test_scalar_repr_numbers, test_scalar_repr_special, test_scalar_void_float_str, test_printoptions_asyncio_safe, test_multithreaded_array_printing | imports: g",
+    "role": "tests",
+    "loc": 1047
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_array_api_info.py",
+    "summary": "No description | functions: test_capabilities, test_default_device, test_default_dtypes, test_dtypes_all, test_dtypes_kind, test_dtypes_tuple | imports: numpy, pytest | [numpy _core tests test_array_api_info.py]",
+    "role": "tests",
+    "loc": 83
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_array_coercion.py",
+    "summary": "Tests for array coercion, mainly through testing `np.array` results directly. | classes: MyArr, _SequenceLike, ArrayDunder, ArrayInterface, ArrayStruct, TestStringDiscovery | functions: arraylikes, ndarray, subclass, scalar_instances, is_parametric_dtype, test_subarray_from_array_construction | impo",
+    "role": "tests",
+    "loc": 596
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_array_interface.py",
+    "summary": "This class is for testing the timing of the PyCapsule destructor | classes: data_source | functions: get_module, test_cstruct | imports: pytest, numpy, array_interface_testing | [numpy _core tests test_array_interface.py]",
+    "role": "tests",
+    "loc": 144
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_casting_floatingpoint_errors.py",
+    "summary": "Generate value+dtype pairs that generate floating point errors during | functions: values_and_dtypes, check_operations, assignment, fill, copyto_scalar, copyto | imports: pytest, numpy | [numpy _core tests test_casting_floatingpoint_errors.py]",
+    "role": "tests",
+    "loc": 109
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_casting_unittests.py",
+    "summary": "The tests exercise the casting machinery in a more low-level manner. | classes: Casting, TestChanges, TestCasting | functions: simple_dtype_instances, get_expected_stringlength, _get_cancast_table | imports: pytest, textwrap, random, ctypes | [numpy _core tests test_casting_unittests.py]",
+    "role": "tests",
+    "loc": 602
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_conversion_utils.py",
+    "summary": "Tests for numpy/_core/src/multiarray/conversion_utils.c | classes: StringConverterTestCase, TestByteorderConverter, TestSortkindConverter, TestSelectkindConverter, TestSearchsideConverter, TestOrderConverter | imports: pytest, numpy | [numpy _core tests test_conversion_utils.py]",
+    "role": "tests",
+    "loc": 160
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_cpu_dispatcher.py",
+    "summary": "Testing the utilities of the CPU dispatcher | functions: test_dispatcher | imports: numpy | [numpy _core tests test_cpu_dispatcher.py]",
+    "role": "tests",
+    "loc": 36
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_cpu_features.py",
+    "summary": "No description | classes: AbstractTest, TestEnvPrivation, Test_X86_Features, Test_POWER_Features, Test_ZARCH_Features, Test_ARM_Features | functions: assert_features_equal, _text_to_list | imports: platform, subprocess, pytest, numpy | [numpy _core tests test_cpu_features.py]",
+    "role": "tests",
+    "loc": 359
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_custom_dtypes.py",
+    "summary": "No description | classes: TestSFloat | functions: test_type_pickle, test_is_numeric | imports: tempfile, pytest, numpy, pickle | [numpy _core tests test_custom_dtypes.py]",
+    "role": "tests",
+    "loc": 208
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_cython.py",
+    "summary": "No description | classes: TestDatetimeStrings, myint | functions: install_temp, test_is_timedelta64_object, test_is_datetime64_object, test_get_datetime64_value, test_get_timedelta64_value, test_get_datetime64_unit | imports: datetime, subprocess, pytest, numpy | [numpy _core tests test_cython.py]",
+    "role": "tests",
+    "loc": 245
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_datetime.py",
+    "summary": "No description | classes: TestDateTime, TestDateTimeData, custom | functions: _assert_equal_hash, test_comparisons_return_not_implemented | imports: datetime, pickle, pytest, numpy | [numpy _core tests test_datetime.py]",
+    "role": "tests",
+    "loc": 2070
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_defchararray.py",
+    "summary": "Regression test for ticket 1948. | classes: TestBasic, TestVecString, TestWhitespace, TestChar, TestComparisons, TestComparisonsMixed1 | functions: test_empty_indexing | imports: pytest, numpy | [numpy _core tests test_defchararray.py]",
+    "role": "tests",
+    "loc": 646
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_deprecations.py",
+    "summary": "Tests related to deprecation warnings. Also a convenient place | classes: _DeprecationTestCase, _VisibleDeprecationTestCase, TestTestDeprecated, TestBincount, TestGeneratorSum, BuiltInRoundComplexDType | functions: test_future_scalar_attributes | imports: pytest, tempfile, numpy, pytz | [numpy _core",
+    "role": "tests",
+    "loc": 330
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_dlpack.py",
+    "summary": "No description | classes: OldDLPack, TestDLPack | functions: new_and_old_dlpack | imports: pytest, numpy | [numpy _core tests test_dlpack.py]",
+    "role": "tests",
+    "loc": 132
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_dtype.py",
+    "summary": "No description | classes: TestBuiltin, TestRecord, IntLike, TestSubarray, TestStructuredObjectRefcounting, TestStructuredDtypeSparseFields | functions: assert_dtype_equal, assert_dtype_not_equal, iter_struct_object_dtypes, test_rational_dtype, test_dtypes_are_true, test_invalid_dtype_string | import",
+    "role": "tests",
+    "loc": 1530
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_einsum.py",
+    "summary": "No description | classes: CustomException, DestructoBox, Mult, TestEinsum, TestEinsumPath | functions: test_overlap, test_einsum_chunking_precision | imports: pytest, numpy | [numpy _core tests test_einsum.py]",
+    "role": "tests",
+    "loc": 931
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_errstate.py",
+    "summary": "No description | classes: TestErrstate | imports: pytest, sysconfig, numpy | [numpy _core tests test_errstate.py]",
+    "role": "tests",
+    "loc": 91
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_extint128.py",
+    "summary": "Iterate over Cartesian product of *args, and if an exception is raised, | functions: exc_iter, iterate, test_safe_binop, test_to_128, test_to_64, test_mul_64_64 | imports: operator, pytest, numpy, traceback | [numpy _core tests test_extint128.py]",
+    "role": "tests",
+    "loc": 170
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_function_base.py",
+    "summary": "No description | classes: PhysicalQuantity, PhysicalQuantity2, TestLogspace, TestGeomspace, Arrayish, TestLinspace | imports: pytest, numpy | [numpy _core tests test_function_base.py]",
+    "role": "tests",
+    "loc": 379
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_getlimits.py",
+    "summary": "Test functions for limits module. | classes: TestPythonFloat, TestHalf, TestSingle, TestDouble, TestLongdouble, NonHashableWithDtype | functions: assert_finfo_equal, assert_iinfo_equal, test_instances, assert_ma_equal, test_known_types, test_subnormal_warning | imports: types, numpy, pytest | [numpy",
+    "role": "tests",
+    "loc": 147
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_half.py",
+    "summary": "No description | classes: Dummy, TestHalf | functions: assert_raises_fpe | imports: platform, pytest, numpy | [numpy _core tests test_half.py]",
+    "role": "tests",
+    "loc": 411
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_hashtable.py",
+    "summary": "No description | functions: test_identity_hashtable | imports: pytest, random, numpy | [numpy _core tests test_hashtable.py]",
+    "role": "tests",
+    "loc": 22
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_indexerrors.py",
+    "summary": "Tests to exercise indexerrors not covered by other tests. | classes: TestIndexErrors | imports: numpy | [numpy _core tests test_indexerrors.py]",
+    "role": "tests",
+    "loc": 100
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_indexing.py",
+    "summary": "No description | classes: SubClass, Zero, ArrayLike, TupleSubclass, SequenceLike, TestIndexing | imports: functools, operator, pytest, numpy | [numpy _core tests test_indexing.py]",
+    "role": "tests",
+    "loc": 988
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_item_selection.py",
+    "summary": "No description | classes: TestTake, TestPutMask, TestPut | imports: pytest, numpy | [numpy _core tests test_item_selection.py]",
+    "role": "tests",
+    "loc": 121
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_limited_api.py",
+    "summary": "No description | functions: install_temp, test_limited_api | imports: subprocess, sysconfig, pytest, numpy | [numpy _core tests test_limited_api.py]",
+    "role": "tests",
+    "loc": 79
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_longdouble.py",
+    "summary": "Confirm that extracting a value doesn't convert to python float | classes: TestFileBased, TestCommaDecimalPointLocale | functions: test_scalar_extraction, test_str_roundtrip, test_str_roundtrip_bytes, test_array_and_stringlike_roundtrip, test_bogus_string, test_fromstring | imports: platform, pytest",
+    "role": "tests",
+    "loc": 245
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_machar.py",
+    "summary": "Test machar. Given recent changes to hardcode type data, we might want to get | classes: TestMachAr | imports: numpy | [numpy _core tests test_machar.py]",
+    "role": "tests",
+    "loc": 21
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_memmap.py",
+    "summary": "No description | classes: MemmapSubClass, TestMemmap | imports: mmap, pytest, tempfile, numpy | [numpy _core tests test_memmap.py]",
+    "role": "tests",
+    "loc": 180
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_mem_overlap.py",
+    "summary": "Returns slices of length nelems, from start onwards, in direction sign. | classes: MyArray, MyArray2, TestUFunc | functions: _indices_for_nelems, _indices_for_axis, _indices, _check_assignment, test_overlapping_assignments, test_diophantine_fuzz | imports: pytest, numpy | [numpy _core tests test_mem",
+    "role": "tests",
+    "loc": 644
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_mem_policy.py",
+    "summary": "Add a memory policy that returns a false pointer 64 bytes into the | classes: MyArr | functions: get_module, test_set_policy, test_default_policy_singleton, test_policy_propagation, test_context_locality, concurrent_thread1 | imports: asyncio, gc, threading, pytest | [numpy _core tests test_mem_poli",
+    "role": "tests",
+    "loc": 358
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_multiarray.py",
+    "summary": "No description | classes: subclass, frominterface, MyArr, TestFlags, TestHash, TestAttributes | functions: assert_arg_sorted, assert_arr_partitioned, _aligned_zeros, _mean, _var, _std | imports: tempfile, operator, io, functools | [numpy _core tests test_multiarray.py]",
+    "role": "tests",
+    "loc": 7923
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_multithreading.py",
+    "summary": "No description | functions: test_parallel_randomstate_creation, func, test_parallel_ufunc_execution, f, test_temp_elision_thread_safety, test_eigvalsh_thread_safety | imports: concurrent, threading, string, numpy | [numpy _core tests test_multithreading.py]",
+    "role": "tests",
+    "loc": 192
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_nditer.py",
+    "summary": "No description | classes: MyNDArray, TestIterNested, T | functions: iter_multi_index, iter_indices, iter_iterindices, test_iter_refcount, test_iter_best_order, test_iter_c_order | imports: pytest, textwrap, subprocess, numpy | [numpy _core tests test_nditer.py]",
+    "role": "tests",
+    "loc": 2616
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_nep50_promotions.py",
+    "summary": "This file adds basic tests to test the NEP 50 style promotion compatibility | functions: test_nep50_examples, test_nep50_weak_integers, test_nep50_weak_integers_with_inexact, test_weak_promotion_scalar_path, test_nep50_complex_promotion, test_nep50_integer_conversion_errors | imports: operator, nump",
+    "role": "tests",
+    "loc": 181
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_numeric.py",
+    "summary": "we pre-create arrays as we sometime want to pass the same instance | classes: MyArray, TestResize, TestNonarrayArgs, TestIsscalar, TestBoolScalar, TestBoolArray | functions: _test_array_equal_parametrizations, assert_array_strict_equal, test_outer_out_param | imports: platform, pytest, decimal, nump",
+    "role": "tests",
+    "loc": 3185
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_numerictypes.py",
+    "summary": "Check the creation of heterogeneous arrays zero-valued | classes: CreateZeros, TestCreateZerosPlain, TestCreateZerosNested, CreateValues, TestCreateValuesPlainSingle, TestCreateValuesPlainMultiple | functions: normalize_descr, test_issctype | imports: pytest, numpy | [numpy _core tests test_numerict",
+    "role": "tests",
+    "loc": 468
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_overrides.py",
+    "summary": "No description | classes: OverrideSub, NoOverrideSub, Other, A, B, C | functions: _return_not_implemented, dispatched_one_arg, dispatched_two_arg, _new_duck_type_and_implements, implements, decorator | imports: inspect, tempfile, io, unittest | [numpy _core tests test_overrides.py]",
+    "role": "tests",
+    "loc": 570
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_print.py",
+    "summary": "Check formatting. | classes: TestCommaDecimalPointLocale | functions: test_float_types, test_nan_inf_float, test_complex_types, test_complex_inf_nan, _test_redirected_print, test_float_type_print | imports: pytest, numpy, io | [numpy _core tests test_print.py]",
+    "role": "tests",
+    "loc": 155
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_protocols.py",
+    "summary": "No description | classes: Wrapper | functions: test_getattr_warning, test_array_called | imports: pytest, numpy | [numpy _core tests test_protocols.py]",
+    "role": "tests",
+    "loc": 30
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_records.py",
+    "summary": "No description | classes: C, TestFromrecords, TestPathUsage, TestRecord | functions: test_find_duplicate | imports: textwrap, io, pickle, pytest | [numpy _core tests test_records.py]",
+    "role": "tests",
+    "loc": 420
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_regression.py",
+    "summary": "No description | classes: BuggySequence, MyFloat, VictimObject, TestArray, Subclass, OldSqueeze | imports: copy, gc, tempfile, pytest | [numpy _core tests test_regression.py]",
+    "role": "tests",
+    "loc": 1874
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalarbuffer.py",
+    "summary": "Test scalar buffer interface adheres to PEP 3118 | classes: TestScalarPEP3118 | imports: numpy, pytest | [numpy _core tests test_scalarbuffer.py]",
+    "role": "tests",
+    "loc": 115
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalarinherit.py",
+    "summary": "Test printing of scalar types. | classes: A, B, C, D, B0, C0 | imports: pytest, numpy | [numpy _core tests test_scalarinherit.py]",
+    "role": "tests",
+    "loc": 77
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalarmath.py",
+    "summary": "No description | classes: TestTypes, TestBaseMath, TestPower, TestModulus, TestComparison, TestComplexDivision | functions: check_ufunc_scalar_equivalence, test_array_scalar_ufunc_equivalence, test_array_scalar_ufunc_dtypes, test_int_float_promotion_truediv, floordiv_and_mod, _signs | imports: opera",
+    "role": "tests",
+    "loc": 852
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalarprint.py",
+    "summary": "Test printing of scalar types. | classes: TestRealScalars | imports: code, platform, pytest, tempfile | [numpy _core tests test_scalarprint.py]",
+    "role": "tests",
+    "loc": 292
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalar_ctors.py",
+    "summary": "Test the scalar constructors, which also do type-coercion | classes: TestFromString, TestExtraArgs, TestFromInt, TestArrayFromScalar | functions: test_void_via_length, test_void_from_byteslike, test_void_arraylike_trumps_byteslike, test_void_dtype_arg, test_void_from_integer_with_dtype, test_void_fr",
+    "role": "tests",
+    "loc": 157
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_scalar_methods.py",
+    "summary": "Test the scalar constructors, which also do type-coercion | classes: TestAsIntegerRatio, TestIsInteger, TestClassGetItem, TestBitCount, TestDevice | functions: test_array_wrap | imports: fractions, platform, types, pytest | [numpy _core tests test_scalar_methods.py]",
+    "role": "tests",
+    "loc": 197
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_shape_base.py",
+    "summary": "No description | classes: TestAtleast1d, TestAtleast2d, TestAtleast3d, TestHstack, TestVstack, TestConcatenate | functions: test_stack, test_unstack, test_stack_out_and_dtype, test_block_dispatcher | imports: pytest, numpy, operator | [numpy _core tests test_shape_base.py]",
+    "role": "tests",
+    "loc": 686
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_simd.py",
+    "summary": "No description | classes: _Test_Utility, _SIMD_BOOL, _SIMD_INT, _SIMD_FP32, _SIMD_FP64, _SIMD_FP | functions: check_floatstatus | imports: operator, pytest, numpy | [numpy _core tests test_simd.py]",
+    "role": "tests",
+    "loc": 1127
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_simd_module.py",
+    "summary": "No description | classes: Test_SIMD_MODULE | imports: pytest, numpy | [numpy _core tests test_simd_module.py]",
+    "role": "tests",
+    "loc": 89
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_stringdtype.py",
+    "summary": "No description | classes: TestStringLikeCasts, TestImplementation | functions: string_list, coerce2, na_object2, dtype2, test_dtype_creation, test_dtype_equality | imports: pickle, string, tempfile, numpy | [numpy _core tests test_stringdtype.py]",
+    "role": "tests",
+    "loc": 1387
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_strings.py",
+    "summary": "No description | classes: MyStr, TestMethods, TestMethodsWithUnicode, TestMixedTypeMethods, TestUnicodeOnlyMethodsRaiseWithBytes, TestReplaceOnArrays | functions: test_mixed_string_comparison_ufuncs_fail, test_mixed_string_comparisons_ufuncs_with_cast, test_string_comparisons, test_string_comparison",
+    "role": "tests",
+    "loc": 1230
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_ufunc.py",
+    "summary": "No description | classes: TestUfuncKwargs, foo, MyFloat, TestUfuncGenericLoops, MySubclass, HasComparisons | functions: _pickleable_module_global, test_ufunc_types, test_ufunc_noncontiguous, test_ufunc_warn_with_nan, test_ufunc_out_casterrors, test_ufunc_input_casterrors | imports: ctypes, pickle, p",
+    "role": "tests",
+    "loc": 2391
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_umath.py",
+    "summary": "Helper to create \"interesting\" operands to cover common code paths: | classes: _FilterInvalids, TestConstants, ArrayWrap, ArrSubclass, TestOut, FunkyType | functions: interesting_binop_operands, on_powerpc, bad_arcsinh, floor_divide_and_remainder, _signs, assert_hypot_isnan | imports: platform, fnma",
+    "role": "tests",
+    "loc": 3805
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_umath_accuracy.py",
+    "summary": "No description | classes: TestAccuracy | functions: convert | imports: numpy, pytest, ctypes | [numpy _core tests test_umath_accuracy.py]",
+    "role": "tests",
+    "loc": 105
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_umath_complex.py",
+    "summary": "No description | classes: TestCexp, TestClog, TestCsqrt, TestCpow, TestCabs, TestCarg | functions: check_real_value, check_complex_value | imports: platform, pytest, numpy | [numpy _core tests test_umath_complex.py]",
+    "role": "tests",
+    "loc": 406
+  },
+  {
+    "id": "numpy\\_core\\tests\\test_unicode.py",
+    "summary": "Check the creation of zero-valued arrays | classes: CreateZeros, TestCreateZeros_1, TestCreateZeros_2, TestCreateZeros_1009, CreateValues, TestCreateValues_1_UCS2 | functions: buffer_length, test_string_cast | imports: numpy | [numpy _core tests test_unicode.py]",
+    "role": "tests",
+    "loc": 224
+  },
+  {
+    "id": "numpy\\_core\\tests\\test__exceptions.py",
+    "summary": "Tests of the ._exceptions module. Primarily for exercising the __str__ methods. | classes: TestArrayMemoryError, TestUFuncNoLoopError, TestAxisError | imports: pickle, pytest, numpy | [numpy _core tests test__exceptions.py]",
+    "role": "tests",
+    "loc": 70
+  },
+  {
+    "id": "numpy\\_core\\tests\\_locales.py",
+    "summary": "Provide class for testing in French locale | classes: CommaDecimalPointLocale | functions: find_comma_decimal_point_locale | imports: locale, pytest | [numpy _core tests _locales.py]",
+    "role": "tests",
+    "loc": 55
+  },
+  {
+    "id": "numpy\\_core\\tests\\_natype.py",
+    "summary": "No description | classes: NAType | functions: _create_binary_propagating_op, method, _create_unary_propagating_op | imports: numbers, numpy | [numpy _core tests _natype.py]",
+    "role": "tests",
+    "loc": 141
+  },
+  {
+    "id": "numpy\\_core\\tests\\examples\\cython\\setup.py",
+    "summary": "Provide python-space access to the functions exposed in numpy/__init__.pxd | imports: Cython, numpy, distutils, setuptools | [numpy _core tests examples cython setup.py]",
+    "role": "tests",
+    "loc": 30
+  },
+  {
+    "id": "numpy\\_core\\tests\\examples\\limited_api\\setup.py",
+    "summary": "Build an example package using the limited Python C API. | imports: numpy, setuptools | [numpy _core tests examples limited_api setup.py]",
+    "role": "tests",
+    "loc": 17
+  },
+  {
+    "id": "numpy\\_pyinstaller\\hook-numpy.py",
+    "summary": "This hook should collect all binary files and any hidden modules that numpy | imports: PyInstaller | [numpy _pyinstaller hook-numpy.py]",
+    "role": "src",
+    "loc": 20
+  },
+  {
+    "id": "numpy\\_pyinstaller\\__init__.py",
+    "summary": "Package initializer | [numpy _pyinstaller __init__.py]",
+    "role": "src",
+    "loc": 0
+  },
+  {
+    "id": "numpy\\_pyinstaller\\tests\\pyinstaller-smoke.py",
+    "summary": "A crude *bit of everything* smoke test to verify PyInstaller compatibility. | imports: numpy | [numpy _pyinstaller tests pyinstaller-smoke.py]",
+    "role": "tests",
+    "loc": 26
+  },
+  {
+    "id": "numpy\\_pyinstaller\\tests\\test_pyinstaller.py",
+    "summary": "Compile and run pyinstaller-smoke.py using PyInstaller. | functions: test_pyinstaller | imports: subprocess, pytest | [numpy _pyinstaller tests test_pyinstaller.py]",
+    "role": "tests",
+    "loc": 25
+  },
+  {
+    "id": "numpy\\_pyinstaller\\tests\\__init__.py",
+    "summary": "Package initializer | imports: numpy, pytest | [numpy _pyinstaller tests __init__.py]",
+    "role": "tests",
+    "loc": 12
+  },
+  {
+    "id": "numpy\\_typing\\_add_docstring.py",
+    "summary": "A module for creating docstrings for sphinx ``data`` domains. | functions: add_newdoc, _parse_docstrings | imports: textwrap, _array_like | [numpy _typing _add_docstring.py]",
+    "role": "src",
+    "loc": 110
+  },
+  {
+    "id": "numpy\\_typing\\_array_like.py",
+    "summary": "No description | classes: _SupportsArray, _SupportsArrayFunc, _Buffer | imports: numpy, _nbit_base, _nested_sequence, _shape | [numpy _typing _array_like.py]",
+    "role": "src",
+    "loc": 152
+  },
+  {
+    "id": "numpy\\_typing\\_char_codes.py",
+    "summary": "No description | [numpy _typing _char_codes.py]",
+    "role": "src",
+    "loc": 184
+  },
+  {
+    "id": "numpy\\_typing\\_dtype_like.py",
+    "summary": "No description | classes: _DTypeDictBase, _DTypeDict, _SupportsDType | imports: numpy, _shape, _char_codes | [numpy _typing _dtype_like.py]",
+    "role": "src",
+    "loc": 199
+  },
+  {
+    "id": "numpy\\_typing\\_extended_precision.py",
+    "summary": "A module with platform-specific extended precision | imports: numpy | [numpy _typing _extended_precision.py]",
+    "role": "src",
+    "loc": 24
+  },
+  {
+    "id": "numpy\\_typing\\_nbit.py",
+    "summary": "A module with the precisions of platform-specific `~numpy.number`s. | imports: _nbit_base | [numpy _typing _nbit.py]",
+    "role": "src",
+    "loc": 14
+  },
+  {
+    "id": "numpy\\_typing\\_nbit_base.py",
+    "summary": "A module with the precisions of generic `~numpy.number` types. | classes: NBitBase, _256Bit, _128Bit, _96Bit, _80Bit, _64Bit | imports: _utils | [numpy _typing _nbit_base.py]",
+    "role": "src",
+    "loc": 78
+  },
+  {
+    "id": "numpy\\_typing\\_nested_sequence.py",
+    "summary": "A module containing the `_NestedSequence` protocol. | classes: _NestedSequence | [numpy _typing _nested_sequence.py]",
+    "role": "src",
+    "loc": 66
+  },
+  {
+    "id": "numpy\\_typing\\_scalars.py",
+    "summary": "No description | imports: numpy | [numpy _typing _scalars.py]",
+    "role": "src",
+    "loc": 16
+  },
+  {
+    "id": "numpy\\_typing\\_shape.py",
+    "summary": "No description | [numpy _typing _shape.py]",
+    "role": "src",
+    "loc": 4
+  },
+  {
+    "id": "numpy\\_typing\\_ufunc.py",
+    "summary": "No description | [numpy _typing _ufunc.py]",
+    "role": "src",
+    "loc": 6
+  },
+  {
+    "id": "numpy\\_typing\\__init__.py",
+    "summary": "Private counterpart of ``numpy.typing``. | imports: _nested_sequence, _nbit_base, _nbit, _char_codes | [numpy _typing __init__.py]",
+    "role": "src",
+    "loc": 151
+  },
+  {
+    "id": "numpy\\_utils\\_convertions.py",
+    "summary": "A set of methods retained from np.compat module that | functions: asunicode, asbytes | [numpy _utils _convertions.py]",
+    "role": "src",
+    "loc": 13
+  },
+  {
+    "id": "numpy\\_utils\\_inspect.py",
+    "summary": "Subset of inspect module from upstream python | functions: ismethod, isfunction, iscode, getargs, getargspec, getargvalues | imports: types | [numpy _utils _inspect.py]",
+    "role": "src",
+    "loc": 149
+  },
+  {
+    "id": "numpy\\_utils\\_pep440.py",
+    "summary": "Utility to compare pep440 compatible version strings. | classes: Infinity, NegativeInfinity, InvalidVersion, _BaseVersion, LegacyVersion, Version | functions: parse, _parse_version_parts, _legacy_cmpkey, _parse_letter_version, _parse_local_version, _cmpkey | [numpy _utils _pep440.py]",
+    "role": "src",
+    "loc": 294
+  },
+  {
+    "id": "numpy\\_utils\\__init__.py",
+    "summary": "This is a module for defining private helpers which do not depend on the | functions: set_module, decorator, _rename_parameter, wrapper | imports: functools, _convertions | [numpy _utils __init__.py]",
+    "role": "src",
+    "loc": 73
+  },
+  {
+    "id": "tools\\changelog.py",
+    "summary": "Script to generate contributor and pull request lists | functions: get_authors, get_pull_requests, main, backtick_repl | imports: git, github, argparse | [tools changelog.py]",
+    "role": "src",
+    "loc": 121
+  },
+  {
+    "id": "tools\\check_installed_files.py",
+    "summary": "Check if all the test and .pyi files are installed after building. | functions: main, get_files | imports: glob, json | [tools check_installed_files.py]",
+    "role": "src",
+    "loc": 88
+  },
+  {
+    "id": "tools\\check_openblas_version.py",
+    "summary": "usage: check_openblas_version.py <min_version> | imports: numpy, pprint | [tools check_openblas_version.py]",
+    "role": "src",
+    "loc": 16
+  },
+  {
+    "id": "tools\\commitstats.py",
+    "summary": "No description | functions: get_count | imports: numpy | [tools commitstats.py]",
+    "role": "src",
+    "loc": 25
+  },
+  {
+    "id": "tools\\download-wheels.py",
+    "summary": "Script to download NumPy wheels from the Anaconda staging area. | functions: get_wheel_names, download_wheels | imports: shutil, argparse, urllib3, bs4 | [tools download-wheels.py]",
+    "role": "src",
+    "loc": 95
+  },
+  {
+    "id": "tools\\find_deprecated_escaped_characters.py",
+    "summary": "Look for escape sequences deprecated in Python 3.6. | functions: main | imports: ast, tokenize, argparse | [tools find_deprecated_escaped_characters.py]",
+    "role": "src",
+    "loc": 47
+  },
+  {
+    "id": "tools\\functions_missing_types.py",
+    "summary": "Find the functions in a module missing type annotations. | classes: FindAttributes | functions: find_missing, main | imports: argparse, ast, importlib | [tools functions_missing_types.py]",
+    "role": "src",
+    "loc": 90
+  },
+  {
+    "id": "tools\\linter.py",
+    "summary": "No description | classes: DiffLinter | imports: subprocess, argparse | [tools linter.py]",
+    "role": "src",
+    "loc": 34
+  },
+  {
+    "id": "tools\\refguide_check.py",
+    "summary": "refguide_check.py [OPTIONS] [-- ARGS] | functions: short_path, find_names, get_all_dict, compare, is_deprecated, check_items | imports: copy, inspect, io, docutils | [tools refguide_check.py]",
+    "role": "src",
+    "loc": 516
+  },
+  {
+    "id": "tools\\ci\\push_docs_to_repo.py",
+    "summary": "No description | functions: run | imports: argparse, subprocess, tempfile, shutil | [tools ci push_docs_to_repo.py]",
+    "role": "src",
+    "loc": 59
+  },
+  {
+    "id": "tools\\ci\\test_all_newsfragments_used.py",
+    "summary": "No description | functions: main | imports: toml | [tools ci test_all_newsfragments_used.py]",
+    "role": "src",
+    "loc": 14
+  },
+  {
+    "id": "tools\\c_coverage\\c_coverage_report.py",
+    "summary": "A script to create C code-coverage reports based on the output of | classes: FunctionHtmlFormatter, SourceFile, SourceFiles | functions: collect_stats | imports: xml, pygments, argparse | [tools c_coverage c_coverage_report.py]",
+    "role": "src",
+    "loc": 153
+  },
+  {
+    "id": "tools\\swig\\test\\setup.py",
+    "summary": "No description | imports: distutils, numpy | [tools swig test setup.py]",
+    "role": "src",
+    "loc": 48
+  },
+  {
+    "id": "tools\\swig\\test\\testArray.py",
+    "summary": "No description | classes: Array1TestCase, Array2TestCase, ArrayZTestCase | imports: unittest, numpy, Array | [tools swig test testArray.py]",
+    "role": "src",
+    "loc": 308
+  },
+  {
+    "id": "tools\\swig\\test\\testFarray.py",
+    "summary": "No description | classes: FarrayTestCase | imports: distutils, unittest, numpy, Farray | [tools swig test testFarray.py]",
+    "role": "src",
+    "loc": 122
+  },
+  {
+    "id": "tools\\swig\\test\\testFlat.py",
+    "summary": "No description | classes: FlatTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, struct, numpy, Flat | [tools swig test testFlat.py]",
+    "role": "src",
+    "loc": 139
+  },
+  {
+    "id": "tools\\swig\\test\\testFortran.py",
+    "summary": "No description | classes: FortranTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, numpy, Fortran | [tools swig test testFortran.py]",
+    "role": "src",
+    "loc": 106
+  },
+  {
+    "id": "tools\\swig\\test\\testMatrix.py",
+    "summary": "No description | classes: MatrixTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, numpy, Matrix | [tools swig test testMatrix.py]",
+    "role": "src",
+    "loc": 254
+  },
+  {
+    "id": "tools\\swig\\test\\testSuperTensor.py",
+    "summary": "No description | classes: SuperTensorTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, numpy, SuperTensor | [tools swig test testSuperTensor.py]",
+    "role": "src",
+    "loc": 276
+  },
+  {
+    "id": "tools\\swig\\test\\testTensor.py",
+    "summary": "No description | classes: TensorTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, numpy, Tensor | [tools swig test testTensor.py]",
+    "role": "src",
+    "loc": 294
+  },
+  {
+    "id": "tools\\swig\\test\\testVector.py",
+    "summary": "No description | classes: VectorTestCase, scharTestCase, ucharTestCase, shortTestCase, ushortTestCase, intTestCase | imports: unittest, numpy, Vector | [tools swig test testVector.py]",
+    "role": "src",
+    "loc": 265
+  },
+  {
+    "id": "tools\\wheels\\check_license.py",
+    "summary": "check_license.py [MODULE] | functions: check_text, main | imports: argparse | [tools wheels check_license.py]",
+    "role": "src",
+    "loc": 39
+  }
+]
