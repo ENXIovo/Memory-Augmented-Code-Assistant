@@ -17,12 +17,12 @@ cd django
 
 ### Project Summary
 
-- **Total Files**: 2829
+- **Total Files**: 2832
 - **Languages**: Unknown, JavaScript, Python
 - **Language Distribution**:
-  - Python: 2829 files (51.6%)
-  - Unknown: 2542 files (46.4%)
-  - JavaScript: 112 files (2.0%)
+  - Python: 2832 files (51.6%)
+  - Unknown: 2547 files (46.4%)
+  - JavaScript: 111 files (2.0%)
 
 ### Directory Structure
 
@@ -113,11 +113,12 @@ django/
 │   │   │   │   └── ...
 │   │   │   ├── templates/
 │   │   │   │   └── ...
+│   │   │   ├── templatetags/
+│   │   │   │   └── ...
 │   │   │   ├── __init__.py
 │   │   │   ├── admin.py
 │   │   │   ├── apps.py
-│   │   │   ├── backends.py
-│   │   │   ├── ... (16 more items)
+│   │   │   ├── ... (17 more items)
 │   │   ├── contenttypes/
 │   │   │   ├── locale/
 │   │   │   │   └── ...
@@ -600,8 +601,8 @@ django/
 
 **Path**: tests\admin_views\tests.py
 **Language**: Python
-**Lines of Code**: 7767
-**Dependencies**: datetime, os, re, unittest, zoneinfo and 186 more
+**Lines of Code**: 7756
+**Dependencies**: datetime, os, re, unittest, zoneinfo and 184 more
 **Classes**: 50
 **Functions**: 3
 
@@ -609,7 +610,7 @@ django/
 
 **Path**: tests\migrations\test_operations.py
 **Language**: Python
-**Lines of Code**: 6165
+**Lines of Code**: 6170
 **Dependencies**: math, decimal.Decimal, django.core.exceptions.FieldDoesNotExist, django.db.IntegrityError, django.db.connection and 23 more
 **Classes**: 6
 
@@ -625,7 +626,7 @@ django/
 
 **Path**: tests\schema\tests.py
 **Language**: Python
-**Lines of Code**: 4835
+**Lines of Code**: 4836
 **Dependencies**: datetime, itertools, unittest, copy.copy, decimal.Decimal and 96 more
 **Classes**: 166
 
@@ -641,7 +642,7 @@ django/
 
 **Path**: tests\queries\tests.py
 **Language**: Python
-**Lines of Code**: 3708
+**Lines of Code**: 3713
 **Dependencies**: datetime, pickle, sys, unittest, operator.attrgetter and 120 more
 **Classes**: 66
 

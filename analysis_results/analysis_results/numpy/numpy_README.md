@@ -17,14 +17,14 @@ cd numpy
 
 ### Project Summary
 
-- **Total Files**: 578
+- **Total Files**: 575
 - **Languages**: Unknown, Python, C/C++ Header, C, C++
 - **Language Distribution**:
-  - Unknown: 1143 files (53.2%)
-  - Python: 578 files (26.9%)
-  - C/C++ Header: 228 files (10.6%)
-  - C: 174 files (8.1%)
-  - C++: 27 files (1.3%)
+  - Unknown: 1209 files (54.7%)
+  - Python: 575 files (26.0%)
+  - C/C++ Header: 226 files (10.2%)
+  - C: 173 files (7.8%)
+  - C++: 28 files (1.3%)
 
 ### Directory Structure
 
@@ -75,7 +75,7 @@ numpy/
 │   │   ├── 1.14.0-changelog.rst
 │   │   ├── 1.14.1-changelog.rst
 │   │   ├── 1.14.2-changelog.rst
-│   │   ├── ... (80 more items)
+│   │   ├── ... (82 more items)
 │   ├── neps/
 │   │   ├── _static/
 │   │   │   ├── casting_flow.svg
@@ -109,7 +109,7 @@ numpy/
 │   │       ├── 27883.change.rst
 │   │       ├── 27998.c_api.rst
 │   │       ├── 28080.c_api.rst
-│   │       ├── ... (8 more items)
+│   │       ├── ... (20 more items)
 │   ├── source/
 │   │   ├── _static/
 │   │   │   ├── favicon/
@@ -188,7 +188,7 @@ numpy/
 │   │   │   ├── 1.11.1-notes.rst
 │   │   │   ├── 1.11.2-notes.rst
 │   │   │   ├── 1.11.3-notes.rst
-│   │   │   ├── ... (106 more items)
+│   │   │   ├── ... (108 more items)
 │   │   ├── user/
 │   │   │   ├── images/
 │   │   │   │   └── ...
@@ -285,16 +285,18 @@ numpy/
 │   │   ├── __init__.py
 │   │   ├── __init__.pyi
 │   │   ├── _add_newdocs.py
+│   │   ├── _add_newdocs.pyi
 │   │   ├── _add_newdocs_scalars.py
-│   │   ├── _asarray.py
-│   │   ├── ... (51 more items)
+│   │   ├── ... (63 more items)
 │   ├── _pyinstaller/
 │   │   ├── tests/
 │   │   │   ├── __init__.py
 │   │   │   ├── pyinstaller-smoke.py
 │   │   │   └── test_pyinstaller.py
 │   │   ├── __init__.py
-│   │   └── hook-numpy.py
+│   │   ├── __init__.pyi
+│   │   ├── hook-numpy.py
+│   │   └── hook-numpy.pyi
 │   ├── _typing/
 │   │   ├── __init__.py
 │   │   ├── _add_docstring.py
@@ -308,9 +310,13 @@ numpy/
 │   │   ├── ... (5 more items)
 │   ├── _utils/
 │   │   ├── __init__.py
+│   │   ├── __init__.pyi
 │   │   ├── _convertions.py
+│   │   ├── _convertions.pyi
 │   │   ├── _inspect.py
-│   │   └── _pep440.py
+│   │   ├── _inspect.pyi
+│   │   ├── _pep440.py
+│   │   └── _pep440.pyi
 │   ├── char/
 │   │   ├── __init__.py
 │   │   └── __init__.pyi
@@ -323,13 +329,13 @@ numpy/
 │   │   ├── __init__.py
 │   │   ├── __init__.pyi
 │   │   ├── _dtype.py
+│   │   ├── _dtype.pyi
 │   │   ├── _dtype_ctypes.py
+│   │   ├── _dtype_ctypes.pyi
 │   │   ├── _internal.py
 │   │   ├── _multiarray_umath.py
 │   │   ├── _utils.py
-│   │   ├── arrayprint.py
-│   │   ├── defchararray.py
-│   │   ├── ... (11 more items)
+│   │   ├── ... (14 more items)
 │   ├── ctypeslib/
 │   │   ├── __init__.py
 │   │   ├── __init__.pyi
@@ -386,15 +392,14 @@ numpy/
 │   │   ├── check_license.py
 │   │   ├── cibw_before_build.sh
 │   │   ├── cibw_test_command.sh
-│   │   ├── gfortran_utils.sh
 │   │   ├── repair_windows.sh
 │   │   └── upload_wheels.sh
 │   ├── changelog.py
 │   ├── check_installed_files.py
 │   ├── check_openblas_version.py
-│   ├── commitstats.py
 │   ├── download-wheels.py
-│   ├── ... (8 more items)
+│   ├── functions_missing_types.py
+│   ├── ... (6 more items)
 ├── vendored-meson/
 │   └── meson/
 ├── CITATION.bib
@@ -434,18 +439,18 @@ numpy/
 
 **Path**: numpy\_core\tests\test_multiarray.py
 **Language**: Python
-**Lines of Code**: 7923
-**Dependencies**: __future__.annotations, collections.abc, tempfile, sys, warnings and 72 more
+**Lines of Code**: 7955
+**Dependencies**: __future__.annotations, collections.abc, tempfile, sys, warnings and 73 more
 **Classes**: 143
-**Functions**: 40
+**Functions**: 42
 
 ### core.py
 
 **Path**: numpy\ma\core.py
 **Language**: Python
-**Lines of Code**: 7018
+**Lines of Code**: 7016
 **Description**: numpy.ma : a package to handle missing or invalid values. This package was initially written for numarray by Paul F. Dubois at Lawrence Livermore National Laboratory. In 2006, the package was complet...
-**Dependencies**: builtins, functools, inspect, operator, warnings and 23 more
+**Dependencies**: builtins, functools, inspect, operator, warnings and 22 more
 **Classes**: 20
 **Functions**: 98
 
@@ -453,7 +458,7 @@ numpy/
 
 **Path**: numpy\_core\_add_newdocs.py
 **Language**: Python
-**Lines of Code**: 5268
+**Lines of Code**: 5277
 **Description**: This is only meant to add docs to objects defined in C-extension modules. The purpose is to allow easier editing of the docstrings without requiring a re-compile. NOTE: Many of the methods of ndarray...
 **Dependencies**: numpy._core.function_base.add_newdoc, numpy._core.overrides.get_array_function_like_doc
 **Functions**: 1

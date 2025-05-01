@@ -1,98 +1,104 @@
-# Scikit-Learn Project
-Scikit-learn is a powerful and open-source machine learning library for Python. It provides simple and efficient tools for data analysis and machine learning tasks, built on top of NumPy, SciPy, and Matplotlib.
+# Scikit-Learn Benchmarking and Examples
+
+Scikit-Learn Benchmarking and Examples is a comprehensive library designed to facilitate performance evaluation and provide illustrative examples for machine learning tasks using the Scikit-Learn framework. This project aims at enhancing your experience with Scikit-Learn through benchmarking various algorithms and offering a variety of practical coding examples.
 
 ## Installation
-To set up the Scikit-learn library, follow these instructions:
 
-1. Ensure you have Python installed (version 3.6 or higher).
-2. Install scikit-learn using pip:
+To set up this project, you will need Python and Git installed. Below are the steps to install the project:
 
+1. **Clone the repository:**
    ```bash
-   pip install scikit-learn
+   git clone https://github.com/scikit-learn/scikit-learn.git
+   cd scikit-learn
    ```
 
-3. You may also want to install the optional dependencies for better performance:
-
+2. **Create and activate a virtual environment (optional but recommended):**
    ```bash
-   pip install numpy scipy matplotlib pandas
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows use `myenv\Scripts\activate`
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Build the project:**
+   ```bash
+   ./build_tools/build_wheels.sh
    ```
 
 ## Components
-The Scikit-learn library consists of various modules, each fulfilling a distinct purpose:
 
-- **Datasets**: Contains utilities to load and generate datasets.
-- **Decomposition**: Implements dimensionality reduction methods such as PCA.
-- **Tree**: Implements decision trees and tree-based estimators.
-- **Metrics**: Provides functions to evaluate the performance of models.
-- **Utils**: Contains utility functions for discovering functionalities within the library.
+The project’s directory structure is organized as follows:
 
-### Key Files
-- `sklearn/datasets/descr/__init__.py`: Package initializer for dataset description.
-- `sklearn/utils/discovery.py`: Utilities to discover scikit-learn objects.
-- `examples/release_highlights/plot_release_highlights_X_Y.py`: Various scripts illustrating release highlights for different Scikit-learn versions, demonstrating new features and enhancements.
+- `asv_benchmarks/` - Contains benchmarking scripts and configurations for ASV (A/B testing).
+- `benchmarks/` - Python scripts for various dataset benchmarks.
+- `build_tools/` - Scripts for managing builds, dependency checks, and testing.
+- `doc/` - Documentation related files, including guides and API references.
+- `examples/` - Practical examples and use cases for Scikit-Learn.
+- `maint_tools/` - Maintenance tools for developers.
+- `sklearn/` - The core library code for Scikit-Learn.
 
 ## Usage
-Here are some basic examples to get you started with Scikit-learn.
 
-### Importing Necessary Libraries
-Before using Scikit-learn, you need to import it along with other libraries:
+Here are some typical workflows for utilizing this library:
 
-```python
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+### Running Benchmarks
+
+You can run the benchmark scripts found in the `benchmarks/` directory. 
+
+For example, to benchmark the Hist Gradient Boosting algorithm, use:
+
+```bash
+python benchmarks/bench_hist_gradient_boosting.py
 ```
 
-### Basic Workflow Example
-```python
-# Generate synthetic data
-X, y = np.random.rand(100, 5), np.random.randint(0, 2, 100)
+### Example Workflows
 
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+Explore the `examples/` directory for a variety of scripts that demonstrate different features and applications of Scikit-Learn:
 
-# Create and fit the model
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
+- **Release Highlights:**
+  Each release has corresponding highlight scripts such as:
+  - `examples/release_highlights/plot_release_highlights_1_0_0.py`
+  - `examples/release_highlights/plot_release_highlights_1_2_0.py`
 
-# Make predictions and evaluate the model
-predictions = model.predict(X_test)
-print("Accuracy:", accuracy_score(y_test, predictions))
-```
+- **Model Selection:**
+  You could view how different models perform regarding classification via:
+  ```bash
+  python examples/model_selection/plot_likelihood_ratios.py
+  ```
+
+- **Feature Selection:**
+  A practical example of model-based feature selection can be explored with:
+  ```bash
+  python examples/feature_selection/plot_select_from_model_diabetes.py
+  ```
 
 ## API Overview
-### 1. Functions in Utilities
-- **`all_functions()`**: Retrieves a list of all functions from the scikit-learn library.
 
-   ```python
-   from sklearn.utils.discovery import all_functions
-   functions = all_functions()
-   ```
+The library provides several key functions and modules:
 
-### 2. Configuration Management
-- **`set_config()`**: Set global configuration options for Scikit-learn.
+- **set_config**:
+  ```python
+  from sklearn import set_config
+  set_config(display='diagram')
+  ```
+  Set global configurations for Scikit-Learn, affecting how outputs are displayed.
 
-   ```python
-   from sklearn import set_config
-   set_config(display='diagram')
-   ```
+- **one_run** (in benchmarks):
+  A function to perform a benchmarking run against different algorithms like LightGBM, XGBoost, and CatBoost, while recording metrics.
 
-### 3. OpenMP Parallelism Test
-- **`test_openmp_parallelism_enabled()`**: Tests if OpenMP parallelism is enabled for optimized performance.
+- **all_functions**:
+  Returns a list of all available functions in the Scikit-Learn module including their names and callable references.
 
-   ```python
-   test_openmp_parallelism_enabled()
-   ```
+  ```python
+  from sklearn.utils.discovery import all_functions
+  functions = all_functions()
+  ```
 
-### 4. Model Evaluation
-- **Various evaluation metrics** provided in the `sklearn.metrics` module like:
-  - `accuracy_score`
-  - `f1_score`
-  - `roc_auc_score`
+For further insights and detailed documentation, kindly explore the `doc/` directory. The extensive set of examples means you'll find code snippets appropriate for learning best practices and efficient usage of Scikit-Learn.
 
-### 5. Example Visualization
-- Various plotting examples available in the `examples` directory that demonstrates features such as release highlights, model selection, and feature selection.
+--- 
 
-This README provides a high-level overview of the Scikit-learn library, guiding users through installation, usage, and its API. Feel free to explore more in the [official documentation](https://scikit-learn.org/stable/documentation.html) for detailed guides and examples.
+Feel free to contribute to this project by submitting pull requests, or by reporting issues. Happy exploring!

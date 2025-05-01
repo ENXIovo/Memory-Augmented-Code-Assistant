@@ -17,11 +17,11 @@ cd pandas
 
 ### Project Summary
 
-- **Total Files**: 1500
+- **Total Files**: 1503
 - **Languages**: Unknown, Python, C/C++ Header, C
 - **Language Distribution**:
-  - Python: 1500 files (69.2%)
-  - Unknown: 643 files (29.7%)
+  - Python: 1503 files (69.3%)
+  - Unknown: 641 files (29.6%)
   - C/C++ Header: 12 files (0.6%)
   - C: 12 files (0.6%)
 
@@ -84,6 +84,7 @@ pandas/
 │   │   ├── actions-311-pyarrownightly.yaml
 │   │   ├── actions-311.yaml
 │   │   ├── actions-312.yaml
+│   │   ├── actions-313.yaml
 │   │   └── actions-pypy-39.yaml
 │   ├── code_checks.sh
 │   ├── meta.yaml
@@ -256,6 +257,8 @@ pandas/
 │   │   ├── compat.py
 │   │   └── contexts.py
 │   ├── api/
+│   │   ├── executors/
+│   │   │   └── __init__.py
 │   │   ├── extensions/
 │   │   │   └── __init__.py
 │   │   ├── indexers/
@@ -444,10 +447,10 @@ pandas/
 │   ├── check_test_naming.py
 │   ├── cibw_before_build.sh
 │   ├── cibw_before_build_windows.sh
-│   ├── cibw_before_test_windows.sh
 │   ├── download_wheels.sh
 │   ├── generate_pip_deps_from_conda.py
-│   ├── ... (9 more items)
+│   ├── pandas_errors_documented.py
+│   ├── ... (8 more items)
 ├── tooling/
 │   └── debug/
 │       ├── Dockerfile.pandas-debug
@@ -465,7 +468,7 @@ pandas/
 
 **Path**: pandas\core\frame.py
 **Language**: Python
-**Lines of Code**: 11458
+**Lines of Code**: 11548
 **Description**: DataFrame --------- An efficient 2D container for potentially mixed-type time series or other labeled data series. Similar to its R counterpart, data.frame, except providing automatic data alignment ...
 **Dependencies**: __future__.annotations, collections, collections.abc, collections.abc.Callable, collections.abc.Hashable and 219 more
 **Classes**: 1
@@ -475,7 +478,7 @@ pandas/
 
 **Path**: pandas\core\generic.py
 **Language**: Python
-**Lines of Code**: 10826
+**Lines of Code**: 10833
 **Dependencies**: __future__.annotations, collections, copy.deepcopy, datetime, functools.partial and 168 more
 **Classes**: 1
 **Functions**: 1
@@ -484,16 +487,16 @@ pandas/
 
 **Path**: pandas\core\series.py
 **Language**: Python
-**Lines of Code**: 6043
+**Lines of Code**: 6063
 **Description**: Data structure for 1-dimensional cross-sectional and time series data
-**Dependencies**: __future__.annotations, collections.abc.Callable, collections.abc.Hashable, collections.abc.Iterable, collections.abc.Mapping and 145 more
+**Dependencies**: __future__.annotations, collections.abc.Callable, collections.abc.Hashable, collections.abc.Iterable, collections.abc.Mapping and 146 more
 **Classes**: 1
 
 ### base.py
 
 **Path**: pandas\core\indexes\base.py
 **Language**: Python
-**Lines of Code**: 6006
+**Lines of Code**: 6008
 **Dependencies**: __future__.annotations, collections.abc, datetime.datetime, functools, itertools.zip_longest and 174 more
 **Classes**: 1
 **Functions**: 13
@@ -502,9 +505,9 @@ pandas/
 
 **Path**: pandas\core\groupby\groupby.py
 **Language**: Python
-**Lines of Code**: 4704
+**Lines of Code**: 4828
 **Description**: Provide the groupby split-apply-combine paradigm. Define the GroupBy class providing the base-class of operations. The SeriesGroupBy and DataFrameGroupBy sub-class (defined in pandas.core.groupby.gen...
-**Dependencies**: __future__.annotations, collections.abc.Callable, collections.abc.Hashable, collections.abc.Iterable, collections.abc.Iterator and 110 more
+**Dependencies**: __future__.annotations, collections.abc.Callable, collections.abc.Hashable, collections.abc.Iterable, collections.abc.Iterator and 112 more
 **Classes**: 3
 **Functions**: 2
 
@@ -512,9 +515,9 @@ pandas/
 
 **Path**: pandas\io\pytables.py
 **Language**: Python
-**Lines of Code**: 4338
+**Lines of Code**: 4394
 **Description**: High level interface to PyTables for reading and writing pandas data structures to disk
-**Dependencies**: __future__.annotations, contextlib.suppress, copy, datetime.date, datetime.tzinfo and 83 more
+**Dependencies**: __future__.annotations, contextlib.suppress, copy, datetime.date, datetime.tzinfo and 84 more
 **Classes**: 21
 **Functions**: 21
 

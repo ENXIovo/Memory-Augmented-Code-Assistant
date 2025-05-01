@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-<p align="center"> <img src="https://raw.githubusercontent.com/eli64s/readme-ai/aaeb55cf989d1f43f43e45d5219ae3e8c6be7435/docs/docs/assets/svg/logo-gradient.svg" alt="ReadmeAI Logo" width="85%"> </p>
+<picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/readme-ai/main/docs/docs/assets/svg/logo-gradient.svg"> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/readme-ai/main/docs/docs/assets/svg/logo-gradient.svg"> <img alt="ReadmeAI Logo" src="https://raw.githubusercontent.com/eli64s/readme-ai/main/docs/docs/assets/svg/logo-gradient.svg" width="60%"> </picture>
 
 ## Installation
 
@@ -20,8 +20,8 @@ cd readme-ai
 - **Total Files**: 148
 - **Languages**: Unknown, Python, JavaScript
 - **Language Distribution**:
-  - Unknown: 189 files (55.9%)
-  - Python: 148 files (43.8%)
+  - Unknown: 191 files (56.2%)
+  - Python: 148 files (43.5%)
   - JavaScript: 1 files (0.3%)
 
 ### Directory Structure
@@ -290,7 +290,7 @@ readme-ai/
 
 **Path**: readmeai\config\settings.py
 **Language**: Python
-**Lines of Code**: 288
+**Lines of Code**: 293
 **Description**: Pydantic model settings for the readme-ai package.
 **Dependencies**: __future__.annotations, random, sys, pathlib.Path, typing.Dict and 34 more
 **Classes**: 6

@@ -17,14 +17,14 @@ cd scikit-learn
 
 ### Project Summary
 
-- **Total Files**: 929
+- **Total Files**: 971
 - **Languages**: Unknown, Python, JavaScript, C, C++
 - **Language Distribution**:
-  - Python: 929 files (66.5%)
-  - Unknown: 448 files (32.0%)
+  - Python: 971 files (65.9%)
+  - Unknown: 483 files (32.8%)
   - C/C++ Header: 7 files (0.5%)
-  - JavaScript: 6 files (0.4%)
-  - C++: 5 files (0.4%)
+  - JavaScript: 5 files (0.3%)
+  - C++: 5 files (0.3%)
 
 ### Directory Structure
 
@@ -62,10 +62,10 @@ scikit-learn/
 │   │   ├── get_commit_message.py
 │   │   ├── get_selected_tests.py
 │   │   ├── install.sh
-│   │   ├── install_pyodide.sh
 │   │   ├── install_setup_conda.sh
 │   │   ├── posix-all-parallel.yml
-│   │   ├── ... (29 more items)
+│   │   ├── posix-docker.yml
+│   │   ├── ... (26 more items)
 │   ├── circle/
 │   │   ├── build_doc.sh
 │   │   ├── checkout_merge_commit.sh
@@ -94,7 +94,6 @@ scikit-learn/
 │   │   ├── build_wheels.sh
 │   │   ├── check_license.py
 │   │   ├── cibw_before_build.sh
-│   │   ├── cibw_before_test.sh
 │   │   └── test_wheels.sh
 │   ├── Makefile
 │   ├── check-meson-openmp-dependencies.py
@@ -230,9 +229,12 @@ scikit-learn/
 │   │   └── plot_random_multilabel_dataset.py
 │   ├── ... (25 more items)
 ├── maint_tools/
+│   ├── bump-dependencies-versions.py
 │   ├── check_xfailed_checks.py
 │   ├── sort_whats_new.py
 │   ├── update_tracking_issue.py
+│   ├── vendor_array_api_compat.sh
+│   ├── vendor_array_api_extra.sh
 │   └── whats_missing.sh
 ├── sklearn/
 │   ├── __check_build/
@@ -381,7 +383,7 @@ scikit-learn/
 │   ├── ... (42 more items)
 ├── CITATION.cff
 ├── CODE_OF_CONDUCT.md
-├── ... (10 more items)
+├── ... (8 more items)
 ```
 
 ## Key Files
@@ -392,9 +394,9 @@ scikit-learn/
 
 **Path**: sklearn\utils\estimator_checks.py
 **Language**: Python
-**Lines of Code**: 4102
+**Lines of Code**: 4089
 **Description**: Various utilities to check the compatibility of estimators with scikit-learn API.
-**Dependencies**: __future__.annotations, pickle, re, textwrap, warnings and 101 more
+**Dependencies**: __future__.annotations, pickle, re, textwrap, warnings and 100 more
 **Classes**: 1
 **Functions**: 141
 
@@ -402,17 +404,17 @@ scikit-learn/
 
 **Path**: sklearn\metrics\_classification.py
 **Language**: Python
-**Lines of Code**: 2933
+**Lines of Code**: 3067
 **Description**: Metrics to assess performance on classification task given class prediction. Functions named as ``*_score`` return a scalar value to maximize: the higher the better. Function named as ``*_error`` or...
-**Dependencies**: warnings, numbers.Integral, numbers.Real, numpy, scipy.sparse.coo_matrix and 37 more
-**Functions**: 25
+**Dependencies**: warnings, numbers.Integral, numbers.Real, numpy, scipy.sparse.coo_matrix and 36 more
+**Functions**: 27
 
 ### _data.py
 
 **Path**: sklearn\preprocessing\_data.py
 **Language**: Python
-**Lines of Code**: 2914
-**Dependencies**: warnings, numbers.Integral, numbers.Real, numpy, scipy.optimize and 34 more
+**Lines of Code**: 2928
+**Dependencies**: warnings, numbers.Integral, numbers.Real, numpy, scipy.optimize and 36 more
 **Classes**: 9
 **Functions**: 11
 
@@ -420,8 +422,8 @@ scikit-learn/
 
 **Path**: sklearn\linear_model\_coordinate_descent.py
 **Language**: Python
-**Lines of Code**: 2576
-**Dependencies**: numbers, sys, warnings, abc.ABC, abc.abstractmethod and 37 more
+**Lines of Code**: 2644
+**Dependencies**: numbers, sys, warnings, abc.ABC, abc.abstractmethod and 38 more
 **Classes**: 9
 **Functions**: 5
 
@@ -429,19 +431,19 @@ scikit-learn/
 
 **Path**: sklearn\metrics\tests\test_classification.py
 **Language**: Python
-**Lines of Code**: 2454
+**Lines of Code**: 2596
 **Dependencies**: re, warnings, functools.partial, itertools.chain, itertools.permutations and 49 more
-**Functions**: 107
+**Functions**: 113
 
-### _split.py
+### _forest.py
 
-**Path**: sklearn\model_selection\_split.py
+**Path**: sklearn\ensemble\_forest.py
 **Language**: Python
-**Lines of Code**: 2442
-**Description**: The :mod:`sklearn.model_selection._split` module includes classes and functions to split the data based on a preset strategy.
-**Dependencies**: numbers, warnings, abc.ABCMeta, abc.abstractmethod, collections.defaultdict and 24 more
-**Classes**: 22
-**Functions**: 6
+**Lines of Code**: 2435
+**Description**: Forest of trees-based ensemble methods. Those methods include random forests and extremely randomized trees. The module structure is the following: - The ``BaseForest`` base class implements a comm...
+**Dependencies**: threading, abc.ABCMeta, abc.abstractmethod, numbers.Integral, numbers.Real and 40 more
+**Classes**: 8
+**Functions**: 5
 
 ## Usage
 

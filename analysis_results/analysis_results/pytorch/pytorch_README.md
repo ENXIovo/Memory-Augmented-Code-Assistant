@@ -23,13 +23,13 @@ pip install -r requirements.txt
 
 ### Project Summary
 
-- **Total Files**: 3736
+- **Total Files**: 3710
 - **Languages**: Unknown, Python, C++, Java, C/C++ Header
 - **Language Distribution**:
-  - Unknown: 7799 files (49.7%)
-  - Python: 3736 files (23.8%)
-  - C/C++ Header: 2056 files (13.1%)
-  - C++: 1888 files (12.0%)
+  - Unknown: 7849 files (49.8%)
+  - Python: 3710 files (23.6%)
+  - C/C++ Header: 2073 files (13.2%)
+  - C++: 1894 files (12.0%)
   - C: 193 files (1.2%)
 
 ### Directory Structure
@@ -119,15 +119,10 @@ pytorch/
 │   └── CMakeLists.txt
 ├── benchmarks/
 │   ├── distributed/
-│   │   ├── ddp/
-│   │   │   ├── README.md
-│   │   │   ├── benchmark.py
-│   │   │   └── diff.py
-│   │   └── rpc/
-│   │       ├── parameter_server/
-│   │       │   └── ...
-│   │       └── rl/
-│   │           └── ...
+│   │   └── ddp/
+│   │       ├── README.md
+│   │       ├── benchmark.py
+│   │       └── diff.py
 │   ├── dynamo/
 │   │   ├── ci_expected_accuracy/
 │   │   │   ├── cu124/
@@ -141,7 +136,7 @@ pytorch/
 │   │   │   ├── aot_eager_torchbench_inference.csv
 │   │   │   ├── aot_eager_torchbench_training.csv
 │   │   │   ├── aot_inductor_huggingface_inference.csv
-│   │   │   ├── ... (45 more items)
+│   │   │   ├── ... (48 more items)
 │   │   ├── microbenchmarks/
 │   │   │   ├── operator_inp_logs/
 │   │   │   │   └── ...
@@ -209,6 +204,8 @@ pytorch/
 │   │   ├── mixtral_moe_quantize.py
 │   │   ├── model.py
 │   │   └── quantize.py
+│   ├── inductor_backends/
+│   │   └── cutlass.py
 │   ├── inference/
 │   │   ├── results/
 │   │   │   ├── output_128_false.md
@@ -229,30 +226,7 @@ pytorch/
 │   │   ├── process_metrics.py
 │   │   ├── runner.sh
 │   │   └── server.py
-│   ├── instruction_counts/
-│   │   ├── applications/
-│   │   │   ├── __init__.py
-│   │   │   └── ci.py
-│   │   ├── core/
-│   │   │   ├── __init__.py
-│   │   │   ├── api.py
-│   │   │   ├── expand.py
-│   │   │   ├── types.py
-│   │   │   └── utils.py
-│   │   ├── definitions/
-│   │   │   ├── __init__.py
-│   │   │   ├── setup.py
-│   │   │   └── standard.py
-│   │   ├── execution/
-│   │   │   ├── __init__.py
-│   │   │   ├── runner.py
-│   │   │   └── work.py
-│   │   ├── worker/
-│   │   │   ├── __init__.py
-│   │   │   └── main.py
-│   │   ├── README.md
-│   │   └── main.py
-│   ├── ... (14 more items)
+│   ├── ... (15 more items)
 ├── binaries/
 │   ├── CMakeLists.txt
 │   ├── aot_model_compiler.cc
@@ -322,6 +296,8 @@ pytorch/
 │   │   ├── cmake_configure_file.bzl
 │   │   └── cmake_macros.h.in
 │   ├── metal/
+│   │   ├── atomic.h
+│   │   ├── common.h
 │   │   ├── indexing.h
 │   │   ├── random.h
 │   │   ├── reduction_utils.h
@@ -369,7 +345,7 @@ pytorch/
 │   │   ├── BFloat16-inl.h
 │   │   ├── BFloat16-math.h
 │   │   ├── BFloat16.h
-│   │   ├── ... (148 more items)
+│   │   ├── ... (149 more items)
 │   ├── ... (6 more items)
 ├── caffe2/
 │   ├── core/
@@ -431,6 +407,7 @@ pytorch/
 │   │   ├── rccl.cmake
 │   │   └── ucc.cmake
 │   ├── Modules/
+│   │   ├── FindACL.cmake
 │   │   ├── FindAPL.cmake
 │   │   ├── FindARM.cmake
 │   │   ├── FindAVX.cmake
@@ -439,8 +416,7 @@ pytorch/
 │   │   ├── FindBLIS.cmake
 │   │   ├── FindBenchmark.cmake
 │   │   ├── FindCUB.cmake
-│   │   ├── FindCUDAToolkit.cmake
-│   │   ├── ... (21 more items)
+│   │   ├── ... (22 more items)
 │   ├── Modules_CUDA_fix/
 │   │   ├── upstream/
 │   │   │   ├── FindCUDA/
@@ -467,14 +443,12 @@ pytorch/
 │   ├── Allowlist.cmake
 │   ├── BuildVariables.cmake
 │   ├── Caffe2Config.cmake.in
-│   ├── CheckAbi.cmake
 │   ├── Codegen.cmake
-│   ├── ... (17 more items)
+│   ├── DebugHelper.cmake
+│   ├── ... (16 more items)
 ├── docs/
 │   ├── cpp/
 │   │   ├── source/
-│   │   │   ├── _static/
-│   │   │   │   └── ...
 │   │   │   ├── notes/
 │   │   │   │   └── ...
 │   │   │   ├── Doxyfile
@@ -495,13 +469,13 @@ pytorch/
 │   │   │   ├── autosummary/
 │   │   │   │   └── ...
 │   │   │   ├── classtemplate.rst
-│   │   │   ├── layout.html
 │   │   │   └── sobolengine.rst
 │   │   ├── community/
 │   │   │   ├── build_ci_governance.rst
 │   │   │   ├── contribution_guide.rst
 │   │   │   ├── design.rst
 │   │   │   ├── governance.rst
+│   │   │   ├── index.rst
 │   │   │   └── persons_of_interest.rst
 │   │   ├── elastic/
 │   │   │   ├── agent.rst
@@ -524,7 +498,7 @@ pytorch/
 │   │   │   ├── cuda.rst
 │   │   │   ├── custom_operators.rst
 │   │   │   ├── ddp.rst
-│   │   │   ├── ... (15 more items)
+│   │   │   ├── ... (17 more items)
 │   │   ├── rpc/
 │   │   │   ├── distributed_autograd.rst
 │   │   │   └── rref.rst
@@ -534,11 +508,12 @@ pytorch/
 │   │   │   ├── onnx/
 │   │   │   │   └── ...
 │   │   │   ├── build_activation_images.py
+│   │   │   ├── build_lr_scheduler_images.py
 │   │   │   ├── build_opsets.py
 │   │   │   └── build_quantization_configs.py
 │   │   ├── accelerator.rst
 │   │   ├── amp.rst
-│   │   ├── ... (144 more items)
+│   │   ├── ... (148 more items)
 │   ├── Makefile
 │   ├── README.md
 │   ├── libtorch.rst
@@ -646,7 +621,7 @@ pytorch/
 
 **Path**: setup.py
 **Language**: Python
-**Lines of Code**: 1040
+**Lines of Code**: 875
 **Dependencies**: os, sys, platform, filecmp, glob and 27 more
 **Classes**: 6
 **Functions**: 15
@@ -662,8 +637,8 @@ pytorch/
 
 **Path**: test\cpp_extensions\open_registration_extension\setup.py
 **Language**: Python
-**Lines of Code**: 57
-**Dependencies**: distutils.command.clean, os, shutil, sys, pathlib.Path and 4 more
+**Lines of Code**: 60
+**Dependencies**: distutils.command.clean, os, platform, shutil, sys and 5 more
 **Classes**: 1
 
 ### Python Files
@@ -672,28 +647,28 @@ pytorch/
 
 **Path**: test\test_jit.py
 **Language**: Python
-**Lines of Code**: 12459
+**Lines of Code**: 12464
 **Dependencies**: torch, jit.test_tracer.TestTracer, jit.test_tracer.TestMixTracingScripting, jit.test_recursive_script.TestRecursiveScript, jit.test_type_sharing.TestTypeSharing and 196 more
 **Classes**: 309
 **Functions**: 21
+
+### test_export.py
+
+**Path**: test\export\test_export.py
+**Language**: Python
+**Lines of Code**: 12213
+**Dependencies**: copy, dataclasses, logging, math, operator and 156 more
+**Classes**: 592
+**Functions**: 16
 
 ### test_torchinductor.py
 
 **Path**: test\inductor\test_torchinductor.py
 **Language**: Python
-**Lines of Code**: 11491
-**Dependencies**: contextlib, copy, dataclasses, functools, gc and 140 more
+**Lines of Code**: 12034
+**Dependencies**: contextlib, copy, dataclasses, functools, gc and 147 more
 **Classes**: 53
-**Functions**: 43
-
-### test_pytorch_onnx_onnxruntime.py
-
-**Path**: test\onnx\test_pytorch_onnx_onnxruntime.py
-**Language**: Python
-**Lines of Code**: 11464
-**Dependencies**: __future__.annotations, functools, io, itertools, os and 43 more
-**Classes**: 812
-**Functions**: 5
+**Functions**: 46
 
 ## Usage
 

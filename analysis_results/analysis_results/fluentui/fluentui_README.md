@@ -70,12 +70,12 @@ fluentui/
 │   │   ├── CHANGELOG.md
 │   │   ├── README.md
 │   │   ├── chiclet-test.html
+│   │   ├── eslint.config.js
 │   │   ├── index.html
 │   │   ├── just.config.ts
 │   │   ├── package.json
 │   │   ├── pr-deploy-site.css
-│   │   ├── pr-deploy-site.js
-│   │   ├── ... (2 more items)
+│   │   ├── ... (3 more items)
 │   ├── public-docsite/
 │   │   ├── config/
 │   │   │   └── pre-copy.json
@@ -175,44 +175,41 @@ fluentui/
 │   │   ├── CHANGELOG.json
 │   │   ├── CHANGELOG.md
 │   │   ├── README.md
+│   │   ├── cypress-react-18.config.ts
 │   │   ├── cypress.config.ts
+│   │   ├── jest-react-18.config.js
 │   │   ├── jest.config.js
-│   │   ├── just.config.ts
-│   │   ├── package.json
-│   │   ├── ... (6 more items)
+│   │   ├── ... (9 more items)
 │   ├── react-18-tests-v9/
 │   │   ├── config/
+│   │   │   ├── cypressWithStrictMode.ts
 │   │   │   └── tests.js
 │   │   ├── src/
 │   │   │   ├── components/
 │   │   │   │   └── ...
-│   │   │   ├── App.cy.tsx
-│   │   │   ├── App.test.tsx
-│   │   │   ├── App.tsx
-│   │   │   ├── Overflow.cy.tsx
-│   │   │   ├── Portal.cy.tsx
-│   │   │   ├── createPresenceComponent.test.tsx
+│   │   │   ├── utils/
+│   │   │   │   └── ...
 │   │   │   └── index.tsx
 │   │   ├── README.md
+│   │   ├── cypress-react-18.config.ts
 │   │   ├── cypress.config.ts
 │   │   ├── jest.config.js
 │   │   ├── just.config.ts
 │   │   ├── package.json
 │   │   ├── project.json
-│   │   ├── tsconfig.app.json
-│   │   ├── ... (4 more items)
-│   ├── ... (8 more items)
+│   │   ├── ... (6 more items)
+│   ├── ... (9 more items)
 ├── change/
+│   ├── @fluentui-eslint-plugin-040b8b5c-5762-46a2-ab2b-48c3da539578.json
 │   ├── @fluentui-eslint-plugin-14d72a24-8d9d-4739-ae20-c5bfccdbd508.json
 │   ├── @fluentui-eslint-plugin-1d38b9b6-d3b1-4606-aff3-d9aba8b1338b.json
 │   ├── @fluentui-eslint-plugin-1d3bf32e-cc52-4d02-8ff0-c047c300984a.json
 │   ├── @fluentui-eslint-plugin-4ae85fd9-5899-48d8-8e78-f34c47eb28fd.json
 │   ├── @fluentui-eslint-plugin-4e7501a2-d24a-4358-a39b-c38b96b74e69.json
 │   ├── @fluentui-eslint-plugin-5535c284-c43b-4aea-b042-e65f35562234.json
+│   ├── @fluentui-eslint-plugin-57088d0d-b50a-4eb6-aa29-cb2df3307e7c.json
 │   ├── @fluentui-eslint-plugin-60857b83-482c-4675-8085-b7e66adf9e2a.json
-│   ├── @fluentui-eslint-plugin-728becf6-2abf-400f-b3bc-7a5049b39ba9.json
-│   ├── @fluentui-eslint-plugin-75e61142-a4e1-4046-9076-316b44c873ca.json
-│   ├── ... (13 more items)
+│   ├── ... (14 more items)
 ├── docs/
 │   ├── react-v9/
 │   │   └── contributing/
@@ -335,6 +332,20 @@ fluentui/
 │   │   ├── tsconfig.json
 │   │   └── webpack.config.js
 │   ├── charts/
+│   │   ├── chart-utilities/
+│   │   │   ├── config/
+│   │   │   │   └── ...
+│   │   │   ├── etc/
+│   │   │   │   └── ...
+│   │   │   ├── src/
+│   │   │   │   └── ...
+│   │   │   ├── CHANGELOG.json
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── just.config.ts
+│   │   │   ├── package.json
+│   │   │   ├── ... (6 more items)
 │   │   ├── chart-web-components/
 │   │   │   ├── docs/
 │   │   │   │   └── ...
@@ -368,7 +379,7 @@ fluentui/
 │   │   │   ├── CHANGELOG.json
 │   │   │   ├── CHANGELOG.md
 │   │   │   ├── ... (10 more items)
-│   │   └── react-charts-preview/
+│   │   └── react-charts/
 │   │       ├── library/
 │   │       │   └── ...
 │   │       └── stories/
@@ -488,12 +499,257 @@ fluentui/
 │   │   ├── jest.config.js
 │   │   ├── just.config.ts
 │   │   ├── ... (3 more items)
-│   ├── ... (13 more items)
-├── CredScanSuppressions.json
-├── LICENSE
-├── README.md
-├── SECURITY.md
-├── ... (25 more items)
+│   ├── ... (38 more items)
+├── scripts/
+│   ├── api-extractor/
+│   │   ├── src/
+│   │   │   └── index.js
+│   │   ├── api-extractor.common.json
+│   │   ├── api-extractor.common.v-next.json
+│   │   ├── api-extractor.wc.json
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── babel/
+│   │   ├── src/
+│   │   │   ├── index.js
+│   │   │   ├── preset-v9.js
+│   │   │   ├── preset-v9.spec.ts
+│   │   │   └── types.ts
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── register.js
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── beachball/
+│   │   ├── src/
+│   │   │   ├── config.test.ts
+│   │   │   ├── customRenderers.ts
+│   │   │   ├── index.ts
+│   │   │   ├── register.js
+│   │   │   ├── release-tools.config.js
+│   │   │   ├── release-v8.config.js
+│   │   │   ├── release-vNext.config.js
+│   │   │   ├── release-web-components.config.js
+│   │   │   ├── shared.config.ts
+│   │   │   └── utils.ts
+│   │   ├── base.config.json
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── cypress/
+│   │   ├── src/
+│   │   │   ├── fixtures/
+│   │   │   │   └── ...
+│   │   │   ├── support/
+│   │   │   │   └── ...
+│   │   │   ├── base.config.ts
+│   │   │   └── index.ts
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── dangerjs/
+│   │   ├── src/
+│   │   │   ├── detectNonApprovedDependencies/
+│   │   │   │   └── ...
+│   │   │   ├── api.ts
+│   │   │   ├── checkChangelog.ts
+│   │   │   ├── checkStorybookVersions.ts
+│   │   │   ├── index.js
+│   │   │   ├── types.ts
+│   │   │   └── utils.ts
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── executors/
+│   │   ├── src/
+│   │   │   ├── __fixtures__/
+│   │   │   │   └── ...
+│   │   │   ├── check-for-modified-files.ts
+│   │   │   ├── checkIfPackagesAffected.js
+│   │   │   ├── debug-test.js
+│   │   │   ├── deprecate-react-components-preview-packages.spec.ts
+│   │   │   ├── deprecate-react-components-preview-packages.ts
+│   │   │   ├── enquirer-types.d.ts
+│   │   │   ├── format.js
+│   │   │   ├── generate-ui.spec.ts
+│   │   │   ├── ... (8 more items)
+│   │   ├── README.md
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── fluentui-publish/
+│   │   ├── bin/
+│   │   │   └── northstar-release.js
+│   │   ├── src/
+│   │   │   ├── overrides/
+│   │   │   │   └── ...
+│   │   │   ├── cli.ts
+│   │   │   ├── index.ts
+│   │   │   ├── publish.spec.ts
+│   │   │   ├── publish.ts
+│   │   │   ├── utils.spec.ts
+│   │   │   ├── utils.ts
+│   │   │   ├── version.spec.ts
+│   │   │   └── version.ts
+│   │   ├── jest-setup.js
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── generators/
+│   │   ├── src/
+│   │   │   ├── create-package/
+│   │   │   │   └── ...
+│   │   │   ├── copy-notices.js
+│   │   │   ├── generate-package-manifest.js
+│   │   │   ├── generate-version-files.spec.ts
+│   │   │   ├── generate-version-files.ts
+│   │   │   └── token-pipeline.ts
+│   │   ├── README.md
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── github/
+│   │   ├── src/
+│   │   │   ├── constants.ts
+│   │   │   ├── index.ts
+│   │   │   ├── pullRequests.ts
+│   │   │   └── types.ts
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── ... (17 more items)
+├── specs/
+│   ├── Breadcrumb.md
+│   ├── Button.md
+│   ├── Checkbox.md
+│   ├── Datepicker.md
+│   ├── Icon.md
+│   ├── Link.md
+│   ├── Pills.md
+│   ├── README.md
+│   ├── Skeleton.md
+│   ├── ... (6 more items)
+├── starter-templates/
+│   ├── src/
+│   │   └── react-components-vite/
+│   │       ├── src/
+│   │       │   └── ...
+│   │       ├── README.md
+│   │       ├── index.html
+│   │       ├── package.json
+│   │       ├── tsconfig.app.json
+│   │       ├── tsconfig.json
+│   │       ├── tsconfig.node.json
+│   │       └── vite.config.ts
+│   ├── README.md
+│   ├── package.json
+│   └── project.json
+├── tools/
+│   ├── eslint-rules/
+│   │   ├── rules/
+│   │   │   ├── consistent-callback-type.spec.ts
+│   │   │   ├── consistent-callback-type.ts
+│   │   │   ├── no-missing-jsx-pragma.spec.ts
+│   │   │   ├── no-missing-jsx-pragma.ts
+│   │   │   ├── no-restricted-globals.spec.ts
+│   │   │   └── no-restricted-globals.ts
+│   │   ├── README.md
+│   │   ├── index.ts
+│   │   ├── jest.config.ts
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lint.json
+│   │   └── tsconfig.spec.json
+│   ├── visual-regression-assert/
+│   │   ├── bin/
+│   │   │   └── visual-regression-assert.js
+│   │   ├── src/
+│   │   │   ├── __fixtures__/
+│   │   │   │   └── ...
+│   │   │   ├── template/
+│   │   │   │   └── ...
+│   │   │   ├── assert.ts
+│   │   │   ├── cli.ts
+│   │   │   ├── index.ts
+│   │   │   ├── report.ts
+│   │   │   ├── reporters.ts
+│   │   │   ├── shared.ts
+│   │   │   ├── types.ts
+│   │   │   ├── ... (3 more items)
+│   │   ├── README.md
+│   │   ├── jest.config.ts
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   ├── visual-regression-utilities/
+│   │   ├── src/
+│   │   │   ├── TestWrapperDecorator.tsx
+│   │   │   ├── getStoryVariant.spec.tsx
+│   │   │   ├── getStoryVariant.tsx
+│   │   │   └── index.ts
+│   │   ├── README.md
+│   │   ├── jest.config.ts
+│   │   ├── package.json
+│   │   ├── project.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.lib.json
+│   │   └── tsconfig.spec.json
+│   └── workspace-plugin/
+│       ├── scripts/
+│       │   ├── check-dep-graph.js
+│       │   └── install-verdaccio.js
+│       ├── src/
+│       │   ├── executors/
+│       │   │   └── ...
+│       │   ├── generators/
+│       │   │   └── ...
+│       │   ├── plugins/
+│       │   │   └── ...
+│       │   ├── index.ts
+│       │   ├── types.spec.ts
+│       │   ├── types.ts
+│       │   ├── utils-testing.ts
+│       │   ├── utils.spec.ts
+│       │   └── utils.ts
+│       ├── README.md
+│       ├── STYLE-GUIDE.md
+│       ├── executors.json
+│       ├── generators.json
+│       ├── jest-setup.js
+│       ├── jest.config.ts
+│       ├── package.json
+│       ├── ... (4 more items)
+├── ... (38 more items)
 ```
 
 ## Key Files

@@ -225,7 +225,7 @@ flask/
 
 **Path**: src\flask\cli.py
 **Language**: Python
-**Lines of Code**: 827
+**Lines of Code**: 829
 **Dependencies**: __future__.annotations, ast, collections.abc, importlib.metadata, inspect and 34 more
 **Classes**: 6
 **Functions**: 22
