@@ -17,7 +17,7 @@ nltk.download('punkt')
 
 # 设定路径
 repo_names = [
-    "django", "fastapi", "flask", "fluentui", "numpy",
+    "django", "fastapi", "flask", "numpy",
     "pandas", "pytorch", "readme-ai", "requests", "scikit-learn"
 ]
 base_dir = "analysis_results/cloned_repos"
@@ -44,7 +44,7 @@ def read_original_readme(repo_name):
 
 # 读取 AST 生成的 README
 def read_ast_readme(repo_name):
-    ast_path = os.path.join(analysis_dir, repo_name, f"{repo_name}_README.md")
+    ast_path = os.path.join(analysis_dir, repo_name, f"{repo_name}_new_readme.md")
     if os.path.exists(ast_path):
         with open(ast_path, "r", encoding="utf-8") as f:
             return f.read()
@@ -126,7 +126,7 @@ def compute_metrics(reference, hypothesis):
 
     return meteor, bertscore, wmd, wmd2
 
-gpt = [0.45, 0.43, 0.47, 0.45, 0.46, 0.45, 0.44, 0.43, 0.52, 0.43]  # 手动输入的数据
+gpt = [0.45, 0.43, 0.47, 0.46, 0.45, 0.44, 0.43, 0.52, 0.43]  # 手动输入的数据
 
 # **确保数据数量匹配**
 if len(gpt) != len(repo_names):

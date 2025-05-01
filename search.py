@@ -17,7 +17,7 @@ import config as C
 PINECONE_API_KEY = C.PINECONE_API_KEY
 GIST_INDEX    = C.GIST_INDEX_NAME
 DETAIL_INDEX  = C.DETAIL_INDEX_NAME
-REPO_NAME     = "django"
+REPO_NAME     = "scikit-learn"
 TOP_K_GIST    = 5
 TOP_K_DETAIL  = 10
 OUTPUT_FILE   = "README-TEST.md"
@@ -106,7 +106,7 @@ def retrieve_top_chunks(repo_name: str, questions: list, top_k_gist: int = TOP_K
 # 生成 README
 EXAMPLE_README_STYLE = """
 # Project Name
-A short and clear description of what this project does.
+A short and clear description of what this project does, its purpose, and key goals.
 
 ## Installation
 Step-by-step instructions for setting up the project.
@@ -118,7 +118,7 @@ An outline of the important files or modules.
 Code examples or typical workflows.
 
 ## API Overview
-Key functions or classes with descriptions.
+Key functions, modules or classes with descriptions.
 """
 
 def generate_readme(gist_chunks: list, detail_chunks: list) -> str:
@@ -146,4 +146,7 @@ if __name__ == "__main__":
     print(f"✅ Retrieved {len(gist_chunks)} gist and {len(detail_chunks)} detail chunks.")
     print("🧠 Generating README...")
     readme_text = generate_readme(gist_chunks, detail_chunks)
-    save_readme(readme_text)
+    # 构造输出路径
+    OUTPUT_DIR = os.path.join("analysis_results", "analysis_results", REPO_NAME)
+    OUTPUT_FILE = os.path.join(OUTPUT_DIR, f"{REPO_NAME}_new_readme.md")
+    save_readme(readme_text, OUTPUT_FILE)
