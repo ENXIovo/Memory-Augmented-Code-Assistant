@@ -1,31 +1,98 @@
 # FastAPI
-FastAPI is a modern, high-performance web framework for building APIs with Python 3.6+ based on standard Python-type hints. It is designed to be easy to learn, quick to code, and ready for production.
 
-## Installation
-To install FastAPI, use pip:
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. It is designed to provide a simple, yet powerful set of tools for creating robust applications quickly and efficiently.
 
-```bash
-pip install fastapi[standard]
+## Project Structure
+
+```
+fastapi/
+├── fastapi/
+│   ├── .gitignore
+│   ├── .pre-commit-config.yaml
+│   ├── CITATION.cff
+│   ├── CONTRIBUTING.md
+│   ├── LICENSE
+│   ├── pdm_build.py
+│   ├── pyproject.toml
+│   ├── README.md
+│   ├── requirements-docs-insiders.txt
+│   ├── requirements-docs-tests.txt
+│   ├── requirements-docs.txt
+│   ├── requirements-github-actions.txt
+│   ├── requirements-tests.txt
+│   ├── requirements-translations.txt
+│   ├── requirements.txt
+│   ├── SECURITY.md
+│   ├── fastapi/
+│   │   ├── applications.py          # Main FastAPI application class
+│   │   ├── cli.py                   # Command-line interface utilities
+│   │   ├── __init__.py              # FastAPI package initializer
+│   │   ├── __main__.py              # Entry point for running FastAPI
+│   │   └── ...                      # Other core modules
+│   ├── scripts/
+│   │   ├── contributors.py          # Contributor management scripts
+│   │   ├── docs.py                  # Documentation scripts
+│   │   └── ...                      # Other utility scripts
+│   ├── tests/
+│   │   ├── test_ws_router.py        # Test suite for WebSocket routing
+│   │   ├── test_schema_extra_examples.py # Tests involving schema examples
+│   │   └── ...                      # Other test modules
+├── docs_src/
+│   ├── first_steps/
+│   │   ├── tutorial001.py           # Introduction to FastAPI module
+│   │   └── tutorial002.py           # Further steps in FastAPI module
+│   ├── static_files/
+│   │   ├── tutorial001.py           # Serving static files example
+│   ├── custom_response/
+│   │   ├── tutorial008.py           # Custom response handling example
+│   ├── bigger_applications/
+│   │   ├── app/
+│   │   │   ├── routers/
+│   │   │   │   ├── users.py         # User routing examples
+│   ├── app_an_py39/
+│   │   ├── routers/
+│   │   │   ├── users.py             # Alternative version for Python 3.9
 ```
 
-This installation includes all necessary dependencies.
+## Installation
+
+Follow these steps to set up the FastAPI project:
+
+1. Clone the Git repository:
+
+   ```bash
+   git clone https://github.com/yourusername/fastapi.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd fastapi/fastapi
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. To use additional features, like documentation generation, install the specified requirements:
+
+   ```bash
+   pip install -r requirements-docs.txt
+   ```
 
 ## Components
-The FastAPI repository contains the following key files and modules:
 
-- `fastapi/__init__.py`: The main module of the FastAPI framework, providing high-performance capabilities and easy integration.
-- `fastapi/applications.py`: Contains the `FastAPI` application class, which is the main entry point to create FastAPI applications.
-- `fastapi/cli.py`: Command line interface for FastAPI applications, allowing easy execution of commands.
-- `fastapi/security/api_key.py`: Implements security features such as API key retrieval using headers, cookies, and query parameters.
-- `fastapi/openapi/__init__.py`: Manages OpenAPI schema generation for FastAPI.
-
-### Documentation Examples
-- `docs_src/first_steps/tutorial001.py`: Example tutorial for beginners.
-- `docs_src/first_steps/tutorial002.py`: Continuation of beginner tutorials.
-- `docs_src/static_files/tutorial001.py`: Demonstrates static file handling.
+- **`fastapi/applications.py`**: Contains the `FastAPI` class, which is the main entry point for creating FastAPI applications.
+- **`fastapi/cli.py`**: Provides command-line functionalities for managing FastAPI projects.
+- **`tests/`**: Includes test cases to ensure the integrity of the FastAPI framework.
 
 ## Usage
-Here’s a simple example of how to create a FastAPI application:
+
+Here are some examples of how you can use the FastAPI framework:
+
+Create and run a simple application:
 
 ```python
 from fastapi import FastAPI
@@ -37,27 +104,24 @@ def read_root():
     return {"Hello": "World"}
 ```
 
-To run the application, save it as `main.py` and execute:
+Run the application using the command line:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-This will start a server at `http://127.0.0.1:8000`, where you can access the endpoint.
-
 ## API Overview
-Below are key functions and classes available within FastAPI:
 
-### `FastAPI`
-The main class used to create FastAPI applications. It is designed for high performance and ease of use.
+### Core Classes and Functions
 
-### `main()`
-This function in `fastapi/cli.py` provides command-line utilities for running FastAPI applications. It shows warning messages if FastAPI dependencies are not properly installed.
+- **`FastAPI`**: The main application class used to instantiate a FastAPI app. It supports extending functionality with routers, background tasks, and more.
 
-### `create_app()`
-Used to create a FastAPI instance for testing purposes, including various route examples and body examples using Pydantic models.
+- **`main()`** in `fastapi/cli.py`: A command-line entry point that checks if the required packages are installed before running FastAPI commands.
 
-### Security Classes
-- **`APIKeyBase`**, **`APIKeyQuery`**, **`APIKeyHeader`**, **`APIKeyCookie`**: Classes that facilitate API key management through different methods.
+### Example Functions
 
-For more detailed documentation, tutorials, and guidance, please refer to the official FastAPI documentation at [FastAPI Docs](https://fastapi.tiangolo.com/).
+- **`make_app()`** in `tests/test_ws_router.py`: A utility function for creating and configuring FastAPI applications, including routers and middleware.
+
+- **`create_app()`** in `tests/test_schema_extra_examples.py`: Demonstrates setting up routes with schema examples and deprecated warning handling.
+
+These components provide a solid foundation for creating scalable and efficient web applications using FastAPI. Explore the source files for more detailed examples and advanced usage.

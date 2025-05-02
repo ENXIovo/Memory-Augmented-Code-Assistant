@@ -1,60 +1,90 @@
 # NumPy
-NumPy is a powerful library for numerical computing in Python, providing support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.
+NumPy is a powerful library for numerical computing in Python that supports large multidimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays. Its purpose is to provide a high-performance foundation for scientific computing in Python.
+
+## Project Structure
+The directory structure of the NumPy project is as follows:
+
+```
+numpy/
+├── numpy/                       # Main library source code
+│   ├── .circleci/              # Continuous integration configuration
+│   ├── .devcontainer/           # Development container configuration
+│   ├── .github/                 # GitHub configuration files
+│   ├── benchmarks/              # Benchmark testing files
+│   ├── branding/                # Branding resources
+│   ├── doc/                     # Documentation files
+│   ├── meson_cpu/               # CPU configuration files
+│   ├── requirements/            # Dependency requirements files
+│   ├── tools/                   # Utility scripts and tools
+│   └── vendored-meson/          # Vendored Meson build scripts
+├── .clang-format                 # Code formatting configuration
+├── CITATION.bib                 # Citation information for the library
+├── CONTRIBUTING.rst             # Guidelines for contributing to the project
+├── environment.yml              # Environment configuration
+├── INSTALL.rst                  # Installation instructions
+├── LICENSE.txt                  # License for the project
+├── README.md                    # This README file
+└── pyproject.toml               # Project metadata for packaging
+```
 
 ## Installation
-To install NumPy, you can use pip, the Python package manager. In your terminal or command prompt, run the following command:
-```bash
-pip install numpy
-```
-Alternatively, you can install it using conda:
-```bash
-conda install numpy
-```
+To set up the NumPy library, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd numpy/
+   ```
+
+2. **Set up a virtual environment (recommended)**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   conda install --file requirements/all_requirements.txt
+   ```
+
+4. **Build and install NumPy**:
+   ```bash
+   pip install .
+   ```
 
 ## Components
-This project is structured into several important modules and packages:
+Key files and components in the NumPy project:
 
-- **numpy**: The main package containing all of NumPy's functionality.
-  - **core**: Contains core functionalities including ndarray, ufuncs, and dtypes.
-  - **lib**: A space for utility functions that aren't specifically tied to the core array features.
-  - **ma**: Contains functionality for masked arrays.
-  - **rec**: Supports record arrays.
-  - **random**: Implements random number generators and distributions.
-  - **distutils**: Utilities for building and installing NumPy, including setup configurations.
-  - **typing**: Type hinting definitions for NumPy.
+- **`numpy/__init__.py`**: Initializes the NumPy package and defines dynamic imports for sub-modules like `linalg`, `fft`, etc.
+- **`numpy/core/__init__.py`**: Contains fundamental functionalities including core data types, ufuncs, and array methods.
+- **`numpy/lib/__init__.py`**: A workspace for implementing various utility functions.
+- **`numpy/distutils`**: Contains build and installation tools.
+- **`numpy/ma/__init__.py`**: Implements masked arrays that handle invalid or missing data.
 
 ## Usage
-Here are some typical workflows you can achieve with NumPy:
+Here's a simple example of how to use NumPy to create an array and perform some operations:
 
 ```python
 import numpy as np
 
 # Create a 1D array
-array_1d = np.array([1, 2, 3, 4, 5])
+arr = np.array([1, 2, 3, 4, 5])
 
-# Create a 2D array
-array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+# Calculate the mean of the array
+mean_val = np.mean(arr)
 
-# Perform basic operations
-sum_array = np.sum(array_1d)  # Sum of elements
-mean_array = np.mean(array_2d)  # Mean of elements
-
-# Reshape the array
-reshaped_array = array_1d.reshape((5, 1))
+print("Array:", arr)
+print("Mean Value:", mean_val)
 ```
 
 ## API Overview
-Key functionalities provided by NumPy include:
+Here are some key modules and functions within NumPy:
 
-- `numpy.array()`: Creates an ndarray from a list or tuple.
-- `numpy.arange()`: Generates arrays with regularly spaced values.
-- `numpy.zeros()`, `numpy.ones()`: Generate arrays filled with zeros or ones.
-- `numpy.sum()`: Computes the sum of array elements.
-- `numpy.mean()`: Computes the arithmetic mean.
+- **`numpy.array`**: Creates a new array from a list or tuple.
+- **`numpy.mean`**: Computes the arithmetic mean along the specified axis.
+- **`numpy.std`**: Computes the standard deviation of the array elements.
+- **`numpy.linalg`**: Contains functions for linear algebra, such as matrix multiplication and eigenvalue computations.
 
-### Additional Key Classes and Functions
-- **ndarray**: The core data structure of NumPy, supports various operations and functionalities.
-- **ufuncs (Universal Functions)**: Functions that operate element-wise on arrays, allowing for extensive mathematical operations directly on ndarrays.
-- **types**: Provides definitions for various NumPy data types.
+For detailed API documentation, refer to the [official NumPy documentation](https://numpy.org/doc/stable/).
 
-For a comprehensive list of functions and detailed API documentation, please refer to the [NumPy documentation](https://numpy.org/doc/stable/).
+Feel free to contribute to this project by reviewing the `CONTRIBUTING.rst` file for guidelines and best practices.

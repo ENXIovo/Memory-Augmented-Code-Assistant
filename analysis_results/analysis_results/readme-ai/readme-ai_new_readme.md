@@ -1,83 +1,94 @@
-# ReadmeAI
-ReadmeAI is a powerful command-line tool for generating comprehensive and well-structured README.md files for software projects. It leverages AI-driven content generation to create professional documentation with ease.
+# readme-ai
+
+readme-ai is a sophisticated command-line tool designed to automatically generate README.md files with structured content and templates, ensuring comprehensive documentation for your projects. Its primary goal is to streamline the documentation process by leveraging modern techniques in README generation, thus enabling developers to focus more on coding and less on documentation.
+
+## Project Structure
+
+```
+├── readme-ai/                 # Main project directory
+│   ├── readme-ai/            # Core package for the application
+│   │   └── .dockerignore      # Docker ignore file
+│   │   └── .gitignore         # Git ignore file
+│   │   └── .pre-commit-config.yaml # Pre-commit configuration file
+│   │   └── .ruff.toml         # Configuration for Ruff
+│   │   └── CHANGELOG.md       # List of changes in the project
+│   │   └── CODE_OF_CONDUCT.md # Community guidelines
+│   │   └── CONTRIBUTING.md    # Contribution guidelines
+│   │   └── Dockerfile         # Docker configuration file
+│   │   └── LICENSE            # Project license
+│   │   └── Makefile           # Makefile for project automation
+│   │   └── noxfile.py         # Nox configuration for testing
+│   │   └── poetry.lock        # Locked dependencies for Poetry
+│   │   └── pyproject.toml     # Project configuration
+│   │   └── README.md          # Project README file
+│   ├── .git/                  # Git metadata
+│   ├── .github/               # GitHub workflows and configurations
+│   ├── docs/                  # Documentation files
+│   ├── examples/              # Example README files for various languages
+│   ├── readmeai/              # Main application package
+│   ├── scripts/               # Utility scripts for project management
+│   ├── setup/                 # Project setup configurations
+│   ├── tests/                 # Unit tests for the application
+```
 
 ## Installation
-To set up ReadmeAI, follow these steps:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your_username/readme-ai.git
-   cd readme-ai
+To set up the project on your local machine, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/readme-ai.git
+   cd readme-ai/readme-ai/
    ```
 
-2. **Install dependencies**:
-   Make sure you have Python 3.7 or later installed. Then, install the required packages using pip:
-   ```bash
-   pip install -r requirements.txt
+2. Install the dependencies using Poetry (make sure Poetry is installed):
+   ```
+   poetry install
    ```
 
-3. **Run the application**:
-   You can run ReadmeAI directly from the command line:
-   ```bash
-   python -m readmeai.cli.main
+3. (Optional) If you want to run tests, you can set up the testing requirements:
    ```
+   cd tests
+   pytest
+   ```
+
+4. To run the application, you can use the command line interface as described in the **Usage** section.
 
 ## Components
-The ReadmeAI project consists of several key components:
 
-- **Entry Points**:
-  - `readmeai.cli.main`: The main entry point for command-line operations.
-  
-- **Core Functionality**:
-  - `readmeai.core.pipeline`: Manages the core pipeline for README generation with important functions for logging and processing.
-  
-- **Configuration**:
-  - `readmeai.config`: Handles configuration settings and file paths necessary for the application.
-  
-- **Generators**:
-  - `readmeai.generators.builder`: Responsible for building each section of the README markdown document.
+### Important Files
 
-- **Testing**:
-  - `tests.core.test_errors`: Contains tests for error handling in the ReadmeAI application.
+- **main.py**: Entry point for the command-line interface.
+- **pipeline.py**: Orchestrates the README.md file generation process.
+- **options.py**: Contains command-line options for configuring the application.
+- **builder.py**: Responsible for generating content for README sections.
+- **settings.py**: Contains configuration handling modules.
+- **test_errors.py**: Unit tests for error handling classes.
 
 ## Usage
-To generate a README.md file using ReadmeAI, you can use the command line as follows:
+
+To generate a README.md file, run the following command in your terminal:
 
 ```bash
-python -m readmeai.cli.main --repository <github_repo> --output <output_file> --logo <logo_url> [options]
+python -m readmeai.cli.main -r <repository_url> -o <output_file_path>
 ```
 
-### Command Options
-- `--repository`: Specify the GitHub repository URL.
-- `--output`: Specify the name of the output README.md file.
-- `--logo`: URL for a logo to display in the README.
-- Additional options include alignment, badge styles, navigation styles, and more.
+### Example:
 
-### Example
 ```bash
-python -m readmeai.cli.main --repository "https://github.com/username/repo" --output "README.md" --logo "https://example.com/logo.png"
+python -m readmeai.cli.main -r "https://github.com/yourusername/yourproject" -o "README.md"
 ```
+
+This command initiates the README generation process and saves the output to `README.md`.
 
 ## API Overview
-### Main Functionality
-- **`main`**: Entry point for the ReadmeAI CLI application, setting up configurations and invoking the README generation process.
-  
-**Example**:
-```python
-def main(align, api, badge_color, badge_style, base_url, context_window, emojis, header_style, logo, logo_size, model, navigation_style, output, rate_limit, repository, system_message, temperature, top_p, tree_max_depth):
-    ...
-```
 
-### Key Classes
-- **`ConfigLoader`**: Loads configuration settings for the application.
-  
-- **`MarkdownBuilder`**: Handles construction and assembly of the README sections. It includes methods for building headers, tables of contents, and more.
+The following key functions, classes, and modules are integral to the readme-ai application:
 
-### Error Handling
-- **`ReadmeAIError`**: Custom exception class for handling errors specific to the ReadmeAI application.
+- **main()** (in `main.py`): The main entry point for the CLI.
+- **readme_agent()** (in `pipeline.py`): Manages the asynchronous README generation process with error handling.
+- **MarkdownBuilder** (in `builder.py`): Generates sections of the README.md document.
+- **ConfigLoader** (in `settings.py`): Loads configuration settings and resources for the application.
+- **LLMProviders** (in `enums.py`): Enum class defining supported Large Language Model (LLM) services.
 
-### Logging
-The application utilizes built-in logging to provide insight into the generation process and debug information.
-
-## Conclusion
-ReadmeAI simplifies the creation of README files, ensuring that they are informative and well-structured. By using this tool, developers can increase the quality of their documentation and save time in the process. For more details, refer to the source code and documentation available in the [repository](https://github.com/your_username/readme-ai).
+Explore the comprehensive functionality of readme-ai for enhancing your documentation workflow efficiently and effectively!

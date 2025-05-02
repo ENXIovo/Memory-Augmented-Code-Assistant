@@ -54,7 +54,7 @@ def truncate_chunks(chunks: List[str], max_tokens: int) -> List[str]:
         total += tokens
     return result
 
-def build_directory_tree_fs(repo_root: str, max_depth: int = 3) -> str:
+def build_directory_tree_fs(repo_root: str, max_depth: int = 2) -> str:
     """Scan the actual file system to generate the directory tree string."""
     tree: List[str] = []
     for root, dirs, files in os.walk(repo_root):
