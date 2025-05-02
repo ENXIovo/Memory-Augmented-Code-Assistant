@@ -1,71 +1,72 @@
 # Memory-Augmented Code Assistant: Automatic README Generation for Large Repositories
 
-This project aims to automatically analyze large code repositories lacking proper documentation, summarize their code structure, and generate high-quality README files that help developers quickly understand complex codebases.
+This project introduces **MACA**, a retrieval-augmented generation (RAG) system that automatically generates high-quality `README.md` files for large, under-documented code repositories using code parsing, vector memory, and LLM reasoning.
 
-## 🚀 Project Overview
+## 🚀 Overview
 
-The system scans an entire code repository, analyzes its structure and content, and produces a comprehensive README that includes:
+MACA takes as input a raw source code repository and produces a complete, human-readable README covering:
 
-- Project description and purpose
-- Installation and setup instructions
-- File structure with descriptions
-- Key components and their relationships
-- Technologies and dependencies used
-- Basic usage examples
+- Project purpose and functionality
+- Setup and installation steps
+- File structure (depth-limited)
+- Key modules and usage examples
+- Dependencies and APIs
 
-## 🛠️ Technical Approach
+## 🧠 Technical Pipeline
 
-Our approach uses a multi-stage pipeline:
+MACA adopts a four-stage architecture:
 
-1. **Code Analysis**: Extract repository structure, important functions, classes, dependencies, and code comments using AST (Abstract Syntax Tree) parsing
-2. **Information Processing**: Generate embeddings for code artifacts and store them in a vector database
-3. **Context-Aware Summarization**: Leverage large language models to query and synthesize information from the vector database
-4. **README Generation**: Structure the extracted insights into a standardized, human-readable README format
+1. **Static Code Parsing**  
+   Extract file-level gists and code-unit details (functions, classes, metadata) using AST parsing.
+
+2. **Dual-layer Vector Memory**  
+   Embed both gists and details using `text-embedding-3-small` and store them in **Pinecone** across two namespaces.
+
+3. **Prompt Decomposition & Retrieval**  
+   Split README generation into five targeted queries (purpose, usage, setup, structure, key modules), retrieve top-$k$ chunks per layer, and merge with the repo directory tree.
+
+4. **README Generation & Evaluation**  
+   Feed aggregated context into **GPT-4o**, which generates the README using a structured prompt. Quality is measured via **GPT-based rubric scoring** and **QA-based answerability tests**.
 
 ## 📊 Evaluation Metrics
 
-We evaluate our system using the following metrics:
+We evaluate README quality using:
 
-- **ROUGE-L**: Measures sequence overlap between generated and reference READMEs
-- **BERTScore**: Semantic similarity evaluation using contextual embeddings
-- **BLEU**: N-gram precision between generated and reference text
-- **METEOR**: Evaluates machine translation quality
-- **FKGL**: Flesch-Kincaid Grade Level to assess readability
-- **WMD**: Word Mover's Distance for semantic similarity
+- ✅ **GPT Rubric Score** (Completeness, Clarity, Accuracy, Similarity, Structure, Fluency)
+- ✅ **QA Answerability** (Can a developer answer 6 key questions from the README?)
+- 🔍 Traditional metrics (for reference only): **BERTScore**, **METEOR**, **WMD**
 
-## 📋 Project Status
+> 📈 MACA improved GPT-rubric scores from **0.71 → 0.85** and doubled QA answerability from **0.22 → 0.70** across 9 real-world Python repositories.
 
-Current progress:
-- [x] Project setup and requirements definition
-- [x] Research on existing solutions and baselines
+## 📂 Project Status
+
 - [x] Data collection and preprocessing
-- [x] AST-based code structure extraction
-- [ ] Vector database integration
-- [ ] README generation module
-- [ ] Evaluation pipeline
-- [ ] Performance benchmarking
+- [x] AST-based summarization baseline
+- [x] Dual-layer embedding + Pinecone vector store
+- [x] GPT-based README generation pipeline
+- [x] GPT-based evaluation framework (rubric + QA)
+- [x] Final report and submission
 
-## 🔄 Comparison with Existing Solutions
+## 🧪 Compared to Prior Work
 
-We build upon but differentiate from existing tools:
-- **readme-ai**: Our approach focuses on more robust code understanding through improved embedding strategies
-- **RepoAgent**: We emphasize better hierarchical representation of code structures
-- **Cursor-AI**: Unlike IDE-specific solutions, we provide a standalone tool for documentation generation
+| Tool           | Focus                          | Our Advantage                      |
+|----------------|--------------------------------|------------------------------------|
+| `readme-ai`    | AST-based summarization        | Ours adds semantic vector memory   |
+| `RepoAgent`    | RAG for code query             | We target full README generation   |
+| `Cursor-AI`    | IDE in-context support         | We’re editor-agnostic and offline  |
 
-## 🔍 References
+## 📚 References
 
-1. [readme-ai](https://github.com/eli64s/readme-ai) - Similar approach for README generation
-2. [RepoAgent: Large Language Model Code Analysis and Beyond](https://arxiv.org/abs/2402.16667)
-3. [Cursor-AI](https://www.cursor.com/) - VSCode extension for in-context code understanding
-4. "Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models"
-5. "Enhancing Long-Term Memory using Hierarchical Aggregate Tree for Retrieval Augmented Generation"
-6. "Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing"
-7. "Lift Yourself Up: Retrieval-augmented Text Generation with Self Memory"
-8. "Bridging Relevance and Reasoning: Rationale Distillation in Retrieval-Augmented Generation"
+- [readme-ai](https://github.com/eli64s/readme-ai)
+- [RepoAgent (arXiv 2402.16667)](https://arxiv.org/abs/2402.16667)
+- [Recursive Summarization (Yao et al. 2023)](https://arxiv.org/abs/2305.14314)
+- [LLMEval (Liu et al. 2024)](https://arxiv.org/abs/2402.13929)
+- "Lift Yourself Up: Retrieval-Augmented Text Generation with Self Memory"
+- "Bridging Relevance and Reasoning: Rationale Distillation in RAG"
 
-## 📅 Project Timeline
+## 📅 Milestones
 
-- Milestone 1: Project Proposal (February 12, 2025)
-- Milestone 2: Data and Baseline (February 28, 2025)
-- Milestone 3: Poster Presentation (April 25, 2025)
-- Milestone 4: Final Project Report (May 1, 2025)
+- ✅ Feb 12 – Proposal submitted  
+- ✅ Feb 28 – Data + baseline complete  
+- ✅ Apr 25 – Poster presented  
+- ✅ May 1 – Final report submitted
