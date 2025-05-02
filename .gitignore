@@ -175,3 +175,6 @@ analysis_results/cloned_repos/
 analysis_results/analysis_results/*/*.json
 
 temp_repos/
+
+processed_detail/
+processed_gist/

@@ -2,6 +2,61 @@
 
 This project introduces **MACA**, a retrieval-augmented generation (RAG) system that automatically generates high-quality `README.md` files for large, under-documented code repositories using code parsing, vector memory, and LLM reasoning.
 
+## ▶️ How to Run
+
+This section describes how to generate README files from raw GitHub repositories using MACA.
+
+### 1. Prepare Input Repositories
+Create a file named `repo_list.txt` and add GitHub repository URLs, one per line:
+```
+https://github.com/user/repo1
+https://github.com/user/repo2
+```
+
+### 2. Clone and Analyze Repositories
+Run the following script to clone repositories, extract Python files via AST, and organize features into JSON files:
+```
+python batch_processor.py
+```
+
+### 3. Build Vector Memory
+Switch into the `vectorization/` directory and run:
+
+```bash
+python build_detail_from_analysis.py
+python build_gist_from_analysis.py
+```
+
+Before running the next steps, **ensure you have the following API keys set locally**:
+- `PINECONE_API_KEY`
+- `OPENAI_API_KEY`
+
+Then push vectors into your Pinecone indexes:
+```bash
+python detail_to_pinecone.py
+python gist_to_pinecone.py
+```
+
+✅ You can visit the Pinecone web console to confirm that the `detail` and `gist` indexes were successfully created.
+
+### 4. Generate README via GPT
+Return to the root folder and run:
+```bash
+python search_and_generate.py
+```
+This script performs:
+- Semantic search based on 5 decomposed README questions
+- Directory tree extraction
+- Context construction and prompting
+- README generation using GPT-4o
+
+### 5. (Optional) Evaluate README Quality
+Run GPT-based scoring:
+```bash
+python new_evaluate.py
+```
+This uses GPT-4o to provide rubric scores and QA answerability for each generated README.
+
 ## 🚀 Overview
 
 MACA takes as input a raw source code repository and produces a complete, human-readable README covering:
